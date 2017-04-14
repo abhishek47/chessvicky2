@@ -1,6 +1,6 @@
 
 <div class="col col-md-4 col-xs-12" style="padding: 10px;padding-top: 0px;margin-bottom: 10px;">
-    <div class="grid panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);background: #fcfcfc;height: 190px;">
+    <div class="grid panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);background: #f7ede1;height: 190px;">
         <div class="panel-heading">
             
         </div>
