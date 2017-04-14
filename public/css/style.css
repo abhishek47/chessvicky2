@@ -239,7 +239,7 @@ a:focus {
 }
 
 .section-padding {
-  padding: 125px 0 120px;
+  padding: 55px 0 120px;
 }
 
 @media (max-width: 991px) {
@@ -250,7 +250,7 @@ a:focus {
 
 @media (max-width: 767px) {
   .section-padding {
-    padding: 80px 0;
+    padding: 20px 0;
   }
 }
 
@@ -8356,7 +8356,7 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
 
 .blog-single-page .post .post-body h3 {
   font-family: "Lato", sans-serif;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   margin: 0 0 0.63em;
 }
 
@@ -8373,7 +8373,10 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
 
 @media (max-width: 991px) {
   .blog-single-page .post .post-body p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+  }
+  .blog-single-page .post .post-body img {
+    width: 80%;
   }
 }
 
