@@ -24,49 +24,23 @@
             <div class="container">        
 
                <div class="row">
-                    <div class="col col-xs-12">
+                    <div class="col col-xs-10">
                         
                             {{ $puzzles->links() }}
+                      
+                    </div>
+
+                    <div class="col col-xs-2">
+                        
+                            <a class="btn btn-primary" style="margin-top: 19px;" href="/puzzles/random"><b>Solve Random Puzzles</b></a>
                       
                     </div>
                 </div>
                 <div class="row case-studies-grids">
 
                   @foreach($puzzles as $puzzle)
-                    <div class="col col-md-4 col-xs-6">
-                        <div class="grid">
-                            <div class="img-holder">
-                                <a href="/puzzles/{{ $puzzle->id }}">
-                                    <div id="board<?= $puzzle->id; ?>" style=""></div>
-                                </a>
-                            </div>
-                            <div class="details">
-                                <h3><a href="/puzzles/{{ $puzzle->id }}">Checkmate in <?= $puzzle->moves; ?> Moves</a></h3>
-                                <span>Level : {{$puzzle->level}} | Points : {{$puzzle->points}} | Coins : {{$puzzle->coins}}</span>
-                                <a href="/puzzles/{{ $puzzle->id }}" class="view-case-studes">Solve Puzzle</a>
-                            </div>
-                        </div>
-                    </div>
-
-                     <script type="text/javascript">
-	                                    var init<?= $puzzle->id; ?> = function() {
-
-	                                    //--- start example JS ---
-	                                    var board<?= $puzzle->id; ?>;
-
-	                                    var cfg<?= $puzzle->id; ?> = {
-	                                    draggable: false,
-	                                    position: 'start',
-	                                    sparePieces: false,
-	                                    pieceTheme: 'http://www.willangles.com/projects/chessboard/img/chesspieces/wikipedia/{piece}.png'
-	                                    };
-	                                    board<?= $puzzle->id; ?> = ChessBoard('board<?= $puzzle->id; ?>', cfg<?= $puzzle->id; ?>);
-
-	                                    board<?= $puzzle->id; ?>.position('<?= $puzzle->start_position; ?>');
-
-	                                    }; // end init()
-	                                    $(document).ready(init<?= $puzzle->id; ?>);
-                                  </script>
+                    
+                     @include('puzzles.puzzle')
 
 
                    @endforeach 

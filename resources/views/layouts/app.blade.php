@@ -141,7 +141,7 @@
                                 <li><a href="{{ route('register') }}">Register</a></li>
                             @else
                                 <li class="sub-menu">
-                                    <a href="#" style="padding-top: 35px;">
+                                    <a href="/home" style="padding-top: 35px;">
                                      
                                         <img style="display: inline;width: 30px;height: 30px;margin-right: 5px;margin-bottom: 2px;" src="/images/testimonials/img-1.jpg" alt class="img img-responsive img-circle">
                                          {{ Auth::user()->name }} <span class="caret"></span>

@@ -38,6 +38,7 @@ Route::post('/forum/answer/{id}/delete', 'ForumAnswersController@delete');
 
 
 Route::get('/puzzles', 'PuzzlesController@index');
+Route::get('/puzzles/random', 'PuzzlesController@random');
 Route::get('/puzzles/create', 'PuzzlesController@create');
 Route::get('/puzzles/{puzzle}', 'PuzzlesController@show');
 Route::post('/puzzles', 'PuzzlesController@store');

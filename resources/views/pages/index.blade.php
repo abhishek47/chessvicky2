@@ -147,7 +147,7 @@
         <section class="featured section-padding">
             <div class="container">
                 <div class="row content">
-                    <div class="col col-lg-4 col-xs-6">
+                    <a href="/blog" class="col col-lg-4 col-xs-6">
                         <div class="grid">
                             <div class="img-holder">
                                 <img src="images/featured/img-1.jpg" alt class="img img-responsive">
@@ -157,8 +157,8 @@
                                 <p>We have hundreds of different articles from various well known identities in the chess world.Either you want gain some news or learn new tactics, these are for you.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col col-lg-4 col-xs-6">
+                    </a>
+                    <a href="/home" class="col col-lg-4 col-xs-6">
                         <div class="grid">
                             <div class="img-holder">
                                 <img src="images/featured/img-2.jpg" alt class="img img-responsive">
@@ -168,8 +168,8 @@
                                 <p>Learning is no fun when you can't apply and test it somewhere.So we have brought up thousands of chess puzzles and quizzes for you.Solve and gain points to compete with your friends.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col col-lg-4 col-xs-6">
+                    </a>
+                    <a href="/home" class="col col-lg-4 col-xs-6">
                         <div class="grid">
                             <div class="img-holder">
                                 <img src="images/featured/img-3.jpg" alt class="img img-responsive">
@@ -179,7 +179,7 @@
                                 <p>Well, we feel just learning and comparing with friends is no cool.So we bring up online chess tournaments as well as puzzle and quiz events where you can earn real money.</p>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div> <!-- end row -->
             </div> <!-- end container -->
         </section>

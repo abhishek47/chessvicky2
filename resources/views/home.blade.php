@@ -19,19 +19,116 @@
         
 <br><br><br>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+ <!-- start featured -->
+        <section class="featured section-padding">
+            <div class="container">
+                <div class="row content">
+                    <a href="/blog" class="col col-lg-4 col-xs-6">
+                        <div class="grid">
+                            <div class="img-holder">
+                                <img src="images/featured/img-1.jpg" alt class="img img-responsive">
+                            </div>
+                            <div class="details">
+                                <h3>Chess Articles <i class="fi flaticon-letter"></i></h3>
+                                <p>We have hundreds of different articles from various well known identities in the chess world.Either you want gain some news or learn new tactics, these are for you.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/puzzles" class="col col-lg-4 col-xs-6">
+                        <div class="grid">
+                            <div class="img-holder">
+                                <img src="images/featured/img-2.jpg" alt class="img img-responsive">
+                            </div>
+                            <div class="details">
+                                <h3>Checkmate Puzzles <i class="fi flaticon-network"></i></h3>
+                                <p>Learning is no fun when you can't apply and test it somewhere.So we have brought up thousands of chess puzzles and quizzes for you.Solve and gain points to compete with your friends.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/quiz" class="col col-lg-4 col-xs-6">
+                        <div class="grid">
+                            <div class="img-holder">
+                                <img src="images/featured/img-3.jpg" alt class="img img-responsive">
+                            </div>
+                            <div class="details">
+                                <h3>Solve Quizzes <i class="fi flaticon-money-2"></i></h3>
+                                <p>Well, we feel just learning and comparing with friends is no cool.So we bring up online chess tournaments as well as puzzle and quiz events where you can earn real money.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/books" class="col col-lg-4 col-xs-6">
+                        <div class="grid">
+                            <div class="img-holder">
+                                <img src="images/featured/img-3.jpg" alt class="img img-responsive">
+                            </div>
+                            <div class="details">
+                                <h3>Buy Books <i class="fi flaticon-money-2"></i></h3>
+                                <p>Well, we feel just learning and comparing with friends is no cool.So we bring up online chess tournaments as well as puzzle and quiz events where you can earn real money.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/forum" class="col col-lg-4 col-xs-6">
+                        <div class="grid">
+                            <div class="img-holder">
+                                <img src="images/featured/img-3.jpg" alt class="img img-responsive">
+                            </div>
+                            <div class="details">
+                                <h3>Visit Forum <i class="fi flaticon-money-2"></i></h3>
+                                <p>Well, we feel just learning and comparing with friends is no cool.So we bring up online chess tournaments as well as puzzle and quiz events where you can earn real money.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/chess" class="col col-lg-4 col-xs-6">
+                        <div class="grid">
+                            <div class="img-holder">
+                                <img src="images/featured/img-3.jpg" alt class="img img-responsive">
+                            </div>
+                            <div class="details">
+                                <h3>Play Chess <i class="fi flaticon-money-2"></i></h3>
+                                <p>Well, we feel just learning and comparing with friends is no cool.So we bring up online chess tournaments as well as puzzle and quiz events where you can earn real money.</p>
+                            </div>
+                        </div>
+                    </a>
 
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                    <a href="/chess" class="col col-lg-4 col-xs-6">
+                        <div class="grid">
+                            <div class="img-holder">
+                                <img src="images/featured/img-3.jpg" alt class="img img-responsive">
+                            </div>
+                            <div class="details">
+                                <h3>Puzzle Events <i class="fi flaticon-money-2"></i></h3>
+                                <p>Well, we feel just learning and comparing with friends is no cool.So we bring up online chess tournaments as well as puzzle and quiz events where you can earn real money.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                     <a href="/chess" class="col col-lg-4 col-xs-6">
+                        <div class="grid">
+                            <div class="img-holder">
+                                <img src="images/featured/img-3.jpg" alt class="img img-responsive">
+                            </div>
+                            <div class="details">
+                                <h3>Quiz Events <i class="fi flaticon-money-2"></i></h3>
+                                <p>Well, we feel just learning and comparing with friends is no cool.So we bring up online chess tournaments as well as puzzle and quiz events where you can earn real money.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                     <a href="/chess" class="col col-lg-4 col-xs-6">
+                        <div class="grid">
+                            <div class="img-holder">
+                                <img src="images/featured/img-3.jpg" alt class="img img-responsive">
+                            </div>
+                            <div class="details">
+                                <h3>Online Tournaments <i class="fi flaticon-money-2"></i></h3>
+                                <p>Well, we feel just learning and comparing with friends is no cool.So we bring up online chess tournaments as well as puzzle and quiz events where you can earn real money.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end featured -->
 
 <br><br><br>
 @endsection

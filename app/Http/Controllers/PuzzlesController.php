@@ -61,6 +61,21 @@ class PuzzlesController extends Controller
         return view('puzzles.show', compact('puzzle'));
     }
 
+     /**
+     * Display the random puzzle.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function random()
+    {
+        $count = Puzzle::count();
+        $rid = rand(1, $count);
+        $puzzle = Puzzle::find($rid);
+        
+        return view('puzzles.show', compact('puzzle'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
