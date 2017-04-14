@@ -8271,12 +8271,12 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
 #19.1	blog-with-sidebar-section
 --------------------------------------------------------------*/
 .blog-with-sidebar-section .blog-section-grids > .col {
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 767px) {
   .blog-with-sidebar-section .blog-section-grids > .col {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 }
 

@@ -1,8 +1,8 @@
 <div class="col col-md-6 col-xs-6">
     <div class="grid">
-        <div class="entry-media">
+       <!-- <div class="entry-media">
             <img src="{{ $post->featured_img }}" alt class="img img-responsive">
-        </div>
+        </div> -->
         <div class="entry-title">
             <h3><a href="/blog/{{$post->slug}}">{{ $post->title }}</a></h3>
         </div>
