@@ -16,8 +16,44 @@
         </section>
         <!-- end page-title -->
 
+    <!-- start team-single-content -->
+        <section class="team-single-content section-padding" style="padding-bottom: 3px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-12 col-md-12">
+                        <div class="row member">
+                            <div class="col col-sm-2">
+                                <div class="member-pic">
+                                    <img src="images/team-s2/img-5.jpg" style="width: 140px;height: 140px;" alt class="img img-responsive img-circle">
+                                </div>
+                            </div>
+                            <div class="col col-sm-10">
+                                <div class="member-details">
+                                    <h3>{{ Auth::user()->name; }}</h3>
+                                    <span>Founder &amp; CEO</span>
+                                    <p>Hasib has over 15 years of consulting experience in the US, Europe, Japan, and across the Asia Pacific region. He advises clients on strategy formulation, strategic M&amp;A, turnaround &amp; restructuring, market and channel development improvement issues.</p>
+                                    <ul class="member-info">
+                                        <li><i class="fa fa-envelope"></i> hasibsharif@consultcare.info</li>
+                                        <li><i class="fa fa-phone"></i> +91 222 911 981</li>
+                                        <li><i class="fa fa-share"></i>
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                       <hr> 
+                    </div>
+                
+             </div>
+        </section>
         
-<br><br><br>
+
 
  <!-- start featured -->
         <section class="featured section-padding">

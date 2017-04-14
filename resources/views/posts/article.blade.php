@@ -1,4 +1,4 @@
-<div class="col col-md-6 col-xs-6">
+<div class="col col-md-12 col-xs-12">
     <div class="grid">
        <!-- <div class="entry-media">
             <img src="{{ $post->featured_img }}" alt class="img img-responsive">
