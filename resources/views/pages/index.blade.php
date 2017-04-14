@@ -469,7 +469,7 @@
 						            </ul>
 						        </div>
 						        <div class="entry-details">
-						            <p>{{ $post->intro }}</p>
+						           <p>We’re the leading consulting partner to the private equity industry and its key stakeholders. We advise investors across the entire investment life cycle.</p>
 
 						            <a href="/blog/{{$post->slug}}" class="read-more">Read more</a>
 						        </div>
