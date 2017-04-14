@@ -12,7 +12,7 @@ class PagesController extends Controller
     
     public function index()
     {
-    	$puzzles = Puzzle::latest()->limit(6)->get();
+    	$puzzles = Puzzle::latest()->limit(3)->get();
     	$posts = Post::latest()->limit(3)->get();
     	return view('pages.index', compact('puzzles', 'posts'));
     }
