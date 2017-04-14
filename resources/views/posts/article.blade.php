@@ -1,8 +1,8 @@
 <div class="col col-md-6 col-xs-6">
     <div class="grid panel panel-default" style="padding: 10px 10px 10px 10px;box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);background: #f7f7f7;">
-       <!-- <div class="entry-media">
-            <img src="{{ $post->featured_img }}" alt class="img img-responsive">
-        </div> -->
+       <div class="entry-media">
+            <img src="{{ empty($post->featured_img) ? '/images/blog/img-1.jpg' : $post->featured_img }}" alt class="img img-responsive">
+        </div> 
         <div class="entry-title">
             <h3><a href="/blog/{{$post->slug}}">{{ $post->title }}</a></h3>
         </div>
