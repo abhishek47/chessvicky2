@@ -29,7 +29,7 @@
                             </div>
                             <div class="col col-sm-10">
                                 <div class="member-details">
-                                    <h3>{{ Auth::user()->name; }}</h3>
+                                    <h3>{{ Auth::user()->name }}</h3>
                                     <span>Founder &amp; CEO</span>
                                     <p>Hasib has over 15 years of consulting experience in the US, Europe, Japan, and across the Asia Pacific region. He advises clients on strategy formulation, strategic M&amp;A, turnaround &amp; restructuring, market and channel development improvement issues.</p>
                                     <ul class="member-info">
