@@ -30,10 +30,10 @@
                             <div class="col col-sm-10">
                                 <div class="member-details">
                                     <h3>{{ Auth::user()->name }}</h3>
-                                    <span>Founder &amp; CEO</span>
+                                    <span>{{ Auth::user()->username }}</span>
                                     <p>Hasib has over 15 years of consulting experience in the US, Europe, Japan, and across the Asia Pacific region. He advises clients on strategy formulation, strategic M&amp;A, turnaround &amp; restructuring, market and channel development improvement issues.</p>
                                     <ul class="member-info">
-                                        <li><i class="fa fa-envelope"></i> hasibsharif@consultcare.info</li>
+                                        <li><i class="fa fa-envelope"></i> {{ Auth::user()->email }}</li>
                                         <li><i class="fa fa-phone"></i> +91 222 911 981</li>
                                         <li><i class="fa fa-share"></i>
                                             <ul>
