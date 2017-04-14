@@ -83,7 +83,19 @@
             </div> <!-- end container -->
         </section>
         <!-- end blog-single-content -->
-
+        
+         <!-- start cta -->
+        <section class="cta parallax" data-bg-image="images/cta-bg.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <h5>Want to write article on ChessVicky?</h5>
+                        <a href="#" class="btn">Request Article</a>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end cta -->
 
       
 </div>
