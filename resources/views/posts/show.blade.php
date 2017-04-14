@@ -8,11 +8,10 @@
         <section class="page-title">
             <div class="container">
                 <div class="title-box">
-                    <h1>Blog single</h1>
+                    <h1>Article</h1>
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Page</a></li>
-                        <li>Blog single</li>
+                        <li>Blog</li>
                     </ol>
                 </div>
             </div> <!-- end container -->
