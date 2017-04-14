@@ -56,7 +56,7 @@
                             <!-- LAYER NR. 3 -->
                             <div class="tp-caption lfb ltt"
                                 data-x="25"
-                                data-y="570"
+                                data-y="470"
                                 data-speed="1800"
                                 data-start="4500"
                                 data-easing="Power4.easeOut"
@@ -118,7 +118,7 @@
                             <!-- LAYER NR. 3 -->
                             <div class="tp-caption lfb ltt"
                                 data-x="25"
-                                data-y="570"
+                                data-y="470"
                                 data-speed="1800"
                                 data-start="4500"
                                 data-easing="Power4.easeOut"
