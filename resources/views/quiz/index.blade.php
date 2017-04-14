@@ -34,7 +34,7 @@
                 </div>
                 <div class="row case-studies-grid">
 
-                  @foreach($quizzes as $quiz)
+                  @foreach($quizzes as $key => $quiz)
                     
                      @include('quiz.quiz')
 

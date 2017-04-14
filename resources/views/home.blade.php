@@ -84,7 +84,7 @@
                     <a href="/quiz" class="col col-lg-4 col-xs-6">
                         <div class="grid">
                             <div class="img-holder">
-                                <img src="images/featured/img-3.jpg" alt class="img img-responsive">
+                                <img src="images/featured/img-4.jpeg" alt class="img img-responsive">
                             </div>
                             <div class="details">
                                 <h3>Solve Quizzes <i class="fi flaticon-money-2"></i></h3>
@@ -92,10 +92,13 @@
                             </div>
                         </div>
                     </a>
+                    </div>
+                    <br><br>
+                     <div class="row content">
                     <a href="/books" class="col col-lg-4 col-xs-6">
                         <div class="grid">
                             <div class="img-holder">
-                                <img src="images/featured/img-3.jpg" alt class="img img-responsive">
+                                <img src="images/featured/img-5.jpg" alt class="img img-responsive">
                             </div>
                             <div class="details">
                                 <h3>Buy Books <i class="fi flaticon-money-2"></i></h3>
@@ -106,7 +109,7 @@
                     <a href="/forum" class="col col-lg-4 col-xs-6">
                         <div class="grid">
                             <div class="img-holder">
-                                <img src="images/featured/img-3.jpg" alt class="img img-responsive">
+                                <img src="images/featured/img-7.png" alt class="img img-responsive">
                             </div>
                             <div class="details">
                                 <h3>Visit Forum <i class="fi flaticon-money-2"></i></h3>
@@ -125,11 +128,14 @@
                             </div>
                         </div>
                     </a>
+                    </div>
+                    <br><br>
+                     <div class="row content">
 
                     <a href="/chess" class="col col-lg-4 col-xs-6">
                         <div class="grid">
                             <div class="img-holder">
-                                <img src="images/featured/img-3.jpg" alt class="img img-responsive">
+                                <img src="images/featured/img-8.jpg" alt class="img img-responsive">
                             </div>
                             <div class="details">
                                 <h3>Puzzle Events <i class="fi flaticon-money-2"></i></h3>
@@ -141,7 +147,7 @@
                      <a href="/chess" class="col col-lg-4 col-xs-6">
                         <div class="grid">
                             <div class="img-holder">
-                                <img src="images/featured/img-3.jpg" alt class="img img-responsive">
+                                <img src="images/featured/img-9.jpg" alt class="img img-responsive">
                             </div>
                             <div class="details">
                                 <h3>Quiz Events <i class="fi flaticon-money-2"></i></h3>
@@ -153,7 +159,7 @@
                      <a href="/chess" class="col col-lg-4 col-xs-6">
                         <div class="grid">
                             <div class="img-holder">
-                                <img src="images/featured/img-3.jpg" alt class="img img-responsive">
+                                <img src="images/featured/img-10.jpg" alt class="img img-responsive">
                             </div>
                             <div class="details">
                                 <h3>Online Tournaments <i class="fi flaticon-money-2"></i></h3>

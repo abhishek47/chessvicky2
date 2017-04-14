@@ -88,7 +88,7 @@
                         <div class="col col-md-9 contact-info">
                             <ul>
                                 <li><i class="fi flaticon-letter"></i> contact@chessvicky.com</li>
-                                <li><i class="fi flaticon-pin"></i> Made with &nbsp;<i class="fa fa-heart" style="font-size: 14px;"></i>&nbsp; from India</li>
+                                <li><i class="fi flaticon-pin"></i> Made with &nbsp;<i class="fa fa-heart" style="font-size: 14px;color: red;"></i>&nbsp; from India</li>
                              </ul>
                         </div>
 
@@ -119,9 +119,9 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse navbar-right">
                         <button class="close-navbar"><i class="fa fa-close"></i></button>
-                        <ul class="nav navbar-nav" style="height: 100px;">
+                        <ul class="nav navbar-nav">
                             <li class="sub-menu">
-                              <a href="/library">Library</a>
+                              <a href="/home">Library</a>
                               <ul>
                                     <li><a href="/blog">Articles/Tutorials</a></li>
                                     <li><a href="/books">Books</a></li>
@@ -140,7 +140,7 @@
                                 <li><a href="{{ route('register') }}">Register</a></li>
                             @else
                                 <li class="sub-menu">
-                                    <a href="/home" style="padding-top: 35px;">
+                                    <a href="/home" style="padding-top: 25px;">
                                      
                                         <img style="display: inline;width: 30px;height: 30px;margin-right: 5px;margin-bottom: 2px;" src="/images/testimonials/img-1.jpg" alt class="img img-responsive img-circle">
                                          {{ Auth::user()->name }} <span class="caret"></span>

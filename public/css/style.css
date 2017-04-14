@@ -3081,6 +3081,7 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
   }
 }
 
+
 .site-header-style2 .navigation, .site-header-style3 .navigation,
 .site-header-style2 #navbar, .site-header-style3 #navbar {
   background: #fff;
@@ -3099,7 +3100,15 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
 
 @media screen and (min-width: 992px) {
   .site-header-style2 #navbar > ul > li > a, .site-header-style3 #navbar > ul > li > a {
-    padding: 40px 17px;
+    padding: 30px 17px;
+  }
+
+  .navbar-brand {
+     padding-top: 5px;
+  }
+
+  .navbar-nav {
+    height: 80px;
   }
 }
 
