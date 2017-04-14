@@ -49,6 +49,7 @@ Route::post('/puzzles/{puzzle}/delete', 'PuzzlesController@delete');
 
 
 Route::get('/quiz', 'QuizzesController@index');
+Route::get('/quiz/random', 'QuizzesController@random');
 Route::get('/quiz/create', 'QuizzesController@create');
 Route::get('/quiz/{quiz}', 'QuizzesController@show');
 Route::post('/quiz', 'QuizzesController@store');

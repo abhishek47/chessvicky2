@@ -88,7 +88,7 @@
                         <div class="col col-md-9 contact-info">
                             <ul>
                                 <li><i class="fi flaticon-letter"></i> contact@chessvicky.com</li>
-                                <li><i class="fi flaticon-pin"></i> Made with Love from India</li>
+                                <li><i class="fi flaticon-pin"></i> Made with &nbsp;<i class="fa fa-heart" style="font-size: 14px;"></i>&nbsp; from India</li>
                              </ul>
                         </div>
 

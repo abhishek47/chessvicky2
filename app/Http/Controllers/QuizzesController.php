@@ -61,6 +61,22 @@ class QuizzesController extends Controller
         return view('quiz.show', compact('quiz'));
     }
 
+     /**
+     * Display the random quiz.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function random()
+    {
+        $count = Quiz::count();
+        $rid = rand(1, $count);
+        $puzzle = Quiz::find($rid);
+        
+        return view('quiz.show', compact('quiz'));
+    }
+
+
     /**
      * Show the form for editing the specified resource.
      *

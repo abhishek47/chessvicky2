@@ -24,11 +24,11 @@
             <div class="container">        
 
                <div class="row">
-                    <div class="col col-xs-12">
+                    
                         
-                            <a class="btn btn-primary" style="margin-bottom: 19px;" href="/puzzles/random"><b>Solve Random Quiz</b></a>
+                            <a class="btn btn-primary" style="margin-bottom: 19px;" href="/quiz/random"><b>Solve Random Quiz</b></a>
                       
-                    </div>
+                   
 
                  
                 </div>
