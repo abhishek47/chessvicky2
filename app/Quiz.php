@@ -19,4 +19,14 @@ class Quiz extends Model
     {
     	return $this->hasMany(QuizQuestion::class);
     }
+
+    public function getPoints()
+    {
+    	return $this->questions()->sum('points');
+    }
+
+    public function getCoins()
+    {
+    	return $this->questions()->sum('coins');
+    }
 }

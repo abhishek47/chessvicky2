@@ -88,9 +88,8 @@
                         <div class="col col-md-9 contact-info">
                             <ul>
                                 <li><i class="fi flaticon-letter"></i> contact@chessvicky.com</li>
-                                <li><i class="fi flaticon-pin"></i> Nashik, Maharashtra, India</li>
-                                <li><i class="fi flaticon-technology-1"></i> (+91) 7276371995</li>
-                            </ul>
+                                <li><i class="fi flaticon-pin"></i> Made with Love from India</li>
+                             </ul>
                         </div>
 
                         <div class="col col-md-3">
@@ -120,7 +119,7 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse navbar-right">
                         <button class="close-navbar"><i class="fa fa-close"></i></button>
-                        <ul class="nav navbar-nav">
+                        <ul class="nav navbar-nav" style="height: 100px;">
                             <li class="sub-menu">
                               <a href="/library">Library</a>
                               <ul>

@@ -21,7 +21,8 @@ class QuizzesController extends Controller
      */
     public function index()
     {
-        $quizzes = Quiz::latest()->paginate(10);
+
+        $quizzes = Quiz::latest()->paginate(20); 
 
         return view('quiz.index', compact('quizzes'));
     }
