@@ -8,10 +8,10 @@
         <section class="page-title">
             <div class="container">
                 <div class="title-box">
-                    <h1>Checkmate Puzzles</h1>
+                    <h1>Books Store</h1>
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
-                        <li>Puzzles</li>
+                        <li>Books</li>
                     </ol>
                 </div>
             </div> <!-- end container -->
@@ -23,20 +23,12 @@
         <section class="case-studies section-padding">
             <div class="container">        
 
-               <div class="row">
-                    <div class="col col-xs-12">
-                        
-                            <a class="btn btn-primary" style="margin-bottom: 19px;" href="/puzzles/random"><b>Solve Random Puzzles</b></a>
-                      
-                    </div>
-
-                 
-                </div>
+               
                 <div class="row case-studies-grids">
 
-                  @foreach($puzzles as $puzzle)
+                  @foreach($books as $book)
                     
-                     @include('puzzles.puzzle')
+                     @include('books.book')
 
 
                    @endforeach 
@@ -46,7 +38,7 @@
                 <div class="row">
                     <div class="col col-xs-12">
                         
-                            {{ $puzzles->links() }}
+                            {{ $books->links() }}
                       
                     </div>
                 </div>

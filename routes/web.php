@@ -46,6 +46,14 @@ Route::get('/puzzles/{puzzle}/edit', 'PuzzlesController@edit');
 Route::post('/puzzles/{puzzle}/update', 'PuzzlesController@update');
 Route::post('/puzzles/{puzzle}/delete', 'PuzzlesController@delete');
 
+Route::get('/books', 'BooksController@index');
+Route::get('/books/create', 'BooksController@create');
+Route::get('/books/{book}', 'BooksController@show');
+Route::post('/books', 'BooksController@store');
+Route::get('/books/{book}/edit', 'BooksController@edit');
+Route::post('/books/{book}/update', 'BooksController@update');
+Route::post('/books/{book}/delete', 'BooksController@delete');
+
 
 
 Route::get('/quiz', 'QuizzesController@index');
