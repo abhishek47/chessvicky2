@@ -82,10 +82,10 @@
         <header class="site-header-style2">
 
             <!-- start upper-topbar -->
-            <div class="upper-topbar">
+            <div class="upper-topbar hidden-xs">
                 <div class="container">
                     <div class="row">
-                        <div class="col col-md-9 contact-info  hidden-xs">
+                        <div class="col col-md-9 contact-info">
                             <ul>
                                 <li><i class="fi flaticon-letter"></i> contact@chessvicky.com</li>
                                 <li><i class="fi flaticon-pin"></i> Nashik, Maharashtra, India</li>
