@@ -639,7 +639,7 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
 
 @media (max-width: 991px) {
   .page-title > .container {
-    height: 320px;
+    height: 120px;
   }
 }
 
@@ -8824,4 +8824,3 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
 
 
 
-      
