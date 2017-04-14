@@ -1,5 +1,5 @@
 <div class="col col-md-4 col-xs-6">
-                        <div class="grid panel panel panel-default" style="padding: 10px 10px 10px 10px;box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);background: #f7ede1;">
+                        <div class="grid panel panel panel-default" style="padding: 10px 10px 10px 10px;box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);background: #ead9c5;">
                             <div class="img-holder">
                                 <a href="/puzzles/{{ $puzzle->id }}">
                                     <div id="board<?= $puzzle->id; ?>" style=""></div>
