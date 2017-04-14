@@ -1,7 +1,7 @@
 
 <div class="col col-md-4 col-xs-12" style="padding: 10px;padding-top: 0px;margin-bottom: 10px;">
-    <div class="grid panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);background: #ecffdb;height: 190px;">
-        <div class="panel-heading">
+    <div class="grid panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);background: #e1ffc6;height: 190px;">
+        <div class="panel-heading" style="background: #3e8400">
             
         </div>
         <div class="details" style="padding: 0px 10px 10px 10px;">
