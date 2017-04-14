@@ -3206,11 +3206,11 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
 }
 
 @media (max-width: 767px) {
-  .slider-section .main-heading,
+ /* .slider-section .main-heading,
   .slider-section .slider-text,
   .slider-section .link-button {
     display: none;
-  }
+  } */
 }
 
 .slider-section .main-heading {
@@ -8378,6 +8378,10 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
   .blog-single-page .post .post-body img {
     width: 80%;
   }
+   .blog-single-page .post .post-body iframe {
+    width: 90%;
+    height: 200px;
+  }
 }
 
 .blog-single-page .post .post-body p:first-child:first-letter {
@@ -8812,7 +8816,7 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
         height: 35px; 
         width: 165px; 
         padding: 8px 16px;
-        padding-top: 3px;
+        padding-top: 0px;
         color: #fff; 
         font-family: Arial, sans-serif; 
         font-size: 21px; 
