@@ -56,19 +56,6 @@
         <!-- end blog-with-sidebar-section -->
 
 
-        <!-- start cta -->
-        <section class="cta parallax" data-bg-image="images/cta-bg.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-xs-12">
-                        <h5>Want to write articles on ChessVicky?</h5>
-                        <a href="#" class="btn">Request Article</a>
-                    </div>
-                </div> <!-- end row -->
-            </div> <!-- end container -->
-        </section>
-        <!-- end cta -->
-
-
+        
 
 @endsection
