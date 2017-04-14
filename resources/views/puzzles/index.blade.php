@@ -24,13 +24,13 @@
             <div class="container">        
 
                <div class="row">
-                    <div class="col col-xs-10">
+                    <div class="col col-sm-10">
                         
                             {{ $puzzles->links() }}
                       
                     </div>
 
-                    <div class="col col-xs-2">
+                    <div class="col col-sm-2">
                         
                             <a class="btn btn-primary" style="margin-top: 19px;" href="/puzzles/random"><b>Solve Random Puzzles</b></a>
                       
