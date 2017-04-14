@@ -28,7 +28,7 @@
                             <div class="post-title-meta">
                                 <h2>{{ $post->title }}</h2>
                                 <ul class="meta-info">
-                                    <li><a href="#">By: </a></li>
+                                    <li><a href="#">By: {{ $post->author }}</a></li>
                                     <li><a href="#"><i class="fa fa-clock-o"></i> {{ $post->created_at->toFormattedDateString() }}</a></li>
                                     <li><a href="#"><i class="fa fa-comments"></i> 26 comments</a></li>
                                 </ul>
