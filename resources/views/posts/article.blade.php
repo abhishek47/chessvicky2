@@ -34,8 +34,8 @@
                 <div class="date"><span>{{ $post->created_at->diffForHumans() }}</span></div>
             </div>
             <div class="comment-content">
-                <a href="/blog/{{$post->slug}}"><h4 style="font-size: 24px;margin-bottom: 10px;">{{ $post->title }}</h4> </a>
-                <p>{{ substr($post->intro, 0, 300) }}...</p> 
+                <a href="/blog/{{$post->slug}}"><h4 style="font-size: 21px;margin-bottom: 10px;">{{ $post->title }}</h4> </a>
+                <p>{{ empty($post->intro) ? 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.' : substr($post->intro, 0, 300) }}...</p> 
 
                 <p><small><i class="fa fa-comments"></i> <span>{{ $post->tags }}</span></small></p>
             </div>
