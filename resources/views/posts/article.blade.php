@@ -25,7 +25,9 @@
 
  <li style="margin-bottom: 10px;">
     <div class="article">
-       
+        <div class="author-pic hidden-xs">
+            <img style="width: 60px;height: 60px;" src="/images/testimonials/img-1.jpg" alt="">
+        </div>
         <div class="details">
             <div class="author-meta">
                 <div class="name"><h4 style="font-size: 12px;">{{ $post->author }}</h4></div>
