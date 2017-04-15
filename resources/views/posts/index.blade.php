@@ -33,7 +33,7 @@
     							<div class="comments">
     							 <ol>
 		                            @include('posts.article')
-		                            <hr>
+		                            
 		                          </ol>  
                                 </div>
 	                           @endforeach 
