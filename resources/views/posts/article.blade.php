@@ -39,10 +39,10 @@
 
                 <p><small><i class="fa fa-comments"></i> <span>{{ $post->tags }}</span></small></p>
             </div>
-            
+            <hr>
         </div>
 
-        <hr>
+        
     </div>
    
 </li>
