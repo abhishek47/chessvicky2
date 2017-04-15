@@ -35,7 +35,7 @@
                                 </ul>
                             </div>
                             <div class="post-body">
-                                {!! $question->body !!}
+                                <p>{!! $question->body !!}</p>
                             </div>
                         </div> <!-- end post -->
                         <br>
