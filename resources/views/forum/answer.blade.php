@@ -1,6 +1,6 @@
  <li>
     <div class="article">
-        <div class="author-pic">
+        <div class="author-pic hidden-xs">
             <img style="width: 60px;height: 60px;" src="/images/testimonials/img-1.jpg" alt="">
         </div>
         <div class="details">
