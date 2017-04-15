@@ -74,7 +74,7 @@ class RegisterController extends Controller
         $user->profile()->save(new Profile);
         
         session()->flash('flash_title', 'Thanks For Joining ChessVicky!');
-        session()->flash('flash_message', 'Welcome to the platform of unlimited possibilities of exploring the chess world like quizzes,puzzles,tutorials,chess events and many more!This is a platfrom of chess where you can Learn,Compete as well as Earn.All the best!'); 
+        session()->flash('flash_message', 'Welcome to the platform of unlimited possibilities of exploring the chess world!This is a platfrom of chess where you can Learn,Compete as well as Earn.All the best!'); 
         
         return $user;
 
