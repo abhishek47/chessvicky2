@@ -17,6 +17,7 @@
 </section>
 <!-- end page-title -->
 
+  <div class="page-wrapper blog-single-page">
         
 <!-- start blog-with-sidebar-section -->
         <section class="blog-with-sidebar-section section-padding">
@@ -38,9 +39,10 @@
 	                      @endforeach    
 
                         <div class="row page-pagination-wrapper">
-                            <div class="col col-xs-12">
+                            <div class="comments">
+                               <ol>
                                     {{ $posts->links() }}
-                                
+                                </ol>
                             </div>
                         </div>                        
                     </div> <!-- end blog-content -->
@@ -54,7 +56,7 @@
             </div> <!-- end container -->
         </section>
         <!-- end blog-with-sidebar-section -->
-       
+     </div>  
        <!-- start cta -->
         <section class="cta parallax" data-bg-image="images/cta-bg.jpg">
             <div class="container">
