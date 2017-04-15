@@ -239,7 +239,7 @@ a:focus {
 }
 
 .section-padding {
-  padding: 55px 0 80px;
+  padding: 35px 0 80px;
 }
 
 @media (max-width: 991px) {
@@ -8555,7 +8555,7 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
 
 @media (max-width: 767px) {
   .blog-single-page .blog-with-sidebar .comments {
-    padding: 10px 25px 0;
+    padding: 10px 0px 0;
   }
 }
 
