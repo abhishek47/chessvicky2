@@ -129,9 +129,10 @@
                                     <li><a href="/puzzles">Puzzles</a></li>
                                     <li><a href="/quiz">Quizzes</a></li>
                                     <li><a href="/calendar">Calendar</a></li>
-                                    <li><a href="/events">Events</a></li>
                                 </ul>
                             </li>
+
+                            <li><a href="/events">Events</a></li>
                             <li><a href="/blog">Blog</a></li>
                             <li><a href="/forum">Forum</a></li>
                             <li><a href="/contact">Contact</a></li>

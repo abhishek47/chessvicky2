@@ -1,5 +1,5 @@
 <div class="col col-md-6 col-xs-6">
-    <div class="grid panel panel-default" style="padding: 10px 10px 10px 10px;box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);background: #f7f7f7;height: 625px;">
+    <div class="grid panel panel-default" id="article">
        <div class="entry-media">
             <img src="{{ empty($post->featured_img) ? '/images/slider/slider-3.jpg' : $post->featured_img }}" style="height: 256px;width: 100%;" alt class="img img-responsive">
         </div> 
