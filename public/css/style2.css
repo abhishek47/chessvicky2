@@ -7747,9 +7747,19 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
   margin-top: 35px;
 }
 
+#upic {
+  padding: 25px;
+  padding-left: 30px;
+}
+
 @media (max-width: 767px) {
   .team-single-content .member-info {
     margin-top: 20px;
+  }
+
+  #upic {
+    padding: 15px;
+    margin: 0 auto;
   }
 }
 

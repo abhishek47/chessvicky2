@@ -4,7 +4,7 @@
                     <div class="col col-lg-12 col-md-12">
                         <div class="row member panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);background: #fffbe0;">
                            <div class="panel-heading"></div>
-                            <div class="col col-sm-2" style="padding: 25px;padding-left: 30px;">
+                            <div class="col col-sm-2" id="upic">
                                 <div class="member-pic">
                                     <img src="images/team-s2/img-5.jpg" style="width: 140px;height: 140px;" alt class="img img-responsive img-circle">
                                 </div>

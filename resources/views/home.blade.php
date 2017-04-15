@@ -17,7 +17,7 @@
         <!-- end page-title -->
 
     <!-- start team-single-content -->
-       @include('layouts.ucard');
+       @include('layouts.ucard')
      
 
 
