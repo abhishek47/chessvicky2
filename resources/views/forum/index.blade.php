@@ -26,32 +26,7 @@
 
                     <div class="blog-content col col-lg-9 col-md-8">
 
-
-
-                        @foreach($questions->chunk(2) as $items)
-	                       <div class="comments">
-                      <ol>
-	   
-	                         @foreach($items as $question)
-
-		                            @include('forum.article')
-                                    <hr>
-
-	                           @endforeach 
-	                           </ol> 
-	                        </div>
-	                      @endforeach    
-
-                        <div class="row page-pagination-wrapper">
-                            <div class="col col-xs-12">
-                                    {{ $questions->links() }}
-                                
-                            </div>
-                        </div>    
-                        
-                        <br>
-
-                         <div class="panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);background: #fffbe0;">
+                        <div class="panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);background: #fffbe0;">
                            <div class="panel-heading">
                            	  <h4>Post New Question</h4>
                            </div>
@@ -75,7 +50,32 @@
 	                           </form>
                            </div>
                         	
-                        </div>                    
+                        </div>       
+
+                        @foreach($questions->chunk(2) as $items)
+	                       <div class="comments">
+                      <ol>
+	   
+	                         @foreach($items as $question)
+
+		                            @include('forum.article')
+                                    <hr>
+
+	                           @endforeach 
+	                           </ol> 
+	                        </div>
+	                      @endforeach    
+
+                        <div class="row page-pagination-wrapper">
+                            <div class="col col-xs-12">
+                                    {{ $questions->links() }}
+                                
+                            </div>
+                        </div>    
+                        
+                        
+
+                                     
                     </div> <!-- end blog-content -->
 
                     <div class="blog-sidebar col col-lg-3 col-md-4 col-sm-5">
