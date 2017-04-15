@@ -9,7 +9,7 @@
                                     <img src="images/team-s2/img-5.jpg" style="width: 140px;height: 140px;" alt class="img img-responsive img-circle">
                                 </div>
                             </div>
-                            <div class="col col-sm-10" style="padding: 20px;">
+                            <div class="col col-sm-10" id="udetails">
                                 <div class="member-details">
                                     <h3>{{ Auth::user()->name }} <span style="font-size: 16px;"><a href="/user/edit"><i class="fa fa-edit"></i>  Edit Profile</a></span></h3>
                                     <span>@  {{ Auth::user()->username }}</span>

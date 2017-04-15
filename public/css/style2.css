@@ -7752,6 +7752,11 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
   padding-left: 30px;
 }
 
+#udetails {
+  padding: 20px;
+}
+
+
 @media (max-width: 767px) {
   .team-single-content .member-info {
     margin-top: 20px;
@@ -7763,6 +7768,10 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
 
   #upic img {
     margin: 0 auto;
+  }
+
+  #udetails {
+    padding-top: 5px;
   }
 }
 
