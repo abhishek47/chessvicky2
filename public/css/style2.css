@@ -7758,7 +7758,10 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
   }
 
   #upic {
-    padding: 15px;
+    padding: 5px;
+  }
+
+  #upic img {
     margin: 0 auto;
   }
 }
