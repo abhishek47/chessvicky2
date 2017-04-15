@@ -50,7 +50,9 @@
 	                           </form>
                            </div>
                         	
-                        </div>       
+                        </div>
+
+                        <br>       
 
                         @foreach($questions->chunk(2) as $items)
 	                       <div class="comments">
