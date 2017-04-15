@@ -30,19 +30,20 @@
 	                        <div class="row blog-section-grids">
 	   
 	                         @foreach($items as $post)
-
+    							<div class="comments">
+    							 <ol>
 		                            @include('posts.article')
-
+		                          </ol>  
+                                </div>
 	                           @endforeach 
 	                            
 	                        </div>
 	                      @endforeach    
 
                         <div class="row page-pagination-wrapper">
-                            <div class="comments">
-                               <ol>
+                            <div class="col col-xs-12">
                                     {{ $posts->links() }}
-                                </ol>
+                                
                             </div>
                         </div>                        
                     </div> <!-- end blog-content -->
