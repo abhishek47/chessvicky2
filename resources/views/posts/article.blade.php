@@ -1,4 +1,4 @@
-<div class="col col-md-6 col-xs-6">
+<!-- <div class="col col-md-6 col-xs-6">
     <div class="grid panel panel-default" id="article">
        <div class="entry-media">
             <img src="{{ empty($post->featured_img) ? '/images/slider/slider-3.jpg' : $post->featured_img }}" style="height: 256px;width: 100%;" alt class="img img-responsive">
@@ -19,4 +19,28 @@
             
         </div>
     </div>
-</div>
+</div> -->
+
+
+
+ <li style="margin-bottom: 10px;">
+    <div class="article">
+        <div class="author-pic hidden-xs">
+            <img style="width: 60px;height: 60px;" src="/images/testimonials/img-1.jpg" alt="">
+        </div>
+        <div class="details">
+            <div class="author-meta">
+                <div class="name"><h4 style="font-size: 12px;">{{ $post->author }}</h4></div>
+                <div class="date"><span>{{ $post->created_at->diffForHumans() }}</span></div>
+            </div>
+            <div class="comment-content">
+                <a href="/blog/{{$post->slug}}"><h4 style="font-size: 24px;margin-bottom: 10px;">{{ $post->title }}</h4> </a>
+                <p>{{ substr($post->intro, 0, 300) }}...</p> 
+
+                <p><small><i class="fa fa-comments"></i> <span>{{ $post->tags }}</span></small></p>
+            </div>
+            
+        </div>
+    </div>
+   
+</li>
