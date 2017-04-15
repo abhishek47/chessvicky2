@@ -404,7 +404,7 @@
                                     <img src="images/testimonials/img-2.jpg" alt class="img img-responsive">
                                 </div>
                                 <div class="details">
-                                    <h4>Vidit Gurathi</h4>
+                                    <h4>GM Vidit Gurathi</h4>
                                     <div class="rating">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -420,7 +420,7 @@
                                     <img src="images/testimonials/img-1.jpg" alt class="img img-responsive">
                                 </div>
                                 <div class="details">
-                                    <h4>Pravin Wani</h4>
+                                    <h4>GM Pravin Thipsay</h4>
                                     <div class="rating">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>

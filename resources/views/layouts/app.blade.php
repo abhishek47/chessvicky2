@@ -41,6 +41,7 @@
 
     <!-- Custom styles for this template -->
     <link href="/css/style.css" rel="stylesheet">
+      <link href="/css/style2.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/chessboard.css">
 
@@ -127,6 +128,7 @@
                                     <li><a href="/books">Books</a></li>
                                     <li><a href="/puzzles">Puzzles</a></li>
                                     <li><a href="/quiz">Quizzes</a></li>
+                                    <li><a href="/calendar">Calendar</a></li>
                                     <li><a href="/events">Events</a></li>
                                 </ul>
                             </li>
@@ -147,11 +149,13 @@
                                     </a>
 
                                     <ul>
+                                        <li><a href="/home"><i class="fa fa-home"></i> Home</a></li>
+                                        <li><a href="/profile"><i class="fa fa-user"></i> Profile</a></li>
                                         <li>
                                             <a href="{{ route('logout') }}"
                                                 onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
-                                                Logout
+                                                <i class="fa fa-sign-out"></i> Logout
                                             </a>
 
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
