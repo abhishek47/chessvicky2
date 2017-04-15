@@ -72,3 +72,4 @@ Route::post('/quiz/questions/{id}/delete', 'QuizQuestionsController@delete');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/user/edit', 'ProfileController@edit');

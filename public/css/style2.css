@@ -3302,7 +3302,7 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
 
 .site-footer .upper-footer {
   background-color: #152029;
-  padding: 115px 0;
+  padding: 55px 0;
 }
 
 @media (max-width: 1199px) {
@@ -7367,18 +7367,19 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
 }
 
 .careers-vacancy-content .apply-job {
-  margin-top: 70px;
+  margin-top: 0px;
 }
 
 @media (max-width: 991px) {
   .careers-vacancy-content .apply-job {
-    margin: 50px 0 100px;
+    margin: 0px 0 5px;
   }
 }
 
 @media (max-width: 767px) {
   .careers-vacancy-content .apply-job {
-    margin: 50px 0 80px;
+    margin: 0px 0 5px;
+    padding: 10px;
   }
 }
 
