@@ -25,7 +25,7 @@ class ForumAnswersController extends Controller
 
         $question->answers()->save($answer);
 
-        redirect('/forum/' . $question->slug);
+        return redirect('/forum/' . $question->slug);
     }
 
     /**

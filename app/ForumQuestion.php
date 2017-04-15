@@ -9,7 +9,7 @@ class ForumQuestion extends Model
 
 	 public function answers()
      {
-     	return $this->hasMany(ForumAnswer::class);
+     	return $this->hasMany(ForumAnswer::class)->latest();
      }
 
 

@@ -40,7 +40,6 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="/css/style.css" rel="stylesheet">
       <link href="/css/style2.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/chessboard.css">

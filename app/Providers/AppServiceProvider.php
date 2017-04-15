@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 
 use App\Post;
+use App\ForumQuestion;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,6 +28,13 @@ class AppServiceProvider extends ServiceProvider
              $latestPosts = Post::latest()->limit(3)->get();             
 
              $view->with(compact('archives', 'latestPosts'));             
+        });
+
+         view()->composer('forum.sidebar', function($view) {
+
+             $latestQues = ForumQuestion::latest()->limit(3)->get();             
+
+             $view->with(compact('latestQues'));             
         });
     }
 
