@@ -13,13 +13,20 @@
                                 <div class="member-details">
                                     <h3>{{ Auth::user()->name }} <span style="font-size: 16px;"><a href="/user/edit"><i class="fa fa-edit"></i>  Edit Profile</a></span></h3>
                                     <span>@  {{ Auth::user()->username }}</span>
-                                    <p>Hasib has over 15 years of consulting experience in the US, Europe, Japan, and across the Asia Pacific region. He advises clients on strategy formulation, strategic M&amp;A, turnaround &amp; restructuring, market and channel development improvement issues.</p>
+                                    <p>{{ empty(Auth::user()->profile->bio) ? 'Bio not added!' : Auth::user()->profile->bio }}</p>
                                      <div class="row">
                                       <div class="col col-md-6">
                                         <ul class="member-info">
                                          
                                             <li><i class="fa fa-envelope"></i> {{ Auth::user()->email }}</li>
-                                            <li><i class="fa fa-phone"></i> <b>Plan : </b> Freemium &nbsp; <span style="font-size: 14px;"><a href="/user/upgrade"><i class="fa fa-level-up"></i>  Upgrade Plan</a></span></li>
+                                            <li><i class="fa fa-phone"></i>
+                                               <b>Plan : </b> {{ Auth::user()->profile->plan ? 'Premium' : 'Freemium' }} &nbsp;
+                                               @if(Auth::user()->plan == 0) 
+                                                   <span style="font-size: 14px;">
+                                                       <a href="/user/upgrade"><i class="fa fa-level-up"></i>  Upgrade Plan</a>
+                                                   </span>
+                                               @endif
+                                             </li>
                                             <li><i class="fa fa-clock-o"></i> Member Since <b>{{ Auth::user()->created_at->toFormattedDateString() }} </b></li>
                                            
                                         </ul>
@@ -27,9 +34,9 @@
                                        <div class="col col-md-6">
                                         <ul class="member-info">
                                          
-                                            <li><i class="fa fa-user"></i> <b>Leaderboard Rank :</b> 3 </li>
-                                            <li><i class="fa fa-tasks"></i> <b>Points :</b> 2018</li>
-                                            <li><i class="fa fa-money"></i> <b>Coins :</b> 23 &nbsp; <span style="font-size: 14px;"><a href="/user/upgrade"><i class="fa fa-shopping-cart"></i>  Buy Coins</a> &nbsp;|&nbsp; <span style="font-size: 14px;"><a href="/user/upgrade"><i class="fa fa-bank"></i>  Redeem Coins</a></span></span></li>
+                                            <li><i class="fa fa-user"></i> <b>Leaderboard Rank :</b> {{ Auth::user()->profile->rank }} </li>
+                                            <li><i class="fa fa-tasks"></i> <b>Points :</b> {{ Auth::user()->profile->points }}</li>
+                                            <li><i class="fa fa-money"></i> <b>Coins :</b> {{ Auth::user()->profile->coins }} &nbsp; <span style="font-size: 14px;"><a href="/user/upgrade"><i class="fa fa-shopping-cart"></i>  Buy Coins</a> &nbsp;|&nbsp; <span style="font-size: 14px;"><a href="/user/upgrade"><i class="fa fa-bank"></i>  Redeem Coins</a></span></span></li>
                                            
                                         </ul>
                                        </div> 

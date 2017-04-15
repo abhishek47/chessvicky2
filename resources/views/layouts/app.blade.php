@@ -60,6 +60,9 @@
 
        <script src="/js/jquery.min.js"></script>
 
+       <script src="/js/sweetalert.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
+
 </head>
 
 <body class="home-style2">
@@ -298,6 +301,30 @@
     <script src="/js/script.js"></script>
 
      <script src="/js/chessboard.js"></script>
+
+     @if( session('flash_title') && session('flash_message'))
+             <script type="text/javascript">
+                 swal({
+          title: "{{ session('flash_title') }}",
+          text: "{{ session('flash_message') }}",
+          type: "success",
+          confirmButtonText: "Cool"
+        });
+      </script>
+     @endif
+
+      @if( session('error_title') && session('error_message'))
+             <script type="text/javascript">
+                 swal({
+          title: "{{ session('error_title') }}",
+          text: "{{ session('error_message') }}",
+          type: "error",
+          confirmButtonText: "Ok"
+        });
+      </script>
+     @endif
+
+   
     
 </body>
 </html>
