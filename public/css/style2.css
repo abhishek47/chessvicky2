@@ -620,7 +620,7 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
 }
 
 .page-title {
-  background: url("../images/page-title/img-2.jpg") 20% 40%/cover no-repeat local;
+  background: url("../images/page-title/img-2.jpg") center bottom/cover no-repeat local;
   text-align: center;
   position: relative;
 }
@@ -633,13 +633,13 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
 
 .page-title > .container {
   position: relative;
-  height: 290px;
+  height: 310px;
   z-index: 100;
 }
 
 @media (max-width: 991px) {
   .page-title > .container {
-    height: 120px;
+    height: 140px;
   }
 }
 
