@@ -27,7 +27,6 @@
                     <div class="blog-content col col-lg-9 col-md-8">
 
                         @foreach($posts->chunk(2) as $items)
-	                        <div class="row blog-section-grids">
 	   
 	                         @foreach($items as $post)
     							<div class="comments">
@@ -38,7 +37,7 @@
                                 </div>
 	                           @endforeach 
 	                            
-	                        </div>
+	                       
 	                      @endforeach    
 
                         <div class="row page-pagination-wrapper">
