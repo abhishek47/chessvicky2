@@ -206,7 +206,7 @@
                                             <img src="/images/blog/thumb/img-1.jpg" alt>
                                         </div>
                                         <div class="entry-details">
-                                            <h5><a href="#">ChessVicky Awarded as Nashik's Best Startup</a></h5>
+                                            <h5><a href="#">GM Vishy Anand wishes to give a video lecture on ChessVicky.</a></h5>
                                             <span class="date"><i class="fa fa-clock-o"></i> March 29, 2017</span>
                                         </div>
                                     </li>
@@ -215,7 +215,7 @@
                                             <img src="/images/blog/thumb/img-2.jpg" alt>
                                         </div>
                                         <div class="entry-details">
-                                            <h5><a href="#">ChessVicky affiliated with FIDE</a></h5>
+                                            <h5><a href="#">ChessVicky officially working with FIDE &amp; AICF.</a></h5>
                                             <span class="date"><i class="fa fa-clock-o"></i> March 09, 2017</span>
                                         </div>
                                     </li>

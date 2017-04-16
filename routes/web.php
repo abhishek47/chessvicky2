@@ -15,6 +15,7 @@ Route::get('/', 'PagesController@index');
 Route::get('/features', 'PagesController@features');
 Route::get('/contact', 'PagesController@contact');
 
+
 Route::get('/blog', 'PostsController@index');
 Route::post('/blog', 'PostsController@store');
 Route::get('/blog/{post}', 'PostsController@show');
@@ -23,6 +24,13 @@ Route::get('/blog/{id}/edit', 'PostsController@edit');
 Route::post('/blog/{id}/update', 'PostsController@update');
 Route::post('/blog/{id}/delete', 'PostsController@delete');
 
+Route::get('/calendar', 'CalendarController@index');
+Route::post('/calendar', 'CalendarController@store');
+Route::get('/calendar/{event}', 'CalendarController@show');
+Route::get('/calendar/create', 'CalendarController@create');
+Route::get('/calendar/{id}/edit', 'CalendarController@edit');
+Route::post('/calendar/{id}/update', 'CalendarController@update');
+Route::post('/calendar/{id}/delete', 'CalendarController@delete');
 
 Route::get('/forum', 'ForumQuestionsController@index');
 Route::get('/forum/{question}', 'ForumQuestionsController@show');
