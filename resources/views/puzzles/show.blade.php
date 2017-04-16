@@ -31,28 +31,67 @@
                             <ol>
                               
                                 <li style="margin-bottom: 10px;">
-                                <div class="article">
-                                    <div class="details">
+                                <div class="article panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);">
+                                   
+                                      <div class="panel-heading" style="padding-bottom: 0px;background: #f8f8f8">
                                         <div class="author-meta">
-                                            <div class="name"><h4 style="font-size: 32px;">Check Mate in {{ $puzzle->moves }} moves.</h4></div>
+                                            <div class="name"><h4 style="font-size: 28px;">Check Mate in {{ $puzzle->moves }} moves.</h4></div>
                                             <div class="date"><span style="font-size: 22px;color: #f39c12;font-weight: bold;">[ {{ $puzzle->points }} Points ]</span></div>
+                                            <p style="color: #0b0b0b;"><b>White</b> to move! Click on a white piece. Check and Mate the <b>black</b> oppnent.</p>
                                         </div>
+                                      </div>  
                                         <div class="comment-content">
+
+                                            <script src="/js/chess.js"></script>
+
+                                            <div class="col-sm-8" style="padding: 14px;">
+                                                
+                                              <div id="board" style="width: 90%;"></div> 
+
+                                            <br>
+
+                                            </div>
+
+                                            <div class="col-sm-4">
+
+                                                 <i id="source" data-val="0" hidden="true"></i>
+                          <i id="dest" data-val="0" hidden="true"></i>
+                                                
+
+                                                <p id="status"></p>
+                                                <p id="pgndisp"></p>
+                                            </div>
+
+
+                                        <form>
+                                            <input type="hidden" name="startfen" id="startfen" value="<?= $puzzle->start_position; ?>">
+                                            <input type="hidden" name="moves" id="moves" value="<?= $puzzle->moves; ?>">
+                                            <input type="hidden" name="pgn" id="pgn" value="<?= $puzzle->solution; ?>">
+                                            <input type="hidden" name="finalfen" id="finalfen" value="<?= $puzzle->final_position; ?>">
+                                        </form>
+  
                                            
                                         </div>
                                        
                                     </div>
 
                                     
-                                </div>
+                               
                                
                             </li>    
 
                             </ol>
-
+                            <hr>
 
                         </div>
 
+                        <div class="panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);padding: 10px;">
+                           <a class="btn btn-lg btn-danger" href="/user/challenge"><b>Challenge Friends</b></a> &nbsp;
+                           <a class="btn btn-lg btn-info" href="/puzzles/random"><b>New Puzzle</b></a> &nbsp;
+                           <a class="btn btn-lg btn-success" href="/user/save?type=puzzle&id={{$puzzle->id}}"><b>Save Puzzle</b></a>
+
+                        </div>
+ 
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <!-- CV AD 3 -->
                         <ins class="adsbygoogle"
@@ -63,6 +102,10 @@
                         <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
+
+                        <br>
+
+                        
 
                         
 
@@ -88,5 +131,13 @@
 
 
 
+
+@endsection
+
+
+
+@section('scripts')
+
+  <script src="/js/puzzle.js"></script>
 
 @endsection

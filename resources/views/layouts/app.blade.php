@@ -301,6 +301,8 @@
 
      <script src="/js/chessboard.js"></script>
 
+     @yield('scripts')
+
      @if( session('flash_title') && session('flash_message'))
              <script type="text/javascript">
                  swal({

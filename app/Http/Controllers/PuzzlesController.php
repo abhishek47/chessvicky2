@@ -70,9 +70,14 @@ class PuzzlesController extends Controller
     public function random()
     {
         $count = Puzzle::count();
-        $rid = rand(1, $count);
-        $puzzle = Puzzle::find($rid);
         
+        $puzzle = null;
+        
+        while($puzzle == null){
+          $rid = rand(1, $count);
+          $puzzle = Puzzle::find($rid);
+         }
+
         return view('puzzles.show', compact('puzzle'));
     }
 
