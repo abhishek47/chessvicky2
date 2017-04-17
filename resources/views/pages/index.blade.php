@@ -14,7 +14,7 @@
                     <ul>
                         <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000" data-thumb="images/page-title/img-1.jpg"  data-title="We are Consult Care" >
                             <!-- MAIN IMAGE -->
-                            <img src="images/page-title/img-1.jpg"  alt="newslide2014_1"  data-bgposition="bottom" data-bgfit="cover" data-bgrepeat="no-repeat">
+                            <img src="images/slider/slider-1.jpg"  alt="newslide2014_1"  data-bgposition="bottom" data-bgfit="cover" data-bgrepeat="no-repeat">
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
