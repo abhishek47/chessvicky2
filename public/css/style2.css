@@ -8944,9 +8944,63 @@ stats {
 @media (max-width: 480px) { 
 }
 
+.btn-lg {
+  border-radius: 0px;
+  font-weight: bold;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #bc2c00;
+  border-color: #932200;
+}
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #e03300;
+}
+
+.btn-info {
+   color: #fff;
+  background-color: #007084;
+  border-color: #005a6b;
+  
+}
+
+.btn-info:hover {
+  color: #fff;
+  background-color: #0195af;
+}
+
+.btn-success {
+   color: #fff;
+  background-color: #019e13;
+  border-color: #00820e;
+  
+}
+
+.btn-success:hover {
+  color: #fff;
+  background-color: #01c118;
+}
+
+.btn-social {
+  color: #fff;
+  background-color: #0048bc;
+  border-color: #003791;
+}
+
+.btn-social:hover {
+  color: #fff;
+  background-color: #0056e0;
+}
 
 
-
+#puzzle-detail h3{
+   font-size: 18px;
+   border-bottom: 1px solid #ccc;
+   padding-bottom: 8px;
+}
 
 
 

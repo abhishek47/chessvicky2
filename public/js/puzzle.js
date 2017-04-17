@@ -1,37 +1,54 @@
 var init = function() {
 
 //--- start example JS ---
-var board,board2
+var board
   game = new Chess(),
-  game2 = new Chess(),
-  finalfenEl = $('#finalfen');
-  var solution = $('#finalfen').data('val'); 
-  startfenEl = $('#startfen');
-  pgnele = $('#pgn');
-var completed = false;
+  startfenEl = $('#startfen'),
+  pgn = $('#pgn').val(),
+  start = $('#startfen').val(),
+  solution = $('#finalfen').val(),
+  moves = $('#moves').val(); 
+
+  var curMove = 0;
+  var steps = pgn.split(',');
+  var completed = false;
 
 
+var updateStatus = function(move) {
 
+    // checkmate?
+  if (game.in_checkmate() === true) {
+    swal('Woo!!You have solved the puzzle!');
+  }
 
-var onDrop = function(source, target, piece, newPos, oldPos, orientation) {
-  console.log("Source: " + source);
-  console.log("Target: " + target);
-  console.log("Piece: " + piece);
-  console.log("New position: " + ChessBoard.objToFen(newPos));
-  console.log("Old position: " + ChessBoard.objToFen(oldPos));
-  console.log("Orientation: " + orientation);
-  console.log("--------------------");
-  board.position(ChessBoard.objToFen(newPos));
-  startfenEl.val(board.fen());
-};
+  // draw?
+  else if (game.in_draw() === true) {
+    status = 'Game over, drawn position';
+  }
 
-
-
-var updateStatus = function() {
-  
-   
+  // game still on
+  else {
         
+        if(move != null && move.san == steps[curMove]) {
+              curMove++;
+              moves--;
+             changePlayer();
+             setTimeout(
+            function() 
+            {
+              playComputer();
+            }, 2000);
+             
+        } else {
+          game.undo();
+
+        }  
+
         board.position(game.fen());
+        
+  }
+        
+        
   
 };
 
@@ -39,13 +56,55 @@ var cfg = {
   draggable: false,
   position: 'start',
   sparePieces: false,
+  snapbackSpeed: 500,
+  snapSpeed: 100,
   pieceTheme: 'http://www.willangles.com/projects/chessboard/img/chesspieces/wikipedia/{piece}.png',
-  onDrop: onDrop,
+  
 };
 board = ChessBoard('board', cfg);
 
 updateStatus();
 
+
+ var playAudio = function() {
+    var audio = new Audio('../audio/mov.wav');
+    audio.play();
+};
+
+
+function changePlayer()
+{
+    $('#movesleft').html(moves);
+  $('#player').toggleClass('hidden');
+             $('#comp').toggleClass('hidden'); 
+}
+ 
+
+ function playComputer(){
+     
+     if(!completed) {
+       move = game.move(steps[curMove]);
+       $('#board .square-55d63').css('background', '');
+
+        var background = '#a9a9a9';
+      if ($('#board .square-' + move.to).hasClass('black-3c85d') === true) {
+        background = '#696969';
+      }
+       $('#board .square-' + move.to).css('background', background);
+
+       var background = '#a9a9a9';
+      if ($('#board .square-' + move.from).hasClass('black-3c85d') === true) {
+        background = '#696969';
+      }
+       $('#board .square-' + move.from).css('background', background);
+       playAudio();
+       curMove++;
+       moves--;
+       board.position(game.fen());
+       changePlayer();
+     }  
+
+ }
 
 
       function clickOnSquare(evt) {
@@ -87,7 +146,7 @@ updateStatus();
              
 
             // illegal move
-            if (move != null) {
+            if (move != null ) {
                board.position(game.fen());
                squareEl.css('background', background);
                   var background = '#a9a9a9';
@@ -95,16 +154,18 @@ updateStatus();
                       background = '#696969';
                     }
                      $('#board .square-' + source).css('background', background);
-               // playAudio();
+                  playAudio();
                
                 
             } else {
-                
-                
-                  $('#board .square-55d63').css('background', '');
-                 } 
+
+                   $('#board .square-55d63').css('background', '');
+            } 
+
+
+
                   $('#source').data('val', 0);
-                  updateStatus();
+                  updateStatus(move);
               }
 
             
@@ -117,6 +178,10 @@ updateStatus();
       }
 
       $("#board").on("click", ".square-55d63", clickOnSquare);
+      
+      console.log(start);
+      game.load(start + ' w KQkq - 1 3');
+      board.position(game.fen());
 
 
 }; // end init()
