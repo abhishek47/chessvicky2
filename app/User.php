@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+use App\Puzzle;
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -48,4 +50,19 @@ class User extends Authenticatable
      {
         return $this->hasOne(Profile::class);
      }
+
+    public function solvedPuzzles()
+    {
+        return $this->belongsToMany(Puzzle::class)->withTimeStamps();
+    }
+
+    public function hasSolvedPuzzle(Puzzle $puzzle)
+    {
+        return $this->solvedPuzzles->contains($puzzle);
+    }
+
+    public function hasSavedPuzzle(Puzzle $puzzle)
+    {
+        return \Auth::user()->profile->savedPuzzles->contains($puzzle);
+    }
 }

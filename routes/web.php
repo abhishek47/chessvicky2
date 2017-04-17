@@ -81,3 +81,17 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/user/edit', 'ProfileController@edit');
+
+
+
+
+/* AXIOS ROUTES */
+Route::post('/user/puzzles', 'ProfileController@updatePuzzles');
+Route::get('/user/puzzles', 'ProfileController@solvedPuzzles');
+Route::post('/user/challenge', 'ProfileController@challengeUser');
+
+
+Route::post('/profile/puzzle/save', 'ProfileController@savePuzzle');
+Route::post('/profile/puzzle/unsave', 'ProfileController@unsavePuzzle');
+
+

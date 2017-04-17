@@ -97,11 +97,11 @@
 
                         <div class="col col-md-3">
                             <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a target="_blank" href="https://www.facebook.com/Chessvicky/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a target="_blank" href="https://twitter.com/chessvicky"><i class="fa fa-twitter"></i></a></li>
+                                <li><a target="_blank" href="https://www.linkedin.com/in/chessvicky/"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a target="_blank" href="https://www.youtube.com/channel/UCI9Egzqx_ntmfK4cEM3O8wA"><i class="fa fa-youtube"></i></a></li>
+                                <li><a target="_blank" href="https://www.instagram.com/chessvickyofficial/"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div> <!-- end row -->
@@ -206,7 +206,7 @@
                                             <img src="/images/blog/thumb/img-1.jpg" alt>
                                         </div>
                                         <div class="entry-details">
-                                            <h5><a href="#">GM Vishy Anand wishes to give a video lecture on ChessVicky.</a></h5>
+                                            <h5><a href="#">GM Vishy Anand showed interest to give a video lecture on ChessVicky.</a></h5>
                                             <span class="date"><i class="fa fa-clock-o"></i> March 29, 2017</span>
                                         </div>
                                     </li>
@@ -215,7 +215,7 @@
                                             <img src="/images/blog/thumb/img-2.jpg" alt>
                                         </div>
                                         <div class="entry-details">
-                                            <h5><a href="#">ChessVicky officially working with FIDE &amp; AICF.</a></h5>
+                                            <h5><a href="#">ChessVicky is soon going to officially work with FIDE &amp; AICF.</a></h5>
                                             <span class="date"><i class="fa fa-clock-o"></i> March 09, 2017</span>
                                         </div>
                                     </li>
@@ -251,11 +251,11 @@
                             <div class="widget social-media-widget">
                                 <h3>Social media</h3>
                                 <ul class="">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a target="_blank" href="https://www.facebook.com/Chessvicky/"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a target="_blank" href="https://twitter.com/chessvicky"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a target="_blank" href="https://www.linkedin.com/in/chessvicky/"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a target="_blank" href="https://www.youtube.com/channel/UCI9Egzqx_ntmfK4cEM3O8wA"><i class="fa fa-youtube"></i></a></li>
+                                    <li><a target="_blank" href="https://www.instagram.com/chessvickyofficial/"><i class="fa fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -300,6 +300,8 @@
     <script src="/js/script.js"></script>
 
      <script src="/js/chessboard.js"></script>
+
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
      @yield('scripts')
 

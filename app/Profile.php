@@ -12,4 +12,9 @@ class Profile extends Model
      {
      	return $this->belongsTo(User::class);
      }
+
+     public function savedPuzzles()
+    {
+        return $this->belongsToMany(Puzzle::class);
+    }
 }
