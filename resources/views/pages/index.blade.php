@@ -76,13 +76,13 @@
                         </li>
                         <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000" data-thumb="images/slider/slider-1.jpg" data-title="We are Consult Care" >
                             <!-- MAIN IMAGE -->
-                            <img src="images/slider/slider-1.jpg"  alt="newslide2014_1"  data-bgposition="0%" data-bgfit="cover" data-bgrepeat="no-repeat">
+                            <img src="images/slider/slider-5.jpg"  alt="newslide2014_1"  data-bgposition="0%" data-bgfit="cover" data-bgrepeat="no-repeat">
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
                             <div class="tp-caption main-heading customin customout"
-                                data-x="25"
-                                data-y="110"
+                                data-x="2"
+                                data-y="180"
                                 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                                 data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                                 data-speed="1400"
@@ -100,8 +100,8 @@
 
                             <!-- LAYER NR. 2 -->
                             <div class="tp-caption slider-text rs-parallaxlevel-0"
-                                data-x="25" 
-                                data-y="360"
+                                data-x="2" 
+                                data-y="430"
                                 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                                 data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                                 data-speed="2000"
@@ -117,8 +117,8 @@
 
                             <!-- LAYER NR. 3 -->
                             <div class="tp-caption lfb ltt"
-                                data-x="25"
-                                data-y="470"
+                                data-x="2"
+                                data-y="540"
                                 data-speed="1800"
                                 data-start="4500"
                                 data-easing="Power4.easeOut"
