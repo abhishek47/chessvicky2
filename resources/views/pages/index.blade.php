@@ -12,9 +12,9 @@
             <div class="tp-banner-container">
                 <div class="tp-banner" >
                     <ul>
-                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000" data-thumb="images/slider/slider-1.jpg"  data-title="We are Consult Care" >
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000" data-thumb="images/page-title/img-1.jpg"  data-title="We are Consult Care" >
                             <!-- MAIN IMAGE -->
-                            <img src="images/slider/slider-1.jpg"  alt="newslide2014_1"  data-bgposition="10%" data-bgfit="cover" data-bgrepeat="no-repeat">
+                            <img src="images/page-title/img-1.jpg"  alt="newslide2014_1"  data-bgposition="bottom" data-bgfit="cover" data-bgrepeat="no-repeat">
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
@@ -74,9 +74,9 @@
                                 </div> <!-- link-button -->
                             </div>
                         </li>
-                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000" data-thumb="images/page-title/img-1.jpg" data-title="We are Consult Care" >
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000" data-thumb="images/slider/slider-1.jpg" data-title="We are Consult Care" >
                             <!-- MAIN IMAGE -->
-                            <img src="images/page-title/img-1.jpg"  alt="newslide2014_1"  data-bgposition="bottom" data-bgfit="cover" data-bgrepeat="no-repeat">
+                            <img src="images/slider/slider-1.jpg"  alt="newslide2014_1"  data-bgposition="0%" data-bgfit="cover" data-bgrepeat="no-repeat">
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
@@ -85,7 +85,7 @@
                                 data-y="110"
                                 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                                 data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                                data-speed="1800"
+                                data-speed="1400"
                                 data-start="500"
                                 data-easing="Power3.easeInOut"
                                 data-splitin="chars"
