@@ -28,7 +28,13 @@
  <li style="margin-bottom: 10px;">
     <div class="article">
         <div class="author-pic hidden-xs">
-            <img style="width: 60px;height: 60px;" src="/images/testimonials/img-1.jpg" alt="">
+          @if($question->user->profile->photo)
+            <img style="width: 60px;height: 60px;" src="{{ $question->user->profile->photo }}" alt="">
+          @else
+           <span class="chatter_avatar_circle" style="background-color:#<?= \DevDojo\Chatter\Helpers\ChatterHelper::stringToColorCode($question->user->name) ?>">
+                {{ ucfirst(substr($question->user->name, 0, 1)) }}
+            </span>
+          @endif  
         </div>
         <div class="details">
             <div class="author-meta">
@@ -37,7 +43,7 @@
             </div>
             <div class="comment-content">
                 <a href="/forum/{{$question->slug}}"><h4 style="font-size: 24px;margin-bottom: 10px;">{{ $question->title }}</h4> </a>
-                <p>{{ substr($question->body, 0, 300) }}...</p> 
+                <p>{{ substr(strip_tags($question->body), 0, 200) }}@if(strlen(strip_tags($question->body)) > 200){{ '...' }}@endif</p> 
 
                 <p><small><i class="fa fa-comments"></i> <span>{{ count($question->answers) }}</span> replies</small></p>
             </div>

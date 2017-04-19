@@ -6,7 +6,13 @@
                            <div class="panel-heading"></div>
                             <div class="col col-sm-2" id="upic">
                                 <div class="member-pic">
-                                    <img src="images/team-s2/img-5.jpg" style="width: 140px;height: 140px;" alt class="img img-responsive img-circle">
+                                    @if( Auth::user()->profile->photo)
+                                      <img class="img img-responsive" style="width: 140px;height: 140px;" src="{{  Auth::user()->profile->photo }}" alt="">
+                                    @else
+                                     <span class="chatter_avatar_circle large" style="background-color:#<?= \DevDojo\Chatter\Helpers\ChatterHelper::stringToColorCode( Auth::user()->name) ?>">
+                                          {{ ucfirst(substr( Auth::user()->name, 0, 1)) }}
+                                      </span>
+                                     @endif 
                                 </div>
                             </div>
                             <div class="col col-sm-10" id="udetails">

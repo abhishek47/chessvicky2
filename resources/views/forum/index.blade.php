@@ -7,10 +7,10 @@
         <section class="page-title">
             <div class="container">
                 <div class="title-box">
-                    <h1>Forum | Questions</h1>
+                    <h1>Welcome to ChessVicky Forums</h1>
                     <ol class="breadcrumb">
                         <li><a href="/">Home</a></li>
-                        <li>Forum</li>
+                        <li>Forums</li>
                     </ol>
                 </div>
             </div> <!-- end container -->

@@ -77,7 +77,9 @@
                     </div> <!-- end blog-content -->
 
                     <div class="blog-sidebar col col-lg-3  col-md-4  col-sm-5">
+                      <div class="sidebar">
                         @include('posts.sidebar')
+                       </div> 
                     </div>                    
                 </div>
             </div> <!-- end container -->

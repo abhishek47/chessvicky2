@@ -9029,3 +9029,23 @@ stats {
   background: rgba(50,205,50, 0.6);
 }
 
+span.chatter_avatar_circle {
+    width: 60px;
+    height: 60px;
+    line-height: 62px;
+    text-align: center;
+    background: #263238;
+    display: inline-block;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+span.chatter_avatar_circle.large {
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  font-size: 47px;
+  padding-top: 37px;
+}

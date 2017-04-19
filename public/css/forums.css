@@ -1,0 +1,77 @@
+#chatter #chatter_hero h1 { 
+    font-size: 44px;
+}
+
+#chatter #chatter_hero p {
+   font-size: 22px;
+}
+
+#chatter #chatter_hero {
+
+  background: url("../images/page-title/img-2.jpg") center bottom/cover no-repeat local;
+  text-align: center;
+  position: relative;
+  padding-top: 60px;
+
+}
+
+#chatter #chatter_hero {
+  position: relative;
+  height: 310px;
+  z-index: 100;
+}
+
+@media (max-width: 991px) {
+  #chatter #chatter_hero {
+    height: 140px;
+  }
+
+  #chatter ul.discussions li a.discussion_list .chatter_middle, #chatter ul.discussions li .chatter_posts .chatter_middle {
+    float: none;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#chatter ul.discussions li a.discussion_list .chatter_right, #chatter ul.discussions li .chatter_posts .chatter_right {
+  float: none;
+  position: relative;
+  right: 0;
+}
+}
+
+
+#chatter.chatter_home .chatter_middle p  {
+	margin-top: 10px;
+	font-size: 16px;
+}
+
+#chatter ul.discussions li a.discussion_list .chatter_middle span.chatter_middle_details, #chatter ul.discussions li .chatter_posts .chatter_middle span.chatter_middle_details
+{
+	padding-top: 25px;
+	font-size: 14px;
+}
+
+#chatter ul.discussions li a.discussion_list .chatter_middle h3.chatter_middle_title, #chatter ul.discussions li .chatter_posts .chatter_middle h3.chatter_middle_title
+{
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+#chatter .chatter_avatar span.chatter_avatar_circle {
+   
+    font-size: 23px;
+    font-weight: bold;
+}
+
+#chatter ul.discussions li a.discussion_list .chatter_middle, #chatter ul.discussions li .chatter_posts .chatter_middle {
+float: none;
+	
+}
+
+#chatter .conversation ul.discussions li .chatter_posts .chatter_middle {
+	float: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
