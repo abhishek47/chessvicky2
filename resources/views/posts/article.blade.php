@@ -26,7 +26,11 @@
  <li style="margin-bottom: 10px;">
     <div class="article">
         <div class="author-pic hidden-xs">
-            <img style="width: 60px;height: 60px;" src="/images/testimonials/img-1.jpg" alt="">
+          
+           <span class="chatter_avatar_circle" style="background-color:#<?= \DevDojo\Chatter\Helpers\ChatterHelper::stringToColorCode($post->author) ?>">
+                {{ ucfirst(substr($post->author, 0, 1)) }}
+            </span>
+          
         </div>
         <div class="details">
             <div class="author-meta">
