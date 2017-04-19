@@ -74,9 +74,9 @@
                                 </div> <!-- link-button -->
                             </div>
                         </li>
-                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000" data-thumb="images/slider/slider-5.jpg" data-title="We are Consult Care" >
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000" data-thumb="images/slider/slider-6.jpg" data-title="We are Consult Care" >
                             <!-- MAIN IMAGE -->
-                            <img src="images/slider/slider-5.jpg"  alt="newslide2014_1"  data-bgposition="0%" data-bgfit="cover" data-bgrepeat="no-repeat">
+                            <img src="images/slider/slider-6.jpg"  alt="newslide2014_1"  data-bgposition="0%" data-bgfit="cover" data-bgrepeat="no-repeat">
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
@@ -94,14 +94,14 @@
                                 data-endelementdelay="0.08"
                                 data-end="8000"
                                 data-endspeed="500"
-                                style="z-index: 2;color: #fff"> <h1>Be Always One Move <br> Ahead</h1>
+                                style="z-index: 2;color: #fff"> <h1>Learn.Compete.Earn</h1>
                             </div>
                             
 
                             <!-- LAYER NR. 2 -->
                             <div class="tp-caption slider-text rs-parallaxlevel-0"
                                 data-x="10" 
-                                data-y="430"
+                                data-y="360"
                                 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                                 data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                                 data-speed="2000"
@@ -112,13 +112,13 @@
                                 data-end="9000"
                                 data-endspeed="2000"
                                 data-linktoslide="next"
-                                style="z-index: 8;color: #fff">  ChessVicky is a one stop platfrom to learn chess in a better and an advanced <br>way.Join now to learn and earn with chess.
+                                style="z-index: 8;color: #fff"> Well, we feel just learning and comparing with friends is no cool.So we bring up <br> online chess tournaments as well as puzzle and quiz events where you can earn real money.
                             </div>
 
                             <!-- LAYER NR. 3 -->
                             <div class="tp-caption lfb ltt"
                                 data-x="10"
-                                data-y="540"
+                                data-y="500"
                                 data-speed="1800"
                                 data-start="4500"
                                 data-easing="Power4.easeOut"
