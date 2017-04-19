@@ -71,7 +71,7 @@ class QuizzesController extends Controller
     {
         $count = Quiz::count();
         $rid = rand(1, $count);
-        $puzzle = Quiz::find($rid);
+        $quiz = Quiz::find($rid);
         
         return view('quiz.show', compact('quiz'));
     }
@@ -86,6 +86,39 @@ class QuizzesController extends Controller
     public function edit(Quiz $quiz)
     {
         return view('quiz.edit', compact('quiz'));
+    }
+
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function result(Quiz $quiz)
+    {
+         if(\Auth::user()->solvedQuizzes->contains($quiz)){
+               $answers = unserialize(\Auth::user()->solvedQuizzes()->where('quiz_id', $quiz->id)->first()->pivot->answers);
+               $points = \Auth::user()->solvedQuizzes()->where('quiz_id', $quiz->id)->first()->pivot->points;
+                $correct = 0;
+                $wrong = 0;
+               foreach ($quiz->questions as $key => $question) {
+                   if($question->answer == $answers[$question->id])
+                   {
+                     $correct++;
+                   } else {
+                    $wrong++;
+                   }
+               } 
+
+               return view('quiz.result', compact('quiz' ,'answers', 'points', 'correct', 'wrong'));
+        }
+         else {
+                session()->flash('flash_title', "You have to solve this quiz yet!");
+            session()->flash('flash_message', 'You will have to solve this quiz to analyse your answers!');  
+            return redirect('/quiz/' . $quiz->id);
+         }
+      
     }
 
     /**

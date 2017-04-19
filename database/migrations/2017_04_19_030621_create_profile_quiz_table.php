@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePuzzleUserTable extends Migration
+class CreateProfileQuizTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreatePuzzleUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('puzzle_user', function (Blueprint $table) {
-            $table->integer('user_id');
-            $table->integer('puzzle_id');
-             $table->integer('points');
-            $table->primary(['user_id', 'puzzle_id']);
-            $table->timestamps();
+        Schema::create('profile_quiz', function (Blueprint $table) {
+            $table->integer('profile_id');
+            $table->integer('quiz_id');
+            $table->primary(['profile_id', 'quiz_id']); 
         });
     }
 
@@ -29,6 +27,6 @@ class CreatePuzzleUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('puzzle_user');
+        Schema::dropIfExists('profile_quiz');
     }
 }

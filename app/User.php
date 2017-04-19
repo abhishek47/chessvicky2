@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use App\Puzzle;
+use App\Quiz;
 
 class User extends Authenticatable
 {
@@ -53,16 +54,34 @@ class User extends Authenticatable
 
     public function solvedPuzzles()
     {
-        return $this->belongsToMany(Puzzle::class)->withTimeStamps();
+        return $this->belongsToMany(Puzzle::class)->withPivot('points');
     }
 
     public function hasSolvedPuzzle(Puzzle $puzzle)
     {
+      
         return $this->solvedPuzzles->contains($puzzle);
+        
     }
 
     public function hasSavedPuzzle(Puzzle $puzzle)
     {
-        return \Auth::user()->profile->savedPuzzles->contains($puzzle);
+        return $this->profile->savedPuzzles->contains($puzzle);
+    }
+
+    public function solvedQuizzes()
+    {
+        return $this->belongsToMany(Quiz::class)->withPivot('answers', 'points');
+    }
+
+    public function hasSolvedQuiz(Quiz $quiz)
+    {
+
+        return $this->solvedQuizzes->contains($quiz);
+    }
+
+    public function hasSavedQuiz(Quiz $quiz)
+    {
+        return $this->profile->savedQuizzes->contains($quiz);
     }
 }

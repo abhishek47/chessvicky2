@@ -24,22 +24,16 @@
             <div class="container">
                 <div class="row blog-with-sidebar">
                     <div class="col col-lg-9 col-md-8 ">
-                        
-                        <div class="panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);">
+
+                     <div class="panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);">
 
                             <div class="panel-heading" style="padding-bottom: 0px;background: #f8f8f8"></div>
                             <div class="panel-body">
-                               <a class="btn btn-lg btn-danger" id="challenge" style="margin-top: 4px;""><b>Challenge Friend</b></a> &nbsp;
-                               <a class="btn btn-lg btn-info"  style="margin-top: 4px;" href="/quiz/random"><b>New Quiz</b></a> &nbsp;
-                               @if(!\Auth::user()->hasSavedQuiz($quiz))
-                                 <a class="btn btn-lg btn-success" id="save" data-save="1" style="margin-top: 4px;"><b>Save Quiz</b></a> &nbsp;
-                               @else
-                                  <a class="btn btn-lg btn-success" id="save" data-save="0" style="margin-top: 4px;"><b>Unsave Quiz</b></a> &nbsp;
-                               @endif   
-                              
-                               <a class="btn btn-lg btn-social" style="margin-top: 4px;" href="/quiz/share/{{$quiz->id}}"><b>Share Quiz</b></a>
+                                <h4><b>Points Scored : </b>{{ $points }} &nbsp; | &nbsp; <b>Correct Answers : </b>{{ $correct }} &nbsp; | &nbsp; <b>Wrong Answers : </b>{{ $wrong }} </h4>
                             </div>
                         </div> 
+                        
+                       
 
                         <div class="comments">
                             
@@ -50,9 +44,9 @@
                                    
                                       <div class="panel-heading" style="padding-bottom: 0px;background: #f8f8f8">
                                         <div class="author-meta">
-                                            <div class="name"><h4 style="font-size: 28px;" id="question_no">Question #1</h4></div>
-                                            <div class="date"><span style="font-size: 22px;color: #f39c12;font-weight: bold;">[ <span id="points ">{{ $quiz->questions->first()->points }}</span> Points ]</span></div>
-                                            <p style="color: #0b0b0b;">Choose your answer and click <b>next</b>.</p>
+                                            <div class="name"><h4 style="font-size: 28px;" id="question_no">Results Quiz #{{$quiz->id}}</h4></div>
+                                           
+                                            <p style="color: #0b0b0b;">Analyse your answers.</p>
 
                                         </div>
                                       </div>  
@@ -60,37 +54,45 @@
 
                                            @foreach($quiz->questions as $key => $question)
 
-                                                   <div class="questions" data-id="{{ $question->id }}">
-                                                       <h3 style="margin-top: 0px;font-size: 20px;">{{$key+1 . '. '}}{!! $question->question !!}</h3>
+                                                   <div class="questions" style="margin-top: 20px;margin-bottom: : 20px; ">
+                                                       <h3 style="margin-top: 0px;font-size: 20px;">{{$key+1 . '. '}}{!! $question->question !!} </h3>
                                                         <form class="options">
                                                           <input type="hidden" name="points" class="points" value="{{ $question->points }}">
                                                           <div class="row">
                                                             <div class="col-md-6">
-                                                                <div class="radio card">
-                                                                 <label><input class="option" type="radio" name="{{ $question->id }}" value=0 data-points="{{ $question->answer == 0 ? $question->points : 0  }}">{{ $question->option_1 }}</label>
+                                                                <div class="radio card {{ $answers[$question->id] == 0 ? 'red' : '' }} {{ $question->answer == 0 ? 'correct' : '' }} 
+                                                                   ">
+                                                                 <label><input class="option" type="radio" name="{{ $question->id }}" value=0 disabled="true" >{{ $question->option_1 }}</label>
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-6">
-                                                                <div class="radio card">
-                                                                  <label><input class="option" type="radio" name="{{ $question->id }}" value=1 data-points="{{ $question->answer == 1 ? $question->points : 0  }}">{{ $question->option_2 }}</label>
+                                                                <div class="radio card {{ $answers[$question->id] == 1 ? 'red' : '' }} {{ $question->answer == 1 ? 'correct' : '' }} ">
+                                                                  <label><input class="option" type="radio" name="{{ $question->id }}" value=1 disabled="true">{{ $question->option_2 }}</label>
                                                                 </div>  
                                                             </div>
 
                                                             <div class="col-md-6">
-                                                                <div class="radio card">
-                                                                  <label><input class="option" type="radio" name="{{ $question->id }}" value=2 data-points="{{ $question->answer == 2 ? $question->points : 0  }}">{{ $question->option_3 }}</label>
+                                                                <div class="radio card {{ $answers[$question->id] == 2 ? 'red' : '' }} {{ $question->answer == 2 ? 'correct' : '' }}">
+                                                                  <label><input class="option" type="radio" name="{{ $question->id }}" value=2 disabled="true">{{ $question->option_3 }}</label>
                                                                 </div>  
                                                             </div>
 
                                                             <div class="col-md-6">
-                                                                <div class="radio card">
-                                                                  <label><input class="option" type="radio" name="{{ $question->id }}" value=3 data-points="{{ $question->answer == 3 ? $question->points : 0  }}">{{ $question->option_4 }}</label>
+                                                                <div class="radio card {{ $answers[$question->id] == 3 ? 'red' : '' }} {{ $question->answer == 3 ? 'correct' : '' }}">
+                                                                  <label><input class="option" type="radio" name="{{ $question->id }}" value=3 disabled="true">{{ $question->option_4 }}</label>
                                                                 </div>  
                                                             </div>
                                                             </div>
+                                                            <br>
+                                                            @if($answers[$question->id] == $question->answer) 
+                                                              <p class=""><span style="color: #FFA500;font-weight: bold;">[{{ $question->points }} points]</span></p>
+                                                            @endif
                                                         </form>
                                                     </div>
+
+
+                                                    <hr>
                                                 
                                             
 
@@ -122,10 +124,10 @@
 
                             <div class="panel-heading" style="padding-bottom: 0px;background: #f8f8f8"></div>
                             <div class="panel-body">
-                               <a class="btn btn-lg btn-info"  style="margin-top: 4px;" href="/home"><b>Exit Quiz</b></a> &nbsp;
+                               <a class="btn btn-lg btn-info"  style="margin-top: 4px;" href="/home"><b>Go Home</b></a> &nbsp;
                                
                               
-                               <button class="btn btn-lg btn-social pull-right" style="margin-top: 4px;" id='next' value="Next" onclick="sum_values()"><b>Next Question</b></button>
+                               <a href="/quiz/random" class="btn btn-lg btn-social pull-right" style="margin-top: 4px;" ><b>New Quiz</b></a>
                             </div>
                         </div> 
 
@@ -177,7 +179,5 @@
 
 
 @section('scripts')
-
-  <script src="/js/quiz.js"></script>
 
 @endsection

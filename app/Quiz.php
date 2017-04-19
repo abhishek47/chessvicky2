@@ -29,4 +29,14 @@ class Quiz extends Model
     {
     	return $this->questions()->sum('coins');
     }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class)->withTimeStamps();;
+    }
+
+    public function profiles()
+    {
+        return $this->belongsToMany(Profile::class)->withTimeStamps();;
+    }
 }

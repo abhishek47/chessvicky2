@@ -72,6 +72,7 @@ Route::post('/quiz', 'QuizzesController@store');
 Route::get('/quiz/{quiz}/edit', 'QuizzesController@edit');
 Route::post('/quiz/{quiz}/update', 'QuizzesController@update');
 Route::post('/quiz/{quiz}/delete', 'QuizzesController@delete');
+Route::get('/quiz/{quiz}/result', 'QuizzesController@result');
 
 Route::post('/quiz/questions', 'QuizQuestionsController@store');
 Route::post('/quiz/questions/{id}/update', 'QuizQuestionsController@update');
@@ -93,5 +94,13 @@ Route::post('/user/challenge', 'ProfileController@challengeUser');
 
 Route::post('/profile/puzzle/save', 'ProfileController@savePuzzle');
 Route::post('/profile/puzzle/unsave', 'ProfileController@unsavePuzzle');
+
+Route::post('/user/quizzes', 'ProfileController@updateQuizzes');
+Route::get('/user/quizzes', 'ProfileController@solvedQuizzes');
+Route::post('/user/challenge', 'ProfileController@challengeUser');
+
+
+Route::post('/profile/quiz/save', 'ProfileController@saveQuiz');
+Route::post('/profile/quiz/unsave', 'ProfileController@unsaveQuiz');
 
 

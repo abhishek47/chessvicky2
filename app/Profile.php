@@ -17,4 +17,9 @@ class Profile extends Model
     {
         return $this->belongsToMany(Puzzle::class);
     }
+
+     public function savedQuizzes()
+    {
+        return $this->belongsToMany(Quiz::class);
+    }
 }

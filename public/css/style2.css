@@ -8990,11 +8990,10 @@ stats {
   border-color: #003791;
 }
 
-.btn-social:hover {
+.btn-social:hover,.btn-social:focus{
   color: #fff;
   background-color: #0056e0;
 }
-
 
 #puzzle-detail h3{
    font-size: 18px;
@@ -9003,4 +9002,30 @@ stats {
 }
 
 
+.card {
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,.05);
+  background: #f6f6f6;
+  width: 100%;
+  margin: 5px;
+  padding: 10px;
+  
+}
+
+.card input {
+  width: 100%;
+}
+
+.card label {
+  font-weight: bold;
+  margin-left: 5px;
+  cursor: hand;
+}
+
+.red {
+  background: rgba(178,34,34, 0.6);
+}
+
+.correct {
+  background: rgba(50,205,50, 0.6);
+}
 
