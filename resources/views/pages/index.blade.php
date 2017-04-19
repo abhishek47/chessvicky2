@@ -112,7 +112,7 @@
                                 data-end="9000"
                                 data-endspeed="2000"
                                 data-linktoslide="next"
-                                style="z-index: 8;color: #fff"> Well, we feel just learning and comparing with friends is no <br>cool.So we bring up online chess tournaments as well as puzzle and <br> quiz events where you can earn real money.
+                                style="z-index: 8;color: #fff"> Well, we feel just learning and comparing with friends is no <br>cool.So we bring up online chess tournaments as well as  <br>puzzle and quiz events where you can earn real money.
                             </div>
 
                             <!-- LAYER NR. 3 -->
