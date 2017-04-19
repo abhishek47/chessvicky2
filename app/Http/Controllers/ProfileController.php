@@ -35,7 +35,7 @@ class ProfileController extends Controller
         {
         	$user->profile->points += $puzzle->points;
         	$user->profile->save();
-        	return $user->solvedPuzzles()->attach($puzzle);
+        	return $user->solvedPuzzles()->attach($puzzle, ['points' => $puzzle->points]);
 
         } else {
         	return "success";
@@ -141,14 +141,14 @@ class ProfileController extends Controller
     public function solvedQuizzes(Request $request)
     {
     	$user = \Auth::user();
-    	if($request->has('puzzle')){
-    		$puzzle = Quiz::find($request->get('puzzle'));
-            if($user->hasSolvedPuzzle($puzzle))
+    	if($request->has('quiz')){
+    		$quiz = Quiz::find($request->get('quiz'));
+            if($user->hasSolvedQuiz($quiz))
             {
             	return "success";
             }
     	} else {
-    		return $user->solvedPuzzles;
+    		return $user->solvedQuizzes;
     	}
     	
     }

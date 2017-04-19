@@ -17,6 +17,16 @@
         
     </ul>
 </div>
+
+<div class="widget news-letter-widget" style="background: #0f80ff;;">
+<h4 style="color: white">Now, even you can write articles on ChessVicky and earn fame!</h4>
+<form class="form">
+    <div>
+        <button class="btn" type="submit">Write Article</button>
+    </div>
+</form>
+</div>
+
 <div class="widget archive-widget">
     <h3>Archive</h3>
     <ul>

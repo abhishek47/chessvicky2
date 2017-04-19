@@ -49,8 +49,10 @@
                     </div> <!-- end blog-content -->
 
                     <div class="blog-sidebar col col-lg-3 col-md-4 col-sm-5">
-                        
+                       
+                       <div class="sidebar">  
                         @include('posts.sidebar')
+                       </div>                        
                         
                     </div>                    
                 </div>
@@ -58,19 +60,7 @@
         </section>
         <!-- end blog-with-sidebar-section -->
      </div>  
-       <!-- start cta -->
-        <section class="cta parallax" data-bg-image="images/cta-bg.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-xs-12">
-                        <h5>Want to write article on ChessVicky?</h5>
-                        <a href="#" class="btn">Request Article</a>
-                    </div>
-                </div> <!-- end row -->
-            </div> <!-- end container -->
-        </section>
-        <!-- end cta -->
-
+       
 
         
 
