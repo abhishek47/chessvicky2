@@ -38,12 +38,16 @@
         </div>
         <div class="details">
             <div class="author-meta">
-                <div class="name"><h4 style="font-size: 12px;">{{ $question->user->name }}</h4></div>
+                <div class="name"><h4 style="font-size: 12px;">@if(isset($q)){!! highlight_words($question->user->name, explode(' ', $q)) !!}@else {{ $question->user->name  }}@endif</h4></div>
                 <div class="date"><span>{{ $question->created_at->diffForHumans() }}</span></div>
             </div>
             <div class="comment-content">
-                <a href="/forum/{{$question->slug}}"><h4 style="font-size: 24px;margin-bottom: 10px;">{{ $question->title }}</h4> </a>
-                <p>{{ substr(strip_tags($question->body), 0, 200) }}@if(strlen(strip_tags($question->body)) > 200){{ '...' }}@endif</p> 
+                <a href="/forum/{{$question->slug}}"><h4 style="font-size: 24px;margin-bottom: 10px;">@if(isset($q)){!! highlight_words($question->title, explode(' ', $q)) !!}@else {{ $question->title  }}@endif</h4> </a>
+                  @if(isset($q)) 
+                   <p>{!! highlight_words(substr(strip_tags($question->body), 0, 200), explode(' ', $q)) !!}@if(strlen(strip_tags($question->body)) > 200){{ '...' }}@endif</p> 
+                @else
+                   <p>{{ substr(strip_tags($question->body), 0, 200) }}@if(strlen(strip_tags($question->body)) > 200){{ '...' }}@endif</p>
+                @endif 
 
                 <p><small><i class="fa fa-comments"></i> <span>{{ count($question->answers) }}</span> replies</small></p>
             </div>

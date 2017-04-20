@@ -22,16 +22,20 @@
         <!-- start blog-with-sidebar-section -->
         <section class="blog-with-sidebar-section section-padding">
             <div class="container">
+
                 <div class="row blog-with-sidebar">
 
                     <div class="blog-content col col-lg-9 col-md-8">
 
+                       @include('layouts.search', ['model' => 'forum', 'data' => $questions])
+
                         <div class="panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);background: #fffbe0;">
                            <div class="panel-heading">
-                           	  <h4>Post New Question</h4>
+                           	  <h4>Start New Discussion</h4>
+                              <button class="btn btn-success" data-toggle="collapse" data-target="#qform"><i class="fa fa-arrow-down"></i> New Discussion</button>
                            </div>
                            
-                           <div class="panel-body">
+                           <div id="qform" class="panel-body collapse">
 	                           <form method="post" action="/forum">
  								
  								  {{ csrf_field() }}	
@@ -70,7 +74,11 @@
 
                         <div class="row page-pagination-wrapper">
                             <div class="col col-xs-12">
+                                    @if(isset($q))
+                                 {{ $questions->appends(['query' => $q])->links() }}
+                                @else 
                                     {{ $questions->links() }}
+                                @endif
                                 
                             </div>
                         </div>    

@@ -6,7 +6,7 @@
         </div>
         <div class="details" style="padding: 0px 10px 10px 10px;">
             <h3><a href="/quiz/{{ $quiz->id }}">{{$key+1}}.{{ $quiz->title }}</a></h3>
-            <span>Level : {{$quiz->level}} | Points : {{$quiz->getPoints()}} | Coins : {{$quiz->getCoins()}} | Questions : {{ count($quiz->questions) }}</span> <br><br>
+            <span>Level : {{$quiz->level+1}} | Points : {{$quiz->getPoints()}} | Coins : {{$quiz->getCoins()}} | Questions : {{ count($quiz->questions) }}</span> <br><br>
             <b><a href="/quiz/{{ $quiz->id }}" class="view-case-studes" style="font-size: 21px;color: #f39c12;">Solve Quiz --></a></b>
         </div>
     </div>

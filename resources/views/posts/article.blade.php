@@ -34,14 +34,18 @@
         </div>
         <div class="details">
             <div class="author-meta">
-                <div class="name"><h4 style="font-size: 12px;">{{ $post->author }}</h4></div>
+                <div class="name"><h4 style="font-size: 12px;">@if(isset($q)){!! highlight_words($post->author, explode(' ', $q)) !!}@else {{ $post->author  }}@endif</h4></div>
                 <div class="date"><span>{{ $post->created_at->diffForHumans() }}</span></div>
             </div>
             <div class="comment-content">
-                <a href="/blog/{{$post->slug}}"><h4 style="font-size: 21px;margin-bottom: 10px;">{{ $post->title }}</h4> </a>
-                <p>{{ substr(strip_tags($post->body), 0, 200) }}@if(strlen(strip_tags($post->body)) > 200){{ '...' }}@endif</p> 
-
-                <p><small><i class="fa fa-comments"></i> <span>{{ $post->tags }}</span></small></p>
+                <a href="/blog/{{$post->slug}}"><h4 style="font-size: 21px;margin-bottom: 10px;">@if(isset($q)){!! highlight_words($post->title, explode(' ', $q)) !!}@else {{ $post->title  }}@endif</h4> </a>
+                @if(isset($q)) 
+                   <p>{!! highlight_words(substr(strip_tags($post->body), 0, 200), explode(' ', $q)) !!}@if(strlen(strip_tags($post->body)) > 200){{ '...' }}@endif</p> 
+                @else
+                   <p>{{ substr(strip_tags($post->body), 0, 200) }}@if(strlen(strip_tags($post->body)) > 200){{ '...' }}@endif</p>
+                @endif 
+                     
+                <p><small><i class="fa fa-comments"></i> <span>@if(isset($q)){!! highlight_words($post->tags, explode(' ', $q)) !!}@else {{ $post->tags  }}@endif</span></small></p>
             </div>
            
         </div>

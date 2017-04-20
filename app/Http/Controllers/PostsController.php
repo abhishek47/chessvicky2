@@ -19,15 +19,32 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $posts = Post::latest()
+    public function index(Request $request)
+    {   
+
+        if($request->has('query')) {
+           $q = $request->get('query');
+           $posts = Post::latest();
+           $words = explode(' ', $q);
+           
+           foreach ($words as $key => $word) {
+               $posts = $posts->orWhere('title', 'LIKE', '%' . $word . '%')->orWhere('tags', 'LIKE',  '%' . $word . '%')->orWhere('body', 'LIKE',  '%' . $word . '%')->orWhere('author', 'LIKE',  '%' . $word . '%');
+           }
+
+           $posts = $posts->paginate(10);
+        
+        }
+         else {
+            
+             $posts = Post::latest()
                        ->filter(request(['month', 'year']))
                        ->latest()->paginate(20);
 
+         }              
+
        
 
-        return view('posts.index', compact('posts'));
+        return view('posts.index', compact('posts', 'q'));
     }
 
     /**

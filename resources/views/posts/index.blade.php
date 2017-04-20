@@ -18,13 +18,18 @@
 <!-- end page-title -->
 
   <div class="page-wrapper blog-single-page">
+
+
         
 <!-- start blog-with-sidebar-section -->
         <section class="blog-with-sidebar-section section-padding">
             <div class="container">
+
                 <div class="row blog-with-sidebar">
 
                     <div class="blog-content col col-lg-9 col-md-8">
+
+                       @include('layouts.search', ['model' => 'blog', 'data' => $posts])
 
                         @foreach($posts->chunk(2) as $items)
 	   
@@ -42,7 +47,11 @@
 
                         <div class="row page-pagination-wrapper">
                             <div class="col col-xs-12">
+                                @if(isset($q))
+                                 {{ $posts->appends(['query' => $q])->links() }}
+                                @else 
                                     {{ $posts->links() }}
+                                @endif
                                 
                             </div>
                         </div>                        

@@ -20,10 +20,36 @@ class ForumQuestionsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $questions = ForumQuestion::latest()->paginate(10);
-        return view('forum.index', compact('questions'));
+        if($request->has('query')) {
+           $q = $request->get('query');
+           $questions = ForumQuestion::latest();
+           $words = explode(' ', $q);
+           
+           foreach ($words as $key => $word) {
+               $questions = $questions->orWhere('title', 'LIKE', '%' . $word . '%')->orWhere('body', 'LIKE',  '%' . $word . '%')
+                            ->orWhereHas('user', function($query) use ($word) {
+                                  
+                                  $query->where('name', 'LIKE',  '%' . $word . '%');
+
+                            })->orWhereHas('answers', function($query) use ($word) {
+                                  
+                                  $query->where('body', 'LIKE',  '%' . $word . '%');
+
+                            });
+           }
+           
+          
+           $questions = $questions->paginate(10);
+        
+        }
+         else {
+
+          $questions = ForumQuestion::latest()->paginate(10);
+
+        }
+        return view('forum.index', compact('questions', 'q'));
 
     }
 

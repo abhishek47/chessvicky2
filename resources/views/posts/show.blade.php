@@ -55,7 +55,7 @@
                                 <ul class="tag">
                                   <?php $tags = explode(',', $post->tags); ?>
                                   @foreach($tags as $tag)
-                                    <li><a href="#">{{ $tag }}</a></li>
+                                    <li><a href="/blog?query={{$tag}}">{{ $tag }}</a></li>
                                   @endforeach  
                                 </ul>
                             </div>

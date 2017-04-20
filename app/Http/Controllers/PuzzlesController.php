@@ -20,11 +20,21 @@ class PuzzlesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $puzzles = Puzzle::latest()->paginate(10);
 
-        return view('puzzles.index', compact('puzzles'));
+        $puzzles = Puzzle::latest();
+        $level = 0;
+        if($request->has('level')) 
+        {
+             $puzzles->where('level', $request->get('level')-1);
+             $level = $request->get('level')
+
+        }
+
+        $puzzles = $puzzles->paginate(20); 
+
+        return view('puzzles.index', compact('puzzles', 'level'));
     }
 
     /**

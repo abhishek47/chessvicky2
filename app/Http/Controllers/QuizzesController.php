@@ -19,12 +19,20 @@ class QuizzesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $quizzes = Quiz::latest();
+        $level = 0;
+        if($request->has('level')) 
+        {
+             $quizzes->where('level', $request->get('level')-1);
+             $level = $request->get('level');
 
-        $quizzes = Quiz::latest()->paginate(20); 
+        }
 
-        return view('quiz.index', compact('quizzes'));
+        $quizzes = $quizzes->paginate(20); 
+
+        return view('quiz.index', compact('quizzes', 'level'));
     }
 
     /**
