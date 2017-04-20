@@ -22,7 +22,10 @@
         <!-- start case-studies -->
         <section class="case-studies section-padding">
             <div class="container">        
-
+                
+                <div class="col-xs-12">
+                    @include('layouts.search', ['model' => 'books', 'data' => $books])
+                </div>   
                
                 <div class="row case-studies-grids">
 

@@ -18,11 +18,24 @@ class BooksController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $books = Book::latest()->paginate(9);
+        if($request->has('query')) {
+           $q = $request->get('query');
+           $books = Book::latest();
+           $words = explode(' ', $q);
+           
+           foreach ($words as $key => $word) {
+               $books = $books->orWhere('name', 'LIKE', '%' . $word . '%')->orWhere('description', 'LIKE',  '%' . $word . '%')->orWhere('author', 'LIKE',  '%' . $word . '%');
+           }
 
-        return view('books.index', compact('books'));
+           $books = $books->paginate(10);
+        
+        }
+         else {
+        $books = Book::latest()->paginate(9);
+         }
+        return view('books.index', compact('books', 'q'));
     }
 
     /**
