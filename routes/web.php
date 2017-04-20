@@ -104,3 +104,9 @@ Route::post('/profile/quiz/save', 'ProfileController@saveQuiz');
 Route::post('/profile/quiz/unsave', 'ProfileController@unsaveQuiz');
 
 
+
+Route::post('/buy/coins', 'PaymentsController@makePayment');
+Route::get('/payments/response', 'PaymentsController@response');
+Route::get('/payments/cancel', 'PaymentsController@cancel');
+
+

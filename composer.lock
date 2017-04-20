@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "64892bf7305e9ce1bed0bf8b47f3bd5d",
-    "content-hash": "273c3eb4c4a3475783b3225b16430e48",
+    "hash": "4d3e010feba06be108d0ccd0868901a0",
+    "content-hash": "fc37eca73a0c0f142312907fce0ecb14",
     "packages": [
         {
             "name": "devdojo/chatter",
@@ -1363,6 +1363,53 @@
                 "uuid"
             ],
             "time": "2017-03-26 20:37:53"
+        },
+        {
+            "name": "softon/indipay",
+            "version": "v1.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/softon/indipay.git",
+                "reference": "1ed9de72312a20594ff91e7f1575f62b3f5b1a35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/softon/indipay/zipball/1ed9de72312a20594ff91e7f1575f62b3f5b1a35",
+                "reference": "1ed9de72312a20594ff91e7f1575f62b3f5b1a35",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~5.0|~6.0",
+                "illuminate/support": "~5.0|~6.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Softon\\Indipay\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shiburaj",
+                    "email": "powerupneo@gmail.com"
+                }
+            ],
+            "description": "The Laravel 5 Package for Indian Payment Gateways. Currently supported gateways: CCAvenue, PayUMoney, EBS, CitrusPay, InstaMojo",
+            "keywords": [
+                "CitrusPay",
+                "Indian Payment Gateways",
+                "ccavenue",
+                "ebs",
+                "instamojo",
+                "laravel 5",
+                "payumoney"
+            ],
+            "time": "2017-04-03 15:11:35"
         },
         {
             "name": "swiftmailer/swiftmailer",

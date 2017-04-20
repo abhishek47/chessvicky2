@@ -140,4 +140,6 @@
         <!-- end featured -->
 
 <br><br><br>
+
+  @include('layouts.buycoins')
 @endsection
