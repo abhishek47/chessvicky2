@@ -178,6 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         DevDojo\Chatter\ChatterServiceProvider::class,
         Softon\Indipay\IndipayServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
     ],
 
@@ -228,6 +229,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Indipay' => Softon\Indipay\Facades\Indipay::class, 
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

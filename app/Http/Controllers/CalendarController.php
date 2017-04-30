@@ -21,9 +21,38 @@ class CalendarController extends Controller
      */
     public function index()
     {
-        $events = Event::latest()->paginate(10);
+        $calendar = Event::all();
+
+        $events = array(); 
+
+        foreach ($calendar as $key => $event) {
+
+             $e = array();
+             $e['id'] = $event->id;
+             $e['title'] = $event->title;
+             $e['start'] = $event->start_date ;
+             $e['end'] = $event->end_date  ;
+             $allday = true;
+             $e['allDay'] = $allday;
+             array_push($events, $e);
+            # code...
+          }
+
 
         return view('calendar.index', compact('events'));
+    }
+
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function events()
+    {
+        $events = Event::all();
+
+        return $events;
+
     }
 
     /**

@@ -21,6 +21,43 @@ class ProfileController extends Controller
     }
     
 
+    public function update(Request $request)
+    {
+        $user = \Auth::user();
+
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+
+        $user->save();
+
+        $user->profile->update($request->all());
+
+         
+
+
+      return redirect('/user/edit');
+    }
+
+
+    public function updatePhoto(Request $request)
+    {
+        $user = \Auth::user();
+
+        $path = \Storage::putFile('avatars', $request->file('photo'), 'public');
+
+
+        $user->profile->photo = $path;
+
+        $user->profile->save();   
+ 
+        
+     
+        return redirect('/user/edit');
+    }
+    
+
+
+
 
    
 

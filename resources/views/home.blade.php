@@ -29,7 +29,7 @@
                     <a href="/blog" class="col col-lg-4 col-xs-6">
                         <div class="grid">
                             <div class="img-holder">
-                                <img src="images/featured/img-1.jpg" alt class="img img-responsive">
+                                <img  src="images/featured/img-1.jpg" alt class="img img-responsive">
                             </div>
                             <div class="details">
                                 <h3>Chess Articles <i class="fi flaticon-letter"></i></h3>

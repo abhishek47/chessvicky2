@@ -2,24 +2,23 @@
 
 
  <li style="margin-bottom: 10px;">
-    <div class="article">
-        <div class="details">
-            <div class="author-meta">
-                <div class="name"><h4 style="font-size: 12px;">{{ $contest->starts_at }} | {{ $contest->ends_at }}</h4></div>
-              
-            </div>
-            <div class="comment-content">
-                <a href="/puzzles/contest/{{$contest->id}}"><h4 style="font-size: 24px;margin-bottom: 10px;">{{ $contest->name }}</h4> </a>
-                
-                <p>{{ $contest->description }}</p>
 
-                <p><small><i class="fa fa-money"></i>&nbsp; <span>{{ $contest->price }}</span> Coins Required to Play. | Win : {{ $contest->coins }} Coins | Minimum Time Uptil Now : 12 seconds </small></p>
+  <div class="panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);">
 
-                <a href="#" class="btn btn-success">Play Contest</a> <a href="#" class="btn btn-social">View Leaderboard</a>
-            </div>
-            
-        </div>
-    </div>
-   
+                            <div class="panel-heading" style="padding-bottom: 0px;padding-top: 0 ;background: #f8f8f8">
+                                <h3 style="margin: 0px;padding-top: 2px;"><a href="/puzzles/contest/{{$contest->id}}"><h4>Contest #{{ $contest->id }}</h4> </a></h3>
+                            </div>
+                            <div class="panel-body" >
+
+                <p style="color: #000;font-size: 18px;">Puzzles To Solve : <b>5</b> <br> Entry Fees : <span style="font-weight: bold;">{{ $contest->price }}</span> Coins |  Win : <b>{{ $contest->coins }}</b> Coins <br>Contest Leaderboard Highest : <b>12 seconds</b> | Players Enrolled : <b>32</b> <br>
+                 Starts At : <b>{{ $contest->starts_at }}</b> | Ends At : <b>{{ $contest->starts_at }}</b>
+                 </p>
+                            </div>
+                            <div class="panel-footer">
+                                <a href="/puzzles/contest/{{$contest->id}}" class="btn btn-success">Play Contest</a> <a href="#" class="btn btn-social">View Contest Leaderboard</a>
+                            </div>
+                        </div> 
+
+    
 </li>
 

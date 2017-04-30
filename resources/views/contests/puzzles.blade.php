@@ -59,7 +59,7 @@
 
                     <div class="blog-sidebar col col-lg-3 col-md-4 col-sm-5">
                         
-                        @include('forum.sidebar')
+                        @include('contests.sidebar')
                         
                     </div>                    
                 </div>

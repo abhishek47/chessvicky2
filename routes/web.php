@@ -16,6 +16,9 @@ Route::get('/features', 'PagesController@features');
 Route::get('/contact', 'PagesController@contact');
 
 
+
+
+
 Route::get('/blog', 'PostsController@index');
 Route::post('/blog', 'PostsController@store');
 Route::get('/blog/{post}', 'PostsController@show');
@@ -25,6 +28,7 @@ Route::post('/blog/{id}/update', 'PostsController@update');
 Route::post('/blog/{id}/delete', 'PostsController@delete');
 
 Route::get('/calendar', 'CalendarController@index');
+Route::get('/calendar/events', 'CalendarController@events');
 Route::post('/calendar', 'CalendarController@store');
 Route::get('/calendar/{event}', 'CalendarController@show');
 Route::get('/calendar/create', 'CalendarController@create');
@@ -89,6 +93,9 @@ Route::get('/home', 'HomeController@index');
 Route::get('/user/edit', 'ProfileController@edit');
 
 
+Route::post('/profile/photo', 'ProfileController@updatePhoto');
+
+Route::post('/profile/update', 'ProfileController@update');
 
 
 /* AXIOS ROUTES */

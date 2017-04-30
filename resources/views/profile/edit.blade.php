@@ -26,12 +26,15 @@
       <!-- left column -->
       <div class="col-md-3" style="padding-top: 20px;">
         <div class="text-center">
-          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+          <img  style="width: 100px;height: 100px;" 
+            src="{{ Auth::user()->profile->photo != null ? Storage::url(Auth::user()->profile->photo) :  '//placehold.it/100' }}" 
+            class="avatar img-circle" alt="avatar">
           <h6>Upload a different photo...</h6>
-          <form>
-            <input type="file" class="form-control">
+          <form method="post" action="/profile/photo" enctype="multipart/form-data">
+           {{ csrf_field() }}
+            <input type="file" name="photo" class="form-control">
            <br>
-            <input type="button" class="btn btn-info" value="Update Image">
+            <input type="submit" class="btn btn-info" value="Update Image">
           </form>
         </div>
       </div>
@@ -41,43 +44,44 @@
        
        
         
-        <form class="form-horizontal" role="form">
+        <form class="form-horizontal" role="form" method="post" action="/profile/update">
+          {{ csrf_field() }}
           <div class="form-group">
             <label class="col-lg-2 control-label">Full name:</label>
             <div class="col-lg-10">
-              <input class="form-control" type="text" value="{{ $user->name }}">
+              <input class="form-control" name="name" type="text" value="{{ $user->name }}">
             </div>
           </div>
 
            <div class="form-group">
             <label class="col-lg-2 control-label">Email:</label>
             <div class="col-lg-10">
-              <input class="form-control" type="text" value="{{ $user->email }}">
+              <input class="form-control" name="email" type="text" value="{{ $user->email }}">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-2 control-label">City:</label>
             <div class="col-lg-10">
-              <input class="form-control" type="text" value="">
+              <input class="form-control" name="city" type="text" value="{{ $user->profile->city }}">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-2 control-label">State:</label>
             <div class="col-lg-10">
-              <input class="form-control" type="text" value="">
+              <input class="form-control" name="state" type="text" value="{{ $user->profile->state }}">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-2 control-label">Country:</label>
             <div class="col-lg-10">
-              <input class="form-control" type="text" value="">
+              <input class="form-control" name="country" type="text" value="{{ $user->profile->country }}">
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-lg-2 control-label">Bio:</label>
             <div class="col-lg-10">
-              <textarea class="form-control">{{ $user->profile->bio }}</textarea> 
+              <textarea name="bio" class="form-control">{{ $user->profile->bio }}</textarea> 
             </div>
           </div>
           
@@ -86,14 +90,14 @@
           <div class="form-group">
             <label class="col-md-2 control-label">Username:</label>
             <div class="col-md-10">
-              <input class="form-control" type="text" value="{{ $user->username }}" disabled="true">
+              <input class="form-control" name="username" type="text" value="{{ $user->username }}" disabled="true">
             </div>
           </div>
          
           <div class="form-group">
             <label class="col-md-2 control-label"></label>
             <div class="col-md-10">
-              <input type="button" class="btn btn-success" value="Save Changes">
+              <input type="submit" class="btn btn-success" value="Save Changes">
               <span></span>
               <input type="reset" class="btn btn-default" value="Cancel">
             </div>
