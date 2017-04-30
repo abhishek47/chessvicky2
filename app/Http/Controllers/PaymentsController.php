@@ -22,7 +22,7 @@ class PaymentsController extends Controller
         
         'amount' => $amount,
 
-        'purpose' => 'Buy Coins',
+        'purpose' => 'Buy ' . $coins . ' Coins',
 
         'buyer_name' => \Auth::user()->name,
 
@@ -45,9 +45,7 @@ class PaymentsController extends Controller
      	 // For default Gateway
         $response = Indipay::response($request);
         
-        // For Otherthan Default Gateway
-        $response = Indipay::gateway('CCAvenue')->response($request);
-
+        
         dd($response);
      }
 
