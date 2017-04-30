@@ -12,7 +12,7 @@ return [
 
     'gateway' => 'InstaMojo',                // Replace with the name of default gateway you want to use
 
-    'testMode'  => true,                   // True for Testing the Gateway [For production false]
+    'testMode'  => false,                   // True for Testing the Gateway [For production false]
 
     'ccavenue' => [                         // CCAvenue Parameters
         'merchantId'  => env('INDIPAY_MERCHANT_ID', ''),
@@ -55,8 +55,8 @@ return [
     ],
 
     'instamojo' =>  [
-        'api_key' => env('INSTAMOJO_API_KEY','6ebecf2e98554a05b3497bab3dd23f09'),
-        'auth_token' => env('INSTAMOJO_AUTH_TOKEN','b94c4c24b3f64ba8c57f98a65c91e833'),
+        'api_key' => env('INSTAMOJO_API_KEY','ca3b8dfd22a84223a2757e6a3a12cbc1'),
+        'auth_token' => env('INSTAMOJO_AUTH_TOKEN','dbcc5f652fb0afe18cbdf1efc27caa8b'),
         'redirectUrl' => env('INDIPAY_REDIRECT_URL', 'payments/response'),
     ],
 
