@@ -313,8 +313,10 @@
              <script type="text/javascript">
                  swal({
           title: "{{ session('flash_title') }}",
-          text: "{{ session('flash_message') }}",
+          html: true,
+          text: "<span style='color:#0a0a0a;font-weight:400'>{!! session('flash_message') !!}</span>",
           type: "success",
+          confirmButtonColor: "#0048bc",
           confirmButtonText: "Cool"
         });
       </script>
@@ -324,8 +326,10 @@
              <script type="text/javascript">
                  swal({
           title: "{{ session('error_title') }}",
-          text: "{{ session('error_message') }}",
+          html: true,
+          text: "<span style='color:#0a0a0a;font-weight:400'>{!! session('error_message') !!}</span>",
           type: "error",
+          confirmButtonColor: "#0048bc",
           confirmButtonText: "Ok"
         });
       </script>

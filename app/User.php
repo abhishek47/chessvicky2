@@ -37,6 +37,11 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
      }
 
+     public function payments()
+     {
+        return $this->hasMany(Payment::class);
+     }
+
      public function questions()
      {
         return $this->hasMany(ForumQuestion::class);
