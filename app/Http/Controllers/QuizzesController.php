@@ -78,8 +78,13 @@ class QuizzesController extends Controller
     public function random()
     {
         $count = Quiz::count();
-        $rid = rand(1, $count);
-        $quiz = Quiz::find($rid);
+        
+        $quiz = null;
+        
+        while($quiz == null){
+          $rid = rand(1, $count);
+          $quiz = Quiz::find($rid);
+         }
         
         return view('quiz.show', compact('quiz'));
     }
