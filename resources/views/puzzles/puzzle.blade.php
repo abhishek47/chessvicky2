@@ -7,7 +7,7 @@
                             </div>
                             <div class="details">
                                 <h3><a href="/puzzles/{{ $puzzle->id }}">Checkmate in <?= $puzzle->moves; ?> Moves</a></h3>
-                                <span>Level : {{$puzzle->level}} | Points : {{$puzzle->points}} | Coins : {{$puzzle->coins}} | White</span>
+                                <span>Level : {{$puzzle->level + 1}} | Points : {{$puzzle->points}} | Coins : {{$puzzle->coins}} | White</span>
                                 <a href="/puzzles/{{ $puzzle->id }}" class="view-case-studes">Solve Puzzle</a>
                             </div>
                         </div>

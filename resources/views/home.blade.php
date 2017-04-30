@@ -99,7 +99,7 @@
                     <br><br>
                      <div class="row content">
 
-                    <a href="/chess" class="col col-lg-4 col-xs-6">
+                    <a href="/puzzles/contests" class="col col-lg-4 col-xs-6">
                         <div class="grid">
                             <div class="img-holder">
                                 <img src="images/featured/img-8.jpg" alt class="img img-responsive">

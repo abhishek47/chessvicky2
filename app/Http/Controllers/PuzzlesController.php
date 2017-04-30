@@ -28,7 +28,7 @@ class PuzzlesController extends Controller
         if($request->has('level')) 
         {
              $puzzles->where('level', $request->get('level')-1);
-             $level = $request->get('level')
+             $level = $request->get('level');
 
         }
 

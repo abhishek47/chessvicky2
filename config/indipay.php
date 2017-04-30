@@ -33,8 +33,8 @@ return [
         'workingKey' => env('INDIPAY_WORKING_KEY', ''),
 
         // Should be route address for url() function
-        'successUrl' => env('INDIPAY_SUCCESS_URL', 'indipay/response'),
-        'failureUrl' => env('INDIPAY_FAILURE_URL', 'indipay/response'),
+        'successUrl' => env('INDIPAY_SUCCESS_URL', 'payments/response'),
+        'failureUrl' => env('INDIPAY_FAILURE_URL', 'payments/response'),
     ],
 
     'ebs' => [                         // EBS Parameters
@@ -42,7 +42,7 @@ return [
         'secretKey' => env('INDIPAY_WORKING_KEY', ''),
 
         // Should be route address for url() function
-        'return_url' => env('INDIPAY_SUCCESS_URL', 'indipay/response'),
+        'return_url' => env('INDIPAY_SUCCESS_URL', 'payments/response'),
     ],
 
     'citrus' => [                         // Citrus Parameters
@@ -50,8 +50,8 @@ return [
         'secretKey' => env('INDIPAY_WORKING_KEY', ''),
 
         // Should be route address for url() function
-        'returnUrl' => env('INDIPAY_SUCCESS_URL', 'indipay/response'),
-        'notifyUrl' => env('INDIPAY_SUCCESS_URL', 'indipay/response'),
+        'returnUrl' => env('INDIPAY_SUCCESS_URL', 'payments/response'),
+        'notifyUrl' => env('INDIPAY_SUCCESS_URL', 'payments/response'),
     ],
 
     'instamojo' =>  [

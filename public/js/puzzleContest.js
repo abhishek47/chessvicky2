@@ -17,6 +17,13 @@ var board
   var completed = false;
   var pid = $('#pid').val();
  
+   var clock = $('.clock').FlipClock({
+        // Create a minute counter
+        clockFace: 'MinuteCounter',
+        autoStart: false
+        });
+
+   var time;
   
 
 var updateStatus = function(move) {
@@ -28,15 +35,19 @@ var updateStatus = function(move) {
     })
     .then(function (response) {
       console.log(response);
+        clock.stop(function(){
+            time = clock.getTime() - 1;
+        });
+
        swal({
             title: "Puzzle Solved!",
             html: true,
-            text: "<span style='color:#0a0a0a;font-weight:400'>You gain " + points + " points to your skillometer!</span>",
+            text: "<span style='color:#0a0a0a;font-weight:400'>You solved the puzzle in " + time + " seconds!</span>",
             type: "success",
             showCancelButton: true,
             confirmButtonColor: "#0048bc",
-            confirmButtonText: "Solve Another!",
-            cancelButtonText: "Go Home!",
+            confirmButtonText: "Next Puzzle",
+            cancelButtonText: "Exit Contest!",
             closeOnConfirm: false,
             closeOnCancel: false,
           },
@@ -218,141 +229,17 @@ function changePlayer()
       game.load(start + ' w KQkq - 1 3');
       board.position(game.fen());
 
-       axios.get('/user/puzzles', {
-        params: {
-          puzzle: pid
-        }
-      })
-      .then(function (response) {
-        console.log(response);
-        if(response.data == 'success')
-        {
-        swal({
-            title: "Puzzle Already Solved!",
-            html: true,
-            text: "<span style='color:#0a0a0a;font-weight:400'>You have Already solved this puzzle!</span>",
-            type: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#0048bc",
-            cancelButtonColor:"#019e13",
-            confirmButtonText: "Solve Another!",
-            cancelButtonText: "Solve Again!",
-            closeOnConfirm: false,
-          },
-          function(){
-              window.location.href = "/puzzles/random";
+  
 
-            
-          });
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    
 
-
-      $('#challenge').on('click', function(){
-          
-          swal({
-          title: "Challenge Friend!",
-          text: "<span style='color:#0a0a0a;font-weight:400'>Enter email Id of the friend to Challenge!</span>",
-          type: "input",
-          html: true,
-          showCancelButton: true,
-           confirmButtonColor: "#0048bc",
-          closeOnConfirm: false,
-          animation: "slide-from-top",
-          inputPlaceholder: "Ex.: xyz@gmail.com",
-          showLoaderOnConfirm: true,
-        },
-        function(inputValue){
-          if (inputValue === false) return false;
-          
-          if (inputValue === "") {
-            swal.showInputError("You need to enter email id!");
-            return false
-          }
-
-          axios.post('/user/challenge', {
-            email: inputValue,
-            puzzle: pid
-          })
-          .then(function (response) {
-            console.log(response);
-            if(response.data == 'success'){
-               swal({
-                title: "Challenge Sent!",
-                text: "<span style='color:#0a0a0a;font-weight:400'>Done!, Challenge sent to <span style='color:#019e13;font-weight:bold;'>" + inputValue + "!</span>",
-                type: "success",
-                html: true,
-                confirmButtonColor: "#0048bc",
-              });
-            }
-            
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-          
-         
-        });
-
-      });
-
-
-
-
-      $('#save').on('click', function(){
-          
-          if($('#save').data('save')) {
-              axios.post('/profile/puzzle/save', {
-                puzzle: pid
-              })
-              .then(function (response) {
-                console.log(response);
-                if(response.data == 'success'){
-                   $('#save').html('Unsave Puzzle');
-                     $('#save').data('save', 0);
-                   swal({
-                    title: "Puzzle Saved!",
-                    text: "<span style='color:#0a0a0a;font-weight:400'>Done!, Puzzle saved to your profile!",
-                    type: "success",
-                    html: true,
-                    confirmButtonColor: "#0048bc",
-                  });
-                }
-                
-              })
-              .catch(function (error) {
-                console.log(error);
-              });
-
-         } else {
-           axios.post('/profile/puzzle/unsave', {
-            puzzle: pid
-          })
-          .then(function (response) {
-            console.log(response);
-            if(response.data == 'success'){
-              $('#save').html('Save Puzzle');
-              $('#save').data('save', 1);
-               swal({
-                title: "Puzzle Removed!",
-                text: "<span style='color:#0a0a0a;font-weight:400'>Done!, Puzzle removed from your profile!",
-                type: "success",
-                html: true,
-                confirmButtonColor: "#0048bc",
-              });
-            }
-            
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-         } 
-
-
-      });
+         setTimeout(
+            function() 
+            {
+              clock.start(function() {
+                // Optional callback will fire when the clock starts
+                });
+            }, 2000);
 
       
 

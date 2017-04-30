@@ -48,11 +48,16 @@ Route::post('/forum/answer/{id}/delete', 'ForumAnswersController@delete');
 Route::get('/puzzles', 'PuzzlesController@index');
 Route::get('/puzzles/random', 'PuzzlesController@random');
 Route::get('/puzzles/create', 'PuzzlesController@create');
+
+Route::get('/puzzles/contests', 'ContestController@puzzles');
+Route::get('/puzzles/contest/{contest}', 'ContestController@puzzle');
+
 Route::get('/puzzles/{puzzle}', 'PuzzlesController@show');
 Route::post('/puzzles', 'PuzzlesController@store');
 Route::get('/puzzles/{puzzle}/edit', 'PuzzlesController@edit');
 Route::post('/puzzles/{puzzle}/update', 'PuzzlesController@update');
 Route::post('/puzzles/{puzzle}/delete', 'PuzzlesController@delete');
+
 
 Route::get('/books', 'BooksController@index');
 Route::get('/books/create', 'BooksController@create');

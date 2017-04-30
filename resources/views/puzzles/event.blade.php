@@ -1,16 +1,21 @@
 @extends('layouts.app')
 
+@section('css')
+
+<link rel="stylesheet" href="/css/flipclock.css">    
+
+@endsection
 
 @section('content')
 
 <!-- start page-title -->
-        <section class="page-title">
+        <section class="page-title" style="background: url('/images/page-title/img-3.jpg');">
             <div class="container">
                 <div class="title-box">
-                    <h1>Checkmate Puzzle</h1>
+                    <h1>Puzzle Event</h1>
                     <ol class="breadcrumb">
                         <li><a href="/">Home</a></li>
-                        <li>Puzzle</li>
+                        <li>Puzzle Event</li>
                     </ol>
                 </div>
             </div> <!-- end container -->
@@ -29,15 +34,9 @@
 
                             <div class="panel-heading" style="padding-bottom: 0px;background: #f8f8f8"></div>
                             <div class="panel-body">
-                               <a class="btn btn-lg btn-danger" id="challenge" style="margin-top: 4px;""><b>Challenge Friend</b></a> &nbsp;
-                               <a class="btn btn-lg btn-info"  style="margin-top: 4px;" href="/puzzles/random"><b>New Puzzle</b></a> &nbsp;
-                               @if(!\Auth::user()->hasSavedPuzzle($puzzle))
-                                 <a class="btn btn-lg btn-success" id="save" data-save="1" style="margin-top: 4px;"><b>Save Puzzle</b></a> &nbsp;
-                               @else
-                                  <a class="btn btn-lg btn-success" id="save" data-save="0" style="margin-top: 4px;"><b>Unsave Puzzle</b></a> &nbsp;
-                               @endif   
-                              
-                               <a class="btn btn-lg btn-social" style="margin-top: 4px;" href="/puzzle/share/{{$puzzle->id}}"><b>Share Puzzle</b></a>
+                               <div style="margin: 0 auto;margin-top: 1em;width: 300px;" class="clock"></div>
+        
+                                      
                             </div>
                         </div> 
 
@@ -77,7 +76,7 @@
                                                 <p id="movesleft" style="color: #000;font-weight: bold;">{{ $puzzle->moves }}</p>
 
                                                 <h3>Difficulty Level</h3>   
-                                                <p id="level" style="color: #000;font-weight: bold;">{{ $puzzle->level + 1 }}</p>
+                                                <p id="level" style="color: #000;font-weight: bold;">{{ $puzzle->level  }}</p>
 
                                                 <i id="source" data-val="0" hidden="true"></i>
                                                 <i id="dest" data-val="0" hidden="true"></i>
@@ -111,6 +110,19 @@
                             <hr>
 
                         </div>
+
+
+                        <div class="panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);">
+
+                            <div class="panel-heading" style="padding-bottom: 0px;background: #f8f8f8"></div>
+                            <div class="panel-body">
+                               <a class="btn btn-lg btn-info"  style="margin-top: 4px;" href="/home"><b>Exit Event</b></a> &nbsp;
+                               
+                              
+                               <button class="btn btn-lg btn-social pull-right" style="margin-top: 4px;" id='next' value="Next" onclick="sum_values()"><b>Next Puzzle</b></button>
+                            </div>
+                        </div> 
+
 
                         
  
@@ -159,7 +171,11 @@
 
 
 @section('scripts')
+  
+    <script src="/js/flipclock.min.js"></script>
 
-  <script src="/js/puzzle.js"></script>
+    
+
+  <script src="/js/puzzleContest.js"></script>
 
 @endsection

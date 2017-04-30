@@ -26,8 +26,7 @@
                <div class="row">
                     <div class="col col-xs-12">
                         
-                            <a class="btn btn-primary" style="margin-bottom: 19px;" href="/puzzles/random"><b>Solve Random Puzzles</b></a>
-
+                           
                             <div class="panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);">
 
                             <div class="panel-heading" style="padding-bottom: 0px;background: #f8f8f8">
@@ -45,8 +44,10 @@
                                   <option value="4" {{ $level == 4 ? 'selected' : '' }}>Level 4</option>
                                 </select>
                                </div>  &nbsp; | &nbsp;
-                               <button type="submit" class="btn btn-success">Filter</button>
+                               <button type="submit" class="btn btn-success">Filter</button> &nbsp; | &nbsp;
+                                <a href="/puzzles/random" class="btn btn-social">Solve Random Puzzle</a>
                             </form>
+
                             </div>
                         </div> 
                       
