@@ -1,5 +1,7 @@
-<?php view("partials/header", compact('page')); ?>
+@extends('admin.master')
 
+
+@section('content')
 
 <!-- BEGIN MAIN CONTENT -->
 		<article class="rs-content-wrapper">
@@ -66,8 +68,8 @@
 							                <td>Published <?= $article->published_at; ?></td>
 							                <td>
 							                    <a href="#" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> View</a>
-							                	<a href="<?= url('blog/edit/' . $article->id); ?>" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
-							                	<a href="<?= url('blog/delete/' . $article->id); ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</a>
+							                	<a href="/admin/blog/edit/{{$article->id}}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
+							                	<a href="/admin/blog/delete/{{$article->id}}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</a>
 							                </td>
 							            </tr>
 							          <?php endforeach; ?>  
@@ -90,7 +92,4 @@
 
 
 
-
-
-
-<?php view("partials/footer", compact('page')); ?>
+@endsection

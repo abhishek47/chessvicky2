@@ -47,6 +47,17 @@ class PostsController extends Controller
         return view('posts.index', compact('posts', 'q'));
     }
 
+     public function admin(Request $request)
+    {   
+
+        $articles = Post::all();
+
+       
+       $page = 'blog';
+
+        return view('admin.blog.index', compact('articles', 'page'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -54,7 +65,8 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+         $page = 'blog';
+        return view('admin.blog.new', compact('page'));
     }
 
     /**
@@ -76,7 +88,7 @@ class PostsController extends Controller
         
 
 
-        return redirect('/blog');
+        return redirect('/admin/blog');
     }
 
     /**
@@ -98,8 +110,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-         $post = Post::find($id);
-         return view('posts.edit', compact('post'));
+         $article = Post::find($id);
+         $page = 'blog';
+         return view('admin.blog.edit', compact('article', 'page'));
     }
 
     /**
@@ -121,7 +134,7 @@ class PostsController extends Controller
         
 
 
-        return redirect('/blog');
+        return redirect('/admin/blog');
     }
 
     /**

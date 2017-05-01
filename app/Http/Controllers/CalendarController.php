@@ -89,20 +89,7 @@ class CalendarController extends Controller
         return view('calendar.show', compact('event'));
     }
 
-     /**
-     * Display the random event.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function random()
-    {
-        $count = Event::count();
-        $rid = rand(1, $count);
-        $event = Event::find($rid);
-        
-        return view('calendar.show', compact('event'));
-    }
+    
 
     /**
      * Show the form for editing the specified resource.

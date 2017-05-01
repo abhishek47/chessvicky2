@@ -1,5 +1,7 @@
-<?php view("partials/header", compact('page')); ?>
+@extends('admin.master')
 
+
+@section('content')
 
 <!-- BEGIN MAIN CONTENT -->
 		<article class="rs-content-wrapper">
@@ -65,8 +67,8 @@
 							                <td><?= $book->link; ?></td>
 							                <td><?= $book->price; ?></td>
 							                <td>
-							                	<a href="<?= url('books/edit/' . $book->id); ?>" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
-							                	<a href="<?= url('books/delete/' . $book->id); ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</a>
+							                	<a href="/admin/books/edit/{{$book->id}}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
+							                	<a href="/admin/books/delete/{{$book->id}}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</a>
 							                </td>
 							            </tr>
 							          <?php endforeach; ?>  
@@ -92,7 +94,9 @@
 							<div class="panel-body p-t-xs">
 
 							
-								<form action="<?= url('books/store'); ?>" method="post">
+								<form action="books/store" method="post">
+
+								  {{ csrf_field() }}
 
 									
 									<div class="form-group">
@@ -150,10 +154,6 @@
 		</article><!-- /.rs-content-wrapper -->
 		<!-- END MAIN CONTENT -->
 
+@endsection
 
 
-
-
-
-
-<?php view("partials/footer", compact('page')); ?>

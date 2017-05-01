@@ -1,6 +1,6 @@
-<?php view("partials/header", compact('page')); ?>
+@extends('admin.master')
 
-
+@section('content')
 
     <!-- BEGIN MAIN CONTENT -->
     <article class="rs-content-wrapper">
@@ -127,9 +127,4 @@
     </article><!-- /.rs-content-wrapper -->
     <!-- END MAIN CONTENT -->
 
-
-
-
-
-
-<?php view("partials/footer"); ?>
+@endsection

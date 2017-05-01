@@ -1,4 +1,7 @@
-<?php view("partials/header", compact('page')); ?>
+@extends('admin.master')
+
+
+@section('content')
 
 
 <!-- BEGIN MAIN CONTENT -->
@@ -10,7 +13,7 @@
 					<div class="rs-dashhead m-b-lg">
 						<div class="rs-dashhead-content">
 							<div class="rs-dashhead-titles">
-								<h3 class="rs-dashhead-title">Add New Articles</h3>
+								<h3 class="rs-dashhead-title">Edit Articles</h3>
 								<!-- Begin Toolbar toggle button on mobile -->
 								<div class="toggle-toolbar-btn">
 									<span class="fa fa-sort"></span>
@@ -24,7 +27,7 @@
 						<!-- Begin Breadcrumb -->
 						<ol class="breadcrumb">
 							<li><a href="javascript:void(0);"><i class="fa fa-home m-r"></i> Home</a></li>
-							<li><a href="<?= url('articles'); ?>">Articles</a></li>
+							<li><a href="/admin/blog">Articles</a></li>
 							<li class="active">New</li>
 						</ol>
 						<!-- End Breadcrumb -->
@@ -36,7 +39,7 @@
 						<!-- Begin Panel -->
 						<div class="panel panel-plain panel-rounded">
 							<div class="panel-heading borderless">
-								<h3 class="panel-title">Add New Article</h3>
+								<h3 class="panel-title">Edit Article</h3>
 								<p class="subtitle text-uppercase m-t">Articles intended to tell something about!</p>
 								<!-- Begin Panel Toolbar -->
 								<div class="panel-toolbar">
@@ -49,46 +52,46 @@
 							<div class="panel-body p-t-xs">
 
 							
-								<form action="<?= url('blog/store'); ?>" method="post">
+								<form action="/admin/blog/update/{{$article->id}}" method="post">
+
+								{{ csrf_field() }}
 
 									
-									<div class="form-group">
+								<div class="form-group">
 										<label>Title</label>
-										<input type="text" name="title" class="form-control">
+										<input type="text" name="title" value="<?= $article->title; ?>" class="form-control">
 									</div>
 								
 
 									<div class="form-group">
-										<textarea name="body" class="summernote-fixed-height" title="Contents"><p>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~</p></textarea>
+										<textarea name="body" class="summernote-fixed-height" title="Contents"><?= $article->body; ?></textarea>
 									</div><!-- /.form-group -->
 
 
 									<div class="form-group">
 										<label>Author</label>
-										<input type="text" class="form-control" name="author" placeholder="Akash Wani">
+										<input type="text" class="form-control" name="author" value="<?= $article->author; ?>" placeholder="Akash Wani">
 									</div>
-
 
 									<div class="form-group">
 										<label>About Author</label>
-										<input type="text" class="form-control" name="author_about" placeholder="Grandmaster">
+										<input type="text" class="form-control" name="author_about" value="<?= $article->author_about; ?>" placeholder="Grandmaster">
 									</div>
 
 									<div class="form-group">
 										<label>Tags</label>
-										<input type="text" name="tags" class="rs-selectize-tags" value="chess,game" placeholder="Input Tags">
+										<input type="text" name="tags" class="rs-selectize-tags" value="<?= $article->tags; ?>" placeholder="Input Tags">
 									</div><!-- /.form-group -->
 									
 									<div class="form-group has-feedback">
 										<label class="control-label">Publish Date</label>
-										<input type="text" name="published_at" class="form-control rs-datepicker" data-date-format="yyyy-mm-dd" placeholder="YYYY-MM-DD" readonly>
+										<input type="text" name="published_at" value="<?= $article->published_at; ?>" class="form-control rs-datepicker" data-date-format="yyyy-mm-dd" placeholder="YYYY-MM-DD" readonly>
 										<span class="fa fa-calendar form-control-feedback" aria-hidden="true"></span>
 									</div><!-- /.form-group -->
 
 									<div class="form-group">
-										<input type="submit" class="btn btn-success" name="addarticle" value="Add article" >
+										<input type="submit" class="btn btn-success" name="addarticle" value="Update article" >
 									</div>
-
 
 									
 									
@@ -113,6 +116,4 @@
 
 
 
-
-
-<?php view("partials/footer", compact('page')); ?>
+@endsection

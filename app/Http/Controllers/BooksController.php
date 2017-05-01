@@ -38,6 +38,21 @@ class BooksController extends Controller
         return view('books.index', compact('books', 'q'));
     }
 
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function admin(Request $request)
+    {
+        
+        $books = Book::all();
+        $page = 'books';
+        
+        return view('admin.books.index', compact('books', 'q', 'page'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -45,7 +60,8 @@ class BooksController extends Controller
      */
     public function create()
     {
-       return view('books.create');
+        $page = 'books';
+       return view('books.create', compact('page'));
     }
 
     /**
@@ -58,7 +74,7 @@ class BooksController extends Controller
     {
         Book::create($request->all());
 
-        return redirect('/books');
+        return redirect('/admin/books');
     }
 
     /**
@@ -81,7 +97,8 @@ class BooksController extends Controller
      */
     public function edit(Book $book)
     {
-        return view('books.edit', compact('book'));
+        $page = 'books';
+        return view('admin.books.edit', compact('book', 'page'));
     }
 
     /**
@@ -95,7 +112,7 @@ class BooksController extends Controller
     {
         $book->update($request->all());
 
-        return redirect('/books');
+        return redirect('/admin/books');
     }
 
     /**
@@ -108,6 +125,6 @@ class BooksController extends Controller
     {
         $book->delete();
 
-        return redirect('/books');
+        return redirect('/admin/books');
     }
 }
