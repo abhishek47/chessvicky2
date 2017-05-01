@@ -128,6 +128,8 @@ Route::get('/payments/cancel', 'PaymentsController@cancel');
 
 Route::get('/admin/home', 'AdminController@dashboard');
 
+Route::get('/admin/users', 'AdminController@users');
+
 
 Route::get('/admin/calendar', 'CalendarController@admin');
 Route::post('/admin/calendar/store', 'CalendarController@store');

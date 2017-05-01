@@ -81,7 +81,7 @@
         </li>
 
         <li class="<?= $page == 'users' ? 'active selected' : ''; ?>">
-          <a href="index.html">
+          <a href="/admin/users">
             <span class="fa fa-user rs-icon-menu"></span>Users
           </a>
         </li>

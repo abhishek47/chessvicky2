@@ -19,4 +19,15 @@ class AdminController extends Controller
 
     	return view('admin.dashboard', compact('page', 'users', 'revenue'));
     }
+
+
+    public function users()
+    {
+    	$page = 'users';
+
+    	$users = User::all();
+
+
+    	return view('admin.users.index', compact('page', 'users'));
+    }
 }
