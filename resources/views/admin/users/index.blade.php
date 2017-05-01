@@ -12,7 +12,7 @@
 					<div class="rs-dashhead m-b-lg">
 						<div class="rs-dashhead-content">
 							<div class="rs-dashhead-titles">
-								<h3 class="rs-dashhead-title">Books Store</h3>
+								<h3 class="rs-dashhead-title">Registered Users</h3>
 								<!-- Begin Toolbar toggle button on mobile -->
 								<div class="toggle-toolbar-btn">
 									<span class="fa fa-sort"></span>
@@ -20,7 +20,7 @@
 								<!-- End Toolbar toggle button on mobile -->
 							</div><!-- /.rs-dashhead-titles -->
 							<div class="rs-dashhead-toolbar">
-								<h6 class="rs-dashhead-subtitle text-uppercase">An amazon affiliated Books Store!</h6>
+								<h6 class="rs-dashhead-subtitle text-uppercase">All users registered on ChessVicky!</h6>
 							</div><!-- /.rs-dashhead-toolbar -->
 						</div><!-- /.rs-dashhead-content -->
 						<!-- Begin Breadcrumb -->
