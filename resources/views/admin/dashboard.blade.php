@@ -65,7 +65,7 @@
                     <div class="quick-stat panel panel-rounded bg-grad bg-grad-03 borderless">
                       <div class="panel-heading borderless">
                         <p class="subtitle text-lighten text-uppercase m-b-xs">Total Revenue</p>
-                        <h3 class="m-a-0 p-a-0">&#8377 50,254</h3>
+                        <h3 class="m-a-0 p-a-0">&#8377 {{$revenue}}</h3>
                         <div class="panel-toolbar">
                           <span class="badge bg-lightest text-white p-x"><i class="fa fa-chevron-up m-r-xs"></i>0.5%</span>
                         </div><!-- /.panel-toolbar -->
@@ -100,7 +100,7 @@
                     <div class="quick-stat panel panel-rounded bg-grad bg-grad-15 borderless">
                       <div class="panel-heading borderless">
                         <p class="subtitle text-lighten text-uppercase m-b-xs">Registered Users</p>
-                        <h3 class="m-a-0 p-a-0">100K</h3>
+                        <h3 class="m-a-0 p-a-0">{{$users}}</h3>
                         <div class="panel-toolbar">
                           <span class="badge bg-lightest text-white p-x"><i class="fa fa-chevron-up m-r-xs"></i>3.68%</span>
                         </div><!-- /.panel-toolbar -->
