@@ -1,4 +1,7 @@
-<?php view("partials/header", compact('page')); ?>
+@extends('admin.master')
+
+@section('content')
+
 
 
 <!-- BEGIN MAIN CONTENT -->
@@ -63,8 +66,8 @@
 							                <td><?= $event->start_date; ?></td>
 							                <td><?= $event->end_date; ?></td>
 							                <td>
-							                	<a href="<?= url('calendar/edit/' . $event->id); ?>" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
-							                	<a href="<?= url('calendar/delete/' . $event->id); ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</a>
+							                	<a href="/admin/calendar/edit/{{$event->id}}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
+							                	<a href="/admin/calendar/delete/{{$event->id}}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</a>
 							                </td>
 							            </tr>
 							          <?php endforeach; ?>  
@@ -90,7 +93,9 @@
 							<div class="panel-body p-t-xs">
 
 							
-								<form action="<?= url('calendar/store'); ?>" method="post">
+								<form action="/admin/calendar/store" method="post">
+
+								  {{ csrf_field() }}
 
 									
 									<div class="form-group">
@@ -140,8 +145,4 @@
 
 
 
-
-
-
-
-<?php view("partials/footer", compact('page')); ?>
+@endsection

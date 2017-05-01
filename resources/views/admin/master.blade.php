@@ -69,7 +69,7 @@
         <li class="menu-header">Main menu</li>
 
         <li class="<?= $page == 'dashboard' ? 'active selected' : ''; ?>">
-          <a href="/admin">
+          <a href="/admin/home">
             <span class="fa fa-line-chart rs-icon-menu"></span>Dashboard
           </a>
         </li>
@@ -107,15 +107,7 @@
           </a>
         </li>
 
-         <li class="<?= $page == 'tutorials' ? 'active selected' : ''; ?>">
-          <a href="javascript:void(0);">
-            <span class="fa fa-flask rs-icon-menu"></span>Tutorials
-          </a>
-          <ul>
-            <li><a href="/admin/tutorials">All Tutorials</a></li>
-            <li><a href="admin/tutorials/new">Add New Tutorial</a></li>
-          </ul>
-        </li>
+         
 
         <li class="<?= $page == 'blog' ? 'active selected' : ''; ?>">
           <a href="javascript:void(0);">

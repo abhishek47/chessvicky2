@@ -9,6 +9,18 @@ use App\QuizQuestion;
 
 class QuizQuestionsController extends Controller
 {
+
+
+    public function edit($id)
+    {
+        $question = QuizQuestion::find($id);
+
+        $quiz = $question->quiz;
+
+        $page = 'quiz';
+       
+        return view('admin.quiz.question.edit', compact('question', 'quiz', 'page'));
+    }
       /**
      * Store a newly created resource in storage.
      *
@@ -22,7 +34,7 @@ class QuizQuestionsController extends Controller
         
         $quiz->questions()->create($request->all());
 
-        redirect('/quiz/' . $quiz->id);
+        return redirect('/admin/quiz/edit/' . $quiz->id);
     }
 
     /**
@@ -34,12 +46,12 @@ class QuizQuestionsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $quiz = Quiz::find($request->get('quiz_id'));
-        $question = QuizQuestion::find($id);
        
+        $question = QuizQuestion::find($id);
+
         $question->update($request->all());
 
-        redirect('/quiz/' . $quiz->id);
+        return redirect('/admin/quiz/edit/' . $question->quiz->id);
     }
 
     /**
@@ -54,6 +66,6 @@ class QuizQuestionsController extends Controller
         
         $question->delete();
 
-        redirect('/quiz');
+        return redirect('/admin/quiz/edit/');
     }
 }

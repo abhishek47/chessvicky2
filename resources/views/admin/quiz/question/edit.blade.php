@@ -1,4 +1,7 @@
-<?php view("partials/header", compact('page')); ?>
+@extends('admin.master')
+
+@section('content')
+
 
 
 <!-- BEGIN MAIN CONTENT -->
@@ -24,7 +27,7 @@
 						<!-- Begin Breadcrumb -->
 						<ol class="breadcrumb">
 							<li><a href="javascript:void(0);"><i class="fa fa-home m-r"></i> Home</a></li>
-							<li><a href="<?= url('quiz'); ?>">Quiz</a></li>
+							<li><a href="/admin/quiz">Quiz</a></li>
 							<li class="active">Edit</li>
 						</ol>
 						<!-- End Breadcrumb -->
@@ -49,7 +52,9 @@
 							<div class="panel-body p-t-xs">
 
 							
-								<form action="<?= url('quiz/question/update/' . $question->id); ?>" method="post">
+								<form action="/admin/quiz/question/update/{{$question->id}}" method="post">
+
+								  {{ csrf_field() }}
 
 									
 									
@@ -60,22 +65,22 @@
 
 									<div class="form-group">
 										<label>Option A</label>
-										<input type="text" name="option_a" value="<?= $question->option_a; ?>" class="form-control">
+										<input type="text" name="option_1" value="<?= $question->option_1; ?>" class="form-control">
 									</div>
 
 									<div class="form-group">
 										<label>Option B</label>
-										<input type="text" name="option_b" value="<?= $question->option_b; ?>"  class="form-control">
+										<input type="text" name="option_2" value="<?= $question->option_2; ?>"  class="form-control">
 									</div>
 
 									<div class="form-group">
 										<label>Option C</label>
-										<input type="text" name="option_c" value="<?= $question->option_c; ?>" class="form-control">
+										<input type="text" name="option_3" value="<?= $question->option_3; ?>" class="form-control">
 									</div>
 
 									<div class="form-group">
 										<label>Option D</label>
-										<input type="text" name="option_d" value="<?= $question->option_d; ?>" class="form-control">
+										<input type="text" name="option_4" value="<?= $question->option_4; ?>" class="form-control">
 									</div>
 
 									
@@ -92,7 +97,7 @@
 
 									<div class="form-group">
 										<label>Hint</label>
-										<textarea name="hint" class="form-control"><?= $question->hint; ?></textarea> 
+										<textarea name="hint" class="form-control"><?= $question->hint != null ? $question->hint : '--'; ?></textarea> 
 									</div>
 
 								
@@ -144,6 +149,4 @@
 
 
 
-
-
-<?php view("partials/footer", compact('page')); ?>
+@endsection

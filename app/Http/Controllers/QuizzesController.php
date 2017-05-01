@@ -35,6 +35,16 @@ class QuizzesController extends Controller
         return view('quiz.index', compact('quizzes', 'level'));
     }
 
+
+    public function admin(Request $request)
+    {
+        $quizzes = Quiz::all();
+        
+        $page = 'quizzes';
+
+        return view('admin.quiz.index', compact('quizzes', 'page'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -98,7 +108,11 @@ class QuizzesController extends Controller
      */
     public function edit(Quiz $quiz)
     {
-        return view('quiz.edit', compact('quiz'));
+        $page = 'quizzes';
+
+        $questions = $quiz->questions;
+
+        return view('admin.quiz.edit', compact('quiz', 'page', 'questions'));
     }
 
 

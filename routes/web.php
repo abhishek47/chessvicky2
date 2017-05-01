@@ -129,11 +129,11 @@ Route::get('/payments/cancel', 'PaymentsController@cancel');
 Route::get('/admin/home', 'AdminController@dashboard');
 
 
-Route::get('/admin/calendar', 'CalendarController@index');
+Route::get('/admin/calendar', 'CalendarController@admin');
 Route::post('/admin/calendar/store', 'CalendarController@store');
-Route::get('/admin/calendar/edit/[i:id]', 'CalendarController@edit');
-Route::post('/admin/calendar/update/[i:id]', 'CalendarController@update');
-Route::get('/admin/calendar/delete/[i:id]', 'CalendarController@destroy');
+Route::get('/admin/calendar/edit/{event}', 'CalendarController@edit');
+Route::post('/admin/calendar/update/{event}', 'CalendarController@update');
+Route::get('/admin/calendar/delete/{event}', 'CalendarController@destroy');
 
 Route::get('/admin/books', 'BooksController@admin');
 Route::post('/admin/books/store', 'BooksController@store');
@@ -148,18 +148,18 @@ Route::get('/admin/blog/edit/{id}', 'PostsController@edit');
 Route::post('/admin/blog/update/{id}', 'PostsController@update');
 Route::get('/admin/blog/delete/{id}', 'PostsController@destroy');
 
-Route::get('/admin/quiz/list', 'QuizController@admin');
-Route::get('/admin/quiz/new', 'QuizController@create');
-Route::post('/admin/quiz/store', 'QuizController@store');
-Route::get('/admin/quiz/edit/{quiz}', 'QuizController@edit');
-Route::post('/admin/quiz/update/{quiz}', 'QuizController@update');
-Route::get('/admin/quiz/delete/{quiz}', 'QuizController@delete');
-Route::get('/admin/quiz/events/list', 'QuizController@events');
-Route::get('/admin/quiz/events/new', 'QuizController@createEvent');
-Route::post('/admin/quiz/events/store', 'QuizController@storeEvent');
-Route::get('/admin/quiz/events/edit/{id}', 'QuizController@editEvent');
-Route::post('/admin/quiz/events/update/{id}', 'QuizController@updateEvent');
-Route::get('/admin/quiz/events/delete/{id}', 'QuizController@deleteEvent');
+Route::get('/admin/quiz/list', 'QuizzesController@admin');
+Route::get('/admin/quiz/new', 'QuizzesController@create');
+Route::post('/admin/quiz/store', 'QuizzesController@store');
+Route::get('/admin/quiz/edit/{quiz}', 'QuizzesController@edit');
+Route::post('/admin/quiz/update/{quiz}', 'QuizzesController@update');
+Route::get('/admin/quiz/delete/{quiz}', 'QuizzesController@delete');
+Route::get('/admin/quiz/events/list', 'QuizzesController@events');
+Route::get('/admin/quiz/events/new', 'QuizzesController@createEvent');
+Route::post('/admin/quiz/events/store', 'QuizzesController@storeEvent');
+Route::get('/admin/quiz/events/edit/{id}', 'QuizzesController@editEvent');
+Route::post('/admin/quiz/events/update/{id}', 'QuizzesController@updateEvent');
+Route::get('/admin/quiz/events/delete/{id}', 'QuizzesController@deleteEvent');
 Route::post('/admin/admin/quiz/question/store', 'QuizQuestionsController@store');
 Route::get('/admin/quiz/question/edit/{id}', 'QuizQuestionsController@edit');
 Route::post('/admin/quiz/question/update/{id}', 'QuizQuestionsController@update');
@@ -168,15 +168,15 @@ Route::get('/admin/quiz/question/delete/{id}', 'QuizQuestionsController@destroy'
 Route::get('/admin/puzzles/list', 'PuzzlesController@admin');
 Route::get('/admin/puzzles/new', 'PuzzlesController@create');
 Route::post('/admin/puzzles/store', 'PuzzlesController@store');
-Route::get('/admin/puzzles/edit/[i:id]', 'PuzzlesController@edit');
-Route::post('/admin/puzzles/update/[i:id]', 'PuzzlesController@update');
-Route::get('/admin/puzzles/delete/[i:id]', 'PuzzlesController@delete');
+Route::get('/admin/puzzles/edit/{puzzle}', 'PuzzlesController@edit');
+Route::post('/admin/puzzles/update/{puzzle}', 'PuzzlesController@update');
+Route::get('/admin/puzzles/delete/{puzzle}', 'PuzzlesController@delete');
 Route::get('/admin/puzzles/events/list', 'PuzzlesController@events');
 Route::get('/admin/puzzles/events/new', 'PuzzlesController@createEvent');
 Route::post('/admin/puzzles/events/store', 'PuzzlesController@storeEvent');
-Route::get('/admin/puzzles/events/edit/[i:id]', 'PuzzlesController@editEvent');
-Route::post('/admin/puzzles/events/update/[i:id]', 'PuzzlesController@updateEvent');
-Route::get('/admin/puzzles/events/delete/[i:id]', 'PuzzlesController@deleteEvent');
+Route::get('/admin/puzzles/events/edit/{id}', 'PuzzlesController@editEvent');
+Route::post('/admin/puzzles/events/update/{id}', 'PuzzlesController@updateEvent');
+Route::get('/admin/puzzles/events/delete/{id}', 'PuzzlesController@deleteEvent');
 
 
 // Login Page

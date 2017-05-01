@@ -1,4 +1,7 @@
-<?php view("partials/header", compact('page')); ?>
+@extends('admin.master')
+
+@section('content')
+
 
 
 <!-- BEGIN MAIN CONTENT -->
@@ -24,7 +27,7 @@
 						<!-- Begin Breadcrumb -->
 						<ol class="breadcrumb">
 							<li><a href="javascript:void(0);"><i class="fa fa-home m-r"></i> Home</a></li>
-							<li><a href="<?= url('calendar'); ?>">Calendar</a></li>
+							<li><a href="/admin/calendar">Calendar</a></li>
 							<li class="active">Edit</li>
 						</ol>
 						<!-- End Breadcrumb -->
@@ -49,7 +52,9 @@
 							<div class="panel-body p-t-xs">
 
 							
-								<form action="<?= url('calendar/update/' . $event->id); ?>" method="post">
+								<form action="/admin/calendar/update/{{$event->id}}" method="post">
+
+								{{ csrf_field() }}
 
 									
 									<div class="form-group">
@@ -101,8 +106,4 @@
 
 
 
-
-
-
-
-<?php view("partials/footer", compact('page')); ?>
+@endsection

@@ -55,6 +55,16 @@ class CalendarController extends Controller
 
     }
 
+     public function admin()
+    {
+        $events = Event::all();
+
+        $page = 'calendar';
+
+        return view('admin.calendar.index', compact('events', 'page'));
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -75,7 +85,7 @@ class CalendarController extends Controller
     {
         Event::create($request->all());
 
-        return redirect('/events');
+        return redirect('/admin/calendar');
     }
 
     /**
@@ -99,7 +109,9 @@ class CalendarController extends Controller
      */
     public function edit(Event $event)
     {
-        return view('calendar.edit', compact('event'));
+       $page = 'calendar';
+
+        return view('admin.calendar.edit', compact('event', 'page'));
     }
 
     /**
@@ -113,7 +125,7 @@ class CalendarController extends Controller
     {
         $event->update($request->all());
 
-        return redirect('/events');
+        return redirect('/admin/calendar');
     }
 
     /**
@@ -126,6 +138,6 @@ class CalendarController extends Controller
     {
         $event->delete();
 
-        return redirect('/events');
+        return redirect('/admin/calendar');
     }
 }

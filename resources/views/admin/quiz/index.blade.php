@@ -1,4 +1,6 @@
-<?php view("partials/header", compact('page')); ?>
+@extends('admin.master')
+
+@section('content')
 
 
 <!-- BEGIN MAIN CONTENT -->
@@ -63,8 +65,8 @@
 							                <td><?= count($quiz->questions); ?></td>
 							                <td><?= $quiz->level; ?></td>
 							                <td>
-							                	<a href="<?= url('quiz/edit/' . $quiz->id); ?>" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
-							                	<a href="<?= url('quiz/delete/' . $quiz->id); ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</a>
+							                	<a href="/admin/quiz/edit/{{$quiz->id}}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
+							                	<a href="/admin/quiz/delete/{{$quiz->id}}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</a>
 							                </td>
 							            </tr>
 							          <?php endforeach; ?>  
@@ -90,7 +92,9 @@
 							<div class="panel-body p-t-xs">
 
 							
-								<form action="<?= url('quiz/store'); ?>" method="post">
+								<form action="/admin/quiz/store" method="post">
+
+								{{ csrf_field() }}
 
 									
 									<div class="form-group">
@@ -101,10 +105,7 @@
 
 									<textarea name="description" class="summernote-fixed-height" title="Contents"></textarea>
 
-									<div class="form-group">
-										<label>Tags</label>
-										<input type="text" name="tags" class="rs-selectize-tags" value="chess,game" placeholder="Input Tags">
-									</div><!-- /.form-group -->
+									
 
 								   <div class="form-group">
 										<label>Quiz Level</label>
@@ -144,7 +145,4 @@
 
 
 
-
-
-
-<?php view("partials/footer", compact('page')); ?>
+@endsection

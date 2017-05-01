@@ -1,4 +1,6 @@
-<?php view("partials/header", compact('page')); ?>
+@extends('admin.master')
+
+@section('content')
 
 
 <!-- BEGIN MAIN CONTENT -->
@@ -24,7 +26,7 @@
 						<!-- Begin Breadcrumb -->
 						<ol class="breadcrumb">
 							<li><a href="javascript:void(0);"><i class="fa fa-home m-r"></i> Home</a></li>
-							<li><a href="<?= url('quiz/list'); ?>">Quiz</a></li>
+							<li><a href="/admin/quiz/list">Quiz</a></li>
 							<li class="active">Edit</li>
 						</ol>
 						<!-- End Breadcrumb -->
@@ -49,7 +51,9 @@
 							<div class="panel-body p-t-xs" style="display: none;">
 
 							
-								<form action="<?= url('quiz/update/' . $quiz->id); ?>" method="post">
+								<form action="/admin/quiz/update/{{$quiz->id}}" method="post">
+
+								   {{ csrf_field() }}
 
 									
 									<div class="form-group">
@@ -60,10 +64,7 @@
 
 									<textarea name="description" class="summernote-fixed-height" title="Contents"><?= $quiz->description; ?></textarea>
 
-									<div class="form-group">
-										<label>Tags</label>
-										<input type="text" name="tags" class="rs-selectize-tags" value="<?= $quiz->tags; ?>" placeholder="Input Tags">
-									</div><!-- /.form-group -->
+									
 
 								   <div class="form-group">
 										<label>Quiz Level</label>
@@ -126,8 +127,8 @@
 							                <td><?= $question->points; ?></td>
 							                <td><?= $question->time; ?></td>
 							                <td>
-							                	<a href="<?= url('quiz/question/edit/' . $question->id); ?>" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
-							                	<a href="<?= url('quiz/question/delete/' . $question->id . '/' . $question->quiz_id); ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</a>
+							                	<a href="/admin/quiz/question/edit/{{$question->id}}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
+							                	<a href="/admin/quiz/question/delete/{{$question->id}}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</a>
 							                </td>
 							            </tr>
 
@@ -158,7 +159,9 @@
 							<div class="panel-body p-t-xs">
 
 							
-								<form action="<?= url('quiz/question/store'); ?>" method="post">
+								<form action="/admin/quiz/question/store" method="post">
+
+								 {{ csrf_field() }}
 
 									
 									<div class="form-group">
@@ -248,7 +251,4 @@
 
 
 
-
-
-
-<?php view("partials/footer", compact('page')); ?>
+@endsection

@@ -37,6 +37,17 @@ class PuzzlesController extends Controller
         return view('puzzles.index', compact('puzzles', 'level'));
     }
 
+    public function admin(Request $request)
+    {
+
+        $puzzles = Puzzle::all();
+
+        $page = 'puzzles';
+       
+
+        return view('admin.puzzles.index', compact('puzzles', 'page'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -99,7 +110,10 @@ class PuzzlesController extends Controller
      */
     public function edit(Puzzle $puzzle)
     {
-        return view('puzzles.edit', compact('puzzle'));
+          $page = 'puzzles';
+       
+
+        return view('admin.puzzles.edit', compact('puzzle', 'page'));
     }
 
     /**
