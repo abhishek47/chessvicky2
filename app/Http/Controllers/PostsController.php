@@ -127,10 +127,9 @@ class PostsController extends Controller
         $post = Post::find($id);
         $post->title = $request->get('title');
         $post->slug = str_slug($post->title, '-');
-        $post->intro = $request->get('intro');
         $post->body = $request->get('body');
 
-        $post->save;
+        $post->save();
         
 
 
