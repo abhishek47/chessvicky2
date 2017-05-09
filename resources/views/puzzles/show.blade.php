@@ -1,5 +1,14 @@
 @extends('layouts.app')
 
+@section('meta')
+
+<meta property="og:url"           content="https://www.chessvicky.com/puzzles/{{$puzzle->id}}" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Puzzle #{{$puzzle->id}} | Chessvicky" />
+  <meta property="og:description"   content="Sovle this puzzle on Chessvicky and gain {{ $puzzle->points }}." />
+
+@endsection
+
 
 @section('content')
 
@@ -37,7 +46,8 @@
                                   <a class="btn btn-lg btn-success" id="save" data-save="0" style="margin-top: 4px;"><b>Unsave Puzzle</b></a> &nbsp;
                                @endif   
                               
-                               <a class="btn btn-lg btn-social" style="margin-top: 4px;" href="/puzzle/share/{{$puzzle->id}}"><b>Share Puzzle</b></a>
+                              <!-- Your share button code -->
+                              <div class="fb-share-button" data-href="https://www.chessvicky.com/puzzles/{{$puzzle->id}}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
                             </div>
                         </div> 
 
