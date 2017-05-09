@@ -152,15 +152,39 @@
                                             <div class="row">
                                                 
                                                <form class="form-horizontal">
-                                                      
-
                                                       <div class="form-group">
-                                                        <label for="timeBase" class="control-label col-xs-4 col-sm-6 col-md-4">Game ID</label>
+                                                        <label for="timeBase" class="control-label col-xs-4 col-sm-6 col-md-4">Base time (min)</label>
                                                         <div class="col-xs-4 col-sm-6 col-md-4">
                                                           <input type="number" class="form-control" id="timeBase" value="5"></input>
                                                         </div>
                                                       </div>
-                                                     
+                                                      <div class="form-group">
+                                                        <label for="timeInc" class="control-label col-xs-4 col-sm-6 col-md-4">Increment (sec)</label>
+                                                        <div class="col-xs-4 col-sm-6 col-md-4">
+                                                          <input type="number" class="form-control" id="timeInc" value="2"></input>
+                                                        </div>
+                                                      </div>
+                                                      <div class="form-group">
+                                                        <label for="skillLevel" class="control-label col-xs-4 col-sm-6 col-md-4">Skill Level (0-20)</label>
+                                                        <div class="col-xs-6 col-sm-6 col-md-4">
+                                                          <input type="number" class="form-control" id="skillLevel" value="5"></input>
+                                                        </div>
+                                                      </div>
+                                                      <div class="form-group">
+                                                        <label for="color" class="control-label col-xs-4 col-sm-6 col-md-4">I play</label>
+                                                        <div class="col-xs-4 col-sm-6 col-md-4">
+                                                          <div class="btn-group" data-toggle="buttons">
+                                                            <label class="btn btn-default active" id="color-white"><input type="radio" name="color">White</label>
+                                                            <label class="btn btn-inverse" id="color-black"><input type="radio" name="color">Black</label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="form-group hidden">
+                                                        <label for="showScore" class="control-label col-xs-4 col-sm-6 col-md-4">Show score</label>
+                                                        <div class="col-xs-4 col-sm-6 col-md-4 hidden">
+                                                          <input type="checkbox" class="form-control" id="showScore" checked></input>
+                                                        </div>
+                                                      </div>
                                                      
                                                     
                                         </div>
