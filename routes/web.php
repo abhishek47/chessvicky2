@@ -125,6 +125,8 @@ Route::post('/buy/coins', 'PaymentsController@makePayment');
 Route::get('/payments/response', 'PaymentsController@response');
 Route::get('/payments/cancel', 'PaymentsController@cancel');
 
+Route::post('user/game/stats', 'GamesController@stats');
+
 
 
 
