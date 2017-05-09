@@ -43,7 +43,7 @@ Puzzle #{{$puzzle->id}}
                                   <a class="btn btn-lg btn-success" id="save" data-save="0" style="margin-top: 4px;"><b>Unsave Puzzle</b></a> &nbsp;
                                @endif   
                               
-                               <a class="btn btn-lg btn-social" style="margin-top: 4px;" href="#" id="shareBtn"><b>Share Quiz</b></a>
+                               <a class="btn btn-lg btn-social" style="margin-top: 4px;" href="#" id="shareBtn"><b>Share Puzzle</b></a>
                             </div>
                         </div> 
 
@@ -139,7 +139,7 @@ Puzzle #{{$puzzle->id}}
 
                         <div class="comments">
 
-                            <div class="fb-comments" data-href="http://trumpetstechnologies.com/cv/articles/show/<?= $puzzle->id; ?>" data-numposts="5" data-width="100%"></div>
+                            <div class="fb-comments" data-href="https://www.chessvicky.com/puzzles/{{$puzzle->id}}" data-numposts="5" data-width="100%"></div>
                                     
                             
                         </div> <!-- end comments -->
