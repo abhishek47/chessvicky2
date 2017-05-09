@@ -229,7 +229,23 @@ function engineGame(options) {
                 startClock();
             }
         } else if(playerColor == turn) {
-            swal("Check And Mate!", "You lose the game and lost 150 skillometer points!", "error");
+            swal({
+            title: "Check And Mate!",
+            html: true,
+            text: "<span style='color:#0a0a0a;font-weight:400'>You lose the game and lost 150 skillometer points!</span>",
+            type: "error",
+            showCancelButton: true,
+            confirmButtonColor: "#0048bc",
+            confirmButtonText: "Play Again!",
+            cancelButtonText: "Go Home!",
+            closeOnConfirm: false,
+            closeOnCancel: true,
+          },
+          function(isConfirm){
+             if(isConfirm) {
+               window.location.href = "/game/computer";
+             }  
+          });
             var dataString = 'operation=decrement' + '&points='+150;
   
               $.ajax({
@@ -245,7 +261,23 @@ function engineGame(options) {
               }
               });
         } else {
-            swal("Woohoo", "You win the game and gain 250 skillometer points!", "success");
+             swal({
+            title: "You Win!",
+            html: true,
+            text: "<span style='color:#0a0a0a;font-weight:400'>YYou win the game and gain 250 skillometer points!</span>",
+            type: "success",
+            showCancelButton: true,
+            confirmButtonColor: "#0048bc",
+            confirmButtonText: "Play Again!",
+            cancelButtonText: "Go Home!",
+            closeOnConfirm: false,
+            closeOnCancel: true,
+          },
+          function(isConfirm){
+             if(isConfirm) {
+               window.location.href = "/game/computer";
+             }  
+          });
              var dataString = 'operation=increment' + '&points='+250;
   
               $.ajax({
