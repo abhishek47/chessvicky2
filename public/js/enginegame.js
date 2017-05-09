@@ -14,7 +14,6 @@ function engineGame(options) {
     
       var statusEl = $('#status');
 
-      $('#gamelevel').val('[ Level ' + $('#skillLevel').val() + ' ]');
    
 
     // do not pick up pieces if the game is over
@@ -33,6 +32,8 @@ function engineGame(options) {
     uciCmd('uci');
 
     function displayStatus() {
+
+
         var status = '<b>Engine: </b> ';
         if(!engineStatus.engineLoaded) {
             status += 'loading...';
@@ -40,6 +41,8 @@ function engineGame(options) {
             status += 'loaded...';
         } else {
             status += 'ready.';
+            
+      $('#gamelevel').val('[ Level ' + $('#skillLevel').val() + ' ]');
         }
         status += ' <b>Book: </b>' + engineStatus.book;
         if(engineStatus.search) {
