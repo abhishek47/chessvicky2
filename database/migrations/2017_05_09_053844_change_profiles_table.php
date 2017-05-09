@@ -14,11 +14,11 @@ class ChangeProfilesTable extends Migration
     public function up()
     {
          Schema::table('profiles', function (Blueprint $table) {
-            $table->string('phone')->default(null)->change();
-            $table->text('photo')->default(null)->change();
-            $table->string('city')->default(null)->change();
-            $table->string('state')->default(null)->change();
-            $table->string('country')->default(null)->change();
+            $table->string('phone')->nullable()->default(null)->change();
+            $table->text('photo')->nullable()->default(null)->change();
+            $table->string('city')->nullable()->default(null)->change();
+            $table->string('state')->nullable()->default(null)->change();
+            $table->string('country')->nullable()->default(null)->change();
             $table->integer('rating')->default(1400);
         });
     }
