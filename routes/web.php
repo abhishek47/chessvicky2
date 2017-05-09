@@ -134,6 +134,8 @@ Route::get('/admin/home', 'AdminController@dashboard');
 
 Route::get('/admin/users', 'AdminController@users');
 
+Route::get('/admin/users/delete/{id}', 'AdminController@deleteUser');
+
 
 Route::get('/admin/calendar', 'CalendarController@admin');
 Route::post('/admin/calendar/store', 'CalendarController@store');

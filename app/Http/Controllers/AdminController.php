@@ -30,4 +30,14 @@ class AdminController extends Controller
 
     	return view('admin.users.index', compact('page', 'users'));
     }
+
+     public function deleteUser($id)
+    {
+      
+        $user = User::find($id);
+        
+        $user->delete();
+
+        return redirect('/admin/users');
+    }
 }
