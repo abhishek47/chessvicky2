@@ -48,6 +48,9 @@ Route::post('/forum/answer', 'ForumAnswersController@store');
 Route::post('/forum/answer/{id}/update', 'ForumAnswersController@update');
 Route::post('/forum/answer/{id}/delete', 'ForumAnswersController@delete');
 
+Route::post('/forum/answer/{ansid}/{qid}', 'ForumAnswersController@markAnswer');
+Route::post('/forum/answer/{ansid}/{qid}/unmark', 'ForumAnswersController@unmarkAnswer');
+
 
 Route::get('/puzzles', 'PuzzlesController@index');
 Route::get('/puzzles/random', 'PuzzlesController@random');

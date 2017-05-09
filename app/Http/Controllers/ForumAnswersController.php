@@ -47,6 +47,44 @@ class ForumAnswersController extends Controller
     }
 
     /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function markAnswer(Request $request, $ansid, $qid)
+    {
+        $question = ForumQuestion::find($request->get('qid'));
+        $answer = ForumAnswer::find($ansid);
+        
+        $question->solved = $answer->id; 
+
+        $question->update();
+
+        redirect('/forum/' . $question->slug);
+    }
+
+     /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function unmarkAnswer(Request $request, $ansid, $qid)
+    {
+        $question = ForumQuestion::find($request->get('qid'));
+        $answer = ForumAnswer::find($ansid);
+        
+        $question->solved = 0; 
+
+        $question->update();
+
+        redirect('/forum/' . $question->slug);
+    }
+
+    /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id

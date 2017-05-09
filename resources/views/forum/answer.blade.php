@@ -18,7 +18,11 @@
                 <p>{!! $answer->body !!}</p>
             </div>
             <div class="replay">
-                <button>Mark Answer</button>
+               @if($question->solved == $answer->id) 
+                <a href="/forum/answer/{{ $answer->id }}/{{ $question->id }}/unmark">Unmark Answer</a>
+               @else 
+                <a href="/forum/answer/{{ $answer->id }}/{{ $question->id }}">Mark Answer</a>
+               @endif 
             </div>
         </div>
     </div>
