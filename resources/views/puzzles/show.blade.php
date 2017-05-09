@@ -1,13 +1,6 @@
 @extends('layouts.app')
 
-@section('meta')
-
-<meta property="og:url"           content="https://www.chessvicky.com/puzzles/{{$puzzle->id}}" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Puzzle #{{$puzzle->id}} | Chessvicky" />
-  <meta property="og:description"   content="Sovle this puzzle on Chessvicky and gain {{ $puzzle->points }}." />
-
-@endsection
+@section('title', 'Puzzle #{{$puzzle->id}} ')
 
 
 @section('content')
@@ -180,7 +173,7 @@ document.getElementById('shareBtn').onclick = function() {
     hashtag : '#chessvicky',
     mobile_iframe: true,
     quote: 'Sovle this puzzle on Chessvicky and gain {{ $puzzle->points }} Points.',
-    href: "www.chessvicky.com",
+    href: "www.chessvicky.com/puzzles/{{$puzzle->id}}",
   }, function(response){});
 }
 </script>

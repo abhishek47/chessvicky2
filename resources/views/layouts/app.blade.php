@@ -11,7 +11,7 @@
     @yield('meta')
 
     <!-- Page Title -->
-    <title> ChessVicky | Chess Resources, Articles, Puzzles, Quizzes, Events, Games,Tournaments, Cash Prices</title>
+    <title>ChessVicky | @yield('title', 'Chess Resources, Articles, Puzzles, Quizzes, Events, Games,Tournaments, Cash Prices') </title>
 
     <!-- Favicon and Touch Icons -->
    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
