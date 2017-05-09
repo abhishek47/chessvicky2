@@ -71,11 +71,7 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
 
-        $profile = new Profile;
-
-        $profile->phone = "";
-
-        $user->profile()->save($profile);
+        $user->profile()->save(new Profile);
         
         session()->flash('flash_title', 'Thanks For Joining ChessVicky!');
         session()->flash('flash_message', 'Welcome to the platform of unlimited possibilities of exploring the chess world!This is a platfrom of chess where you can Learn,Compete as well as Earn.All the best!'); 
