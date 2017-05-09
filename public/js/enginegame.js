@@ -1,24 +1,5 @@
 function engineGame(options) {
 
-  swal({
-                  title: "Check And Mate!",
-                  html: true,
-                  text: "<span style='color:#0a0a0a;font-weight:400'>You lose the game and lost <b>150</b> skillometer points!</span>",
-                  type: "error",
-                  showCancelButton: true,
-                  confirmButtonColor: "#0048bc",
-                  confirmButtonText: "Play Again!",
-                  cancelButtonText: "Go Home!",
-                  closeOnConfirm: false,
-                  closeOnCancel: false,
-                },
-                function(isConfirm){
-                   if(isConfirm) {
-                    window.location.href = "/game/computer";
-                   } else {
-                    window.location.href = "/home";
-                   }  
-                });
     options = options || {}
     var game = new Chess();
     var board;
@@ -261,7 +242,12 @@ function engineGame(options) {
               success: function(html, window)
               { 
                   console.log("LOST");
-                         swal({
+                         
+  
+              }
+              });
+
+              swal({
                   title: "Check And Mate!",
                   html: true,
                   text: "<span style='color:#0a0a0a;font-weight:400'>You lose the game and lost <b>150</b> skillometer points!</span>",
@@ -280,9 +266,6 @@ function engineGame(options) {
                     window.location.href = "/home";
                    }  
                 });
-  
-              }
-              });
         } else {
           var dataString = 'operation=increment' + '&points='+250;
   
@@ -294,7 +277,11 @@ function engineGame(options) {
               beforeSend: function(request){ return request.setRequestHeader('X-CSRF-Token', $("meta[name='csrf-token']").attr('content'));},
               success: function(html, window)
               { 
-                  swal({
+                    
+              }
+              });
+
+              swal({
                   title: "You Win!",
                   html: true,
                   text: "<span style='color:#0a0a0a;font-weight:400'>You win the game and gain <b>250</b> skillometer points!</span>",
@@ -312,9 +299,7 @@ function engineGame(options) {
                    } else {
                     window.location.href = "/home";
                    }  
-                });   
-              }
-              });
+                }); 
              
              
         }
