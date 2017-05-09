@@ -173,7 +173,7 @@ document.getElementById('shareBtn').onclick = function() {
     hashtag : '#chessvicky',
     mobile_iframe: true,
     quote: 'Sovle this puzzle on Chessvicky and gain {{ $puzzle->points }} Points.',
-    href: 'www.chessvicky.com/puzzles/{{$puzzle->id}}',
+    href: 'www.chessvicky.com',
   }, function(response){});
 }
 </script>
