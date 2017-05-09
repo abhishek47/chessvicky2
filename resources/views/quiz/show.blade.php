@@ -187,7 +187,7 @@ document.getElementById('shareBtn').onclick = function() {
     display: 'popup',
     hashtag : '#chessvicky',
     mobile_iframe: true,
-    quote: 'Sovle this quiz on Chessvicky and gain {{ $quiz->points }} Points.',
+    quote: 'Sovle this quiz on Chessvicky and gain {{ $quiz->getPoints() }} Points.',
     href: 'www.chessvicky.com/quiz/{{$quiz->id}}',
   }, function(response){});
 }
