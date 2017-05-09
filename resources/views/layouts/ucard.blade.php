@@ -44,7 +44,7 @@
                                             <li><i class="fa fa-user"></i> <b>Leaderboard Rank :</b> {{ Auth::user()->profile->rank }} &nbsp; <span style="font-size: 14px;"><a href="/leaderboard"><i class="fa fa-bars"></i>  View Leaderboard</a></span></li>
                                             <li><i class="fa fa-tasks"></i> <b>Points :</b> {{ Auth::user()->profile->points }}</li>
                                           <!--  <li><i class="fa fa-money"></i> <b>Coins :</b> {{ Auth::user()->profile->coins }} &nbsp; <span style="font-size: 14px;"><a href="#" data-toggle="modal" data-target="#buyCoins"><i class="fa fa-shopping-cart"></i>  Buy Coins</a> &nbsp;|&nbsp; <span style="font-size: 14px;"><a href="/user/upgrade"><i class="fa fa-bank"></i>  Redeem Coins</a></span></span></li> -->
-                                          <li><i class="fa fa-star"></i> {{ Auth::user()->profile->rating }}</li>
+                                          <li><i class="fa fa-star"></i><b>Rating :</b>  {{ Auth::user()->profile->rating }}</li>
                                            
                                         </ul>
                                        </div> 
