@@ -17,7 +17,7 @@
             <div class="comment-content">
                 <p>{!! $answer->body !!}</p>
             </div>
-            <div class="replay">
+            <div class="">
                @if($question->solved == $answer->id) 
                 <a href="/forum/answer/{{ $answer->id }}/{{ $question->id }}/unmark" class="btn btn-social">Unmark Answer</a>
                @else 

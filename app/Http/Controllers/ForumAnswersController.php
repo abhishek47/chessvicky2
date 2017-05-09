@@ -55,7 +55,7 @@ class ForumAnswersController extends Controller
      */
     public function markAnswer(Request $request, $ansid, $qid)
     {
-        $question = ForumQuestion::find($request->get('qid'));
+        $question = ForumQuestion::find($qid);
         $answer = ForumAnswer::find($ansid);
         
         $question->solved = $answer->id; 
