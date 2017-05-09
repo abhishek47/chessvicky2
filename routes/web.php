@@ -94,6 +94,7 @@ Route::get('/user/edit', 'ProfileController@edit');
 
 
 Route::post('/profile/photo', 'ProfileController@updatePhoto');
+Route::post('/profile/photo/remove', 'ProfileController@removePhoto');
 
 Route::post('/profile/update', 'ProfileController@update');
 

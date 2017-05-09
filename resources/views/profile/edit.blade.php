@@ -36,6 +36,11 @@
            <br>
             <input type="submit" class="btn btn-info" value="Update Image">
           </form>
+          <form method="post" action="/profile/photo/remove" enctype="multipart/form-data">
+           {{ csrf_field() }}
+           
+            <input type="submit" class="btn btn-info" value="Remove Image">
+          </form>
         </div>
       </div>
       

@@ -54,6 +54,19 @@ class ProfileController extends Controller
      
         return redirect('/user/edit');
     }
+
+     public function removePhoto(Request $request)
+    {
+        $user = \Auth::user();
+
+       
+        $user->profile->photo = null;
+
+        $user->profile->save();   
+        
+     
+        return redirect('/user/edit');
+    }
     
 
 

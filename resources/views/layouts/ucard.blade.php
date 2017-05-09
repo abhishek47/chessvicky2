@@ -7,7 +7,7 @@
                             <div class="col col-sm-2" id="upic">
                                 <div class="member-pic">
                                     @if( Auth::user()->profile->photo)
-                                      <img class="img img-responsive" style="width: 140px;height: 140px;border-radius: 50%;" src="{{  Auth::user()->profile->photo }}" alt="">
+                                      <img class="img img-responsive" style="width: 140px;height: 140px;border-radius: 50%;" src="/{{  Auth::user()->profile->photo }}" alt="">
                                     @else
                                      <span class="chatter_avatar_circle large" style="background-color:#<?= \DevDojo\Chatter\Helpers\ChatterHelper::stringToColorCode( Auth::user()->name) ?>">
                                           {{ ucfirst(substr( Auth::user()->name, 0, 1)) }}
