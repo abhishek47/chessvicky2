@@ -81,6 +81,14 @@
 </head>
 
 <body class="home-style2">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=1867657833480788";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
     <!-- start page-wrapper -->
     <div class="page-wrapper">
@@ -327,24 +335,7 @@
      
     <script src="/js/bootstrap.min.js"></script>
 
-    <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1867657833480788',
-      xfbml      : true,
-      version    : 'v2.9'
-    });
-    FB.AppEvents.logPageView();
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
+    
 
      @yield('scripts')
 
