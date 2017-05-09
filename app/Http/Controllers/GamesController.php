@@ -16,7 +16,7 @@ class GamesController extends Controller
         $this->middleware('auth');
     }
     
-    public function game()
+    public function computer()
     {
     	return view('game.index');
     }
