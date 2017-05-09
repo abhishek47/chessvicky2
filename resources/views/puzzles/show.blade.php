@@ -178,8 +178,9 @@ document.getElementById('shareBtn').onclick = function() {
     method: 'share',
     display: 'popup',
     hashtag : '#chessvicky',
-    quote: 'Sovle this puzzle on Chessvicky and gain {{ $puzzle->points }}.',
-    href: "www.chessvicky.com/puzzles/{{$puzzle->id}}",
+    mobile_iframe: true,
+    quote: 'Sovle this puzzle on Chessvicky and gain {{ $puzzle->points }} Points.',
+    href: "www.chessvicky.com",
   }, function(response){});
 }
 </script>
