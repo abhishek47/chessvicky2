@@ -42,7 +42,7 @@
                 <div class="date"><span>{{ $question->created_at->diffForHumans() }}</span></div>
             </div>
             <div class="comment-content">
-                <a href="/forum/{{$question->slug}}"><h4 style="font-size: 24px;margin-bottom: 10px;"><i class="fa fa-check"></i> @if(isset($q)){!! highlight_words($question->title, explode(' ', $q)) !!}@else {{ $question->title  }}@endif</h4> </a>
+                <a href="/forum/{{$question->slug}}"><h4 style="font-size: 24px;margin-bottom: 10px;">@if($question->solved > 0)<i class="fa fa-check"></i>@endif @if(isset($q)){!! highlight_words($question->title, explode(' ', $q)) !!}@else {{ $question->title  }}@endif</h4> </a>
                   @if(isset($q)) 
                    <p>{!! highlight_words(substr(strip_tags($question->body), 0, 200), explode(' ', $q)) !!}@if(strlen(strip_tags($question->body)) > 200){{ '...' }}@endif</p> 
                 @else
