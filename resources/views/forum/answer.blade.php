@@ -19,9 +19,9 @@
             </div>
             <div class="replay">
                @if($question->solved == $answer->id) 
-                <a href="/forum/answer/{{ $answer->id }}/{{ $question->id }}/unmark">Unmark Answer</a>
+                <a href="/forum/answer/{{ $answer->id }}/{{ $question->id }}/unmark" class="btn btn-social">Unmark Answer</a>
                @else 
-                <a href="/forum/answer/{{ $answer->id }}/{{ $question->id }}">Mark Answer</a>
+                <a href="/forum/answer/{{ $answer->id }}/{{ $question->id }}" class="btn btn-success">Mark Answer</a>
                @endif 
             </div>
         </div>
