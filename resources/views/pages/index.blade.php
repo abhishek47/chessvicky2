@@ -158,7 +158,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="/home" class="col col-lg-4 col-xs-6">
+                    <a href="/puzzles" class="col col-lg-4 col-xs-6">
                         <div class="grid">
                             <div class="img-holder">
                                 <img src="images/featured/img-2.jpg" alt class="img img-responsive">
@@ -169,7 +169,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="/home" class="col col-lg-4 col-xs-6">
+                    <a href="/game/computer" class="col col-lg-4 col-xs-6">
                         <div class="grid">
                             <div class="img-holder">
                                 <img src="images/featured/img-3.jpg" alt class="img img-responsive">

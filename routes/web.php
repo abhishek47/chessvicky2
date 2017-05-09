@@ -192,4 +192,7 @@ Route::get('/admin/login', 'LoginController@showLogin');
 Route::post('/admin/login', 'LoginController@postLogin');
 
 
+Route::get('/game/computer', 'GamesController@computer');
+
+
 
