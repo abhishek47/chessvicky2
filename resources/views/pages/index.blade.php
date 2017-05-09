@@ -312,8 +312,8 @@
                             <ul>
                                 <li><a data-filter="*" href="#" class="current">All</a></li>
                                 <li><a data-filter=".basic" href="#">Basic</a></li>
-                                <li><a data-filter=".inter" href="#">Intermediate</a></li>
-                                <li><a data-filter=".advance" href="#">Advance</a></li>
+                                <li><a data-filter=".basic" href="#">Intermediate</a></li>
+                                <li><a data-filter=".basic" href="#">Advance</a></li>
                             </ul>
                         </div>
 
