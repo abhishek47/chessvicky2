@@ -244,18 +244,20 @@ function engineGame(options) {
                          swal({
                   title: "Check And Mate!",
                   html: true,
-                  text: "<span style='color:#0a0a0a;font-weight:400'>You lose the game and lost 150 skillometer points!</span>",
+                  text: "<span style='color:#0a0a0a;font-weight:400'>You lose the game and lost <b>150</b> skillometer points!</span>",
                   type: "error",
                   showCancelButton: true,
                   confirmButtonColor: "#0048bc",
                   confirmButtonText: "Play Again!",
                   cancelButtonText: "Go Home!",
                   closeOnConfirm: false,
-                  closeOnCancel: true,
+                  closeOnCancel: false,
                 },
                 function(isConfirm){
                    if(isConfirm) {
-                     window.location.href = "/game/computer";
+                    window.location.href = "/game/computer";
+                   } else {
+                    window.location.href = "/home";
                    }  
                 });
   
@@ -275,18 +277,20 @@ function engineGame(options) {
                   swal({
                   title: "You Win!",
                   html: true,
-                  text: "<span style='color:#0a0a0a;font-weight:400'>YYou win the game and gain 250 skillometer points!</span>",
+                  text: "<span style='color:#0a0a0a;font-weight:400'>You win the game and gain <b>250</b> skillometer points!</span>",
                   type: "success",
                   showCancelButton: true,
                   confirmButtonColor: "#0048bc",
                   confirmButtonText: "Play Again!",
                   cancelButtonText: "Go Home!",
                   closeOnConfirm: false,
-                  closeOnCancel: true,
+                  closeOnCancel: false,
                 },
                 function(isConfirm){
-                   if(isConfirm) {
-                     window.location.href = "/game/computer";
+                    if(isConfirm) {
+                    window.location.href = "/game/computer";
+                   } else {
+                    window.location.href = "/home";
                    }  
                 });   
               }
