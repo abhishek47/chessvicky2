@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Puzzle #{{$puzzle->id}} ')
+@section('title')
 
+Puzzle #{{ $puzzle->id }}
+
+@endsection 
 
 @section('content')
 
