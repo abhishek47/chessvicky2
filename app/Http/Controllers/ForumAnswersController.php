@@ -43,7 +43,7 @@ class ForumAnswersController extends Controller
 
         $answer->update();
 
-        redirect('/forum/' . $question->slug);
+        return redirect('/forum/' . $question->slug);
     }
 
     /**
@@ -62,7 +62,7 @@ class ForumAnswersController extends Controller
 
         $question->update();
 
-        redirect('/forum/' . $question->slug);
+        return redirect('/forum/' . $question->slug);
     }
 
      /**
@@ -81,7 +81,7 @@ class ForumAnswersController extends Controller
 
         $question->update();
 
-        redirect('/forum/' . $question->slug);
+        return redirect('/forum/' . $question->slug);
     }
 
     /**
@@ -96,6 +96,6 @@ class ForumAnswersController extends Controller
         
         $answer->delete();
 
-        redirect('/forum');
+        return redirect('/forum');
     }
 }
