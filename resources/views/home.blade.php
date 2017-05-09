@@ -121,7 +121,7 @@
                                 <p>Well, we feel just learning and comparing with friends is no cool.So we bring up online chess tournaments as well as puzzle and quiz events where you can earn real money.</p>
                             </div>
                         </div>
-                    </a> -->
+                    </a>
 
                      <a href="/chess" class="col col-lg-4 col-xs-6">
                         <div class="grid">
@@ -133,7 +133,7 @@
                                 <p>Well, we feel just learning and comparing with friends is no cool.So we bring up online chess tournaments as well as puzzle and quiz events where you can earn real money.</p>
                             </div>
                         </div>
-                    </a>
+                    </a> -->
                 </div> <!-- end row -->
             </div> <!-- end container -->
         </section>
