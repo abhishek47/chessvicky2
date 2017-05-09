@@ -42,7 +42,6 @@ function engineGame(options) {
         } else {
             status += 'ready.';
             
-      $('#gamelevel').val('[ Level ' + $('#skillLevel').val() + ' ]');
         }
         status += ' <b>Book: </b>' + engineStatus.book;
         if(engineStatus.search) {

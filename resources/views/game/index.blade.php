@@ -47,7 +47,7 @@
                                       <div class="panel-heading" style="padding-bottom: 0px;background: #f8f8f8">
                                         <div class="author-meta">
                                             <div class="name"><h4 style="font-size: 28px;">Play with ChessVicky!</h4></div>
-                                            <div class="date"><span id="gamelevel" style="font-size: 22px;color: #f39c12;font-weight: bold;">[ Level 0 - Level 20 ]</span></div>
+                                            
                                         </div>
                                       </div>  
                                         <div class="comment-content">
