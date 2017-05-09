@@ -13,6 +13,8 @@ function engineGame(options) {
     var timeOver = false;
     
       var statusEl = $('#status');
+
+      $('#gamelevel').val($('#skillLevel').val());
    
 
     // do not pick up pieces if the game is over
