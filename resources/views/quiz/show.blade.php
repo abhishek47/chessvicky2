@@ -149,9 +149,9 @@
 
                         
 
-                        <div class="comments">
+                      <div class="comments">
 
-                            <div class="fb-comments" data-href="http://trumpetstechnologies.com/cv/articles/show/<?= $quiz->id; ?>" data-numposts="5" data-width="100%"></div>
+                            <div class="fb-comments" data-href="https://www.chessvicky.com/quiz/{{$quiz->id}}" data-numposts="5" data-width="100%"></div>
                                     
                             
                         </div> <!-- end comments -->
