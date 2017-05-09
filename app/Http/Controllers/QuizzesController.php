@@ -139,6 +139,7 @@ class QuizzesController extends Controller
                         $wrong++;
                        }
                     } else {
+                        $answers[$question->id] = 8;
                         $wrong++;
                     }   
                } 
