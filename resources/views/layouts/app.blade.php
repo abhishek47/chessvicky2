@@ -173,7 +173,7 @@
 
                                     <ul>
                                         <li><a href="/home"><i class="fa fa-home"></i> Home</a></li>
-                                        <li><a href="/profile"><i class="fa fa-user"></i> Profile</a></li>
+                                        <li><a href="/user/edit"><i class="fa fa-user"></i> Profile</a></li>
                                         <li>
                                             <a href="{{ route('logout') }}"
                                                 onclick="event.preventDefault();
