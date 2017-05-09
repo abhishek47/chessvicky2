@@ -14,7 +14,7 @@ function engineGame(options) {
     
       var statusEl = $('#status');
 
-      $('#gamelevel').val($('#skillLevel').val());
+      $('#gamelevel').val('[ Level ' + $('#skillLevel').val() + ' ]');
    
 
     // do not pick up pieces if the game is over
