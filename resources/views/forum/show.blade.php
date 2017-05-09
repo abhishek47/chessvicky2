@@ -72,6 +72,7 @@
                            </div>
                            
                            <div class="panel-body">
+                              @if(Auth::check())
 	                           <form method="post" action="/forum/answer">
  								
  								  {{ csrf_field() }}	
@@ -85,6 +86,9 @@
 
 	                           	  <button class="btn btn-info" type="submit">Post Answer</button>
 	                           </form>
+                               @else 
+                                <a class="btn btn-info" href="/login">Login To Post Answer</a>
+                               @endif                                
                            </div>
                         	
                         </div>
