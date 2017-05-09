@@ -177,7 +177,7 @@ document.getElementById('shareBtn').onclick = function() {
   FB.ui({
     method: 'share',
     display: 'popup',
-    href: "https://www.chessvicky.com/puzzles/{{$puzzle->id}}",
+    href: "www.chessvicky.com/puzzles/{{$puzzle->id}}",
   }, function(response){});
 }
 </script>
