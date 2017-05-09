@@ -78,6 +78,13 @@
             </div>
           </div>
 
+           <div class="form-group">
+            <label class="col-lg-2 control-label">Rating:</label>
+            <div class="col-lg-10">
+              <input class="form-control" name="rating" type="text" value="{{ $user->profile->rating }}">
+            </div>
+          </div>
+
           <div class="form-group">
             <label class="col-lg-2 control-label">Bio:</label>
             <div class="col-lg-10">
