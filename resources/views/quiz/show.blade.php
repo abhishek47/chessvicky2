@@ -187,7 +187,8 @@ document.getElementById('shareBtn').onclick = function() {
     display: 'popup',
     hashtag : '#chessvicky',
     mobile_iframe: true,
-    caption: 'Solve Quiz',
+    title: 'Solve Quiz',
+    description: 'Solve quiz',
     quote: 'Sovle this quiz on Chessvicky and gain {{ $quiz->getPoints() }} Points.',
     href: 'www.chessvicky.com/quiz/{{$quiz->id}}',
   }, function(response){});
