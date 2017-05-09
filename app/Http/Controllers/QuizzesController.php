@@ -130,12 +130,17 @@ class QuizzesController extends Controller
                 $correct = 0;
                 $wrong = 0;
                foreach ($quiz->questions as $key => $question) {
-                   if($question->answer == $answers[$question->id])
+                   if(array_key_exists($question->id, $answers)) 
                    {
-                     $correct++;
-                   } else {
-                    $wrong++;
-                   }
+                       if($question->answer == $answers[$question->id])
+                       {
+                         $correct++;
+                       } else {
+                        $wrong++;
+                       }
+                    } else {
+                        $wrong++;
+                    }   
                } 
 
                return view('quiz.result', compact('quiz' ,'answers', 'points', 'correct', 'wrong'));
