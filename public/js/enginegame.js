@@ -320,6 +320,7 @@ var playAudio = function() {
         draggable: false,
         /*boardTheme: "symbol_board_theme,*/
         position: 'start',
+        pieceTheme: 'http://www.willangles.com/projects/chessboard/img/chesspieces/wikipedia/{piece}.png',
 
        
     };
