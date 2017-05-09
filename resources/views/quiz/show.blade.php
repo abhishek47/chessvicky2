@@ -37,7 +37,7 @@
                                   <a class="btn btn-lg btn-success" id="save" data-save="0" style="margin-top: 4px;"><b>Unsave Quiz</b></a> &nbsp;
                                @endif   
                               
-                               <a class="btn btn-lg btn-social" style="margin-top: 4px;" href="/quiz/share/{{$quiz->id}}"><b>Share Quiz</b></a>
+                               <a class="btn btn-lg btn-social" id="shareBtn" style="margin-top: 4px;" href="#"><b>Share Quiz</b></a>
                             </div>
                         </div> 
 
@@ -179,5 +179,18 @@
 @section('scripts')
 
   <script src="/js/quiz.js"></script>
+
+  <script>
+document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    method: 'share',
+    display: 'popup',
+    hashtag : '#chessvicky',
+    mobile_iframe: true,
+    quote: 'Sovle this quiz on Chessvicky and gain {{ $quiz->points }} Points.',
+    href: 'www.chessvicky.com/quiz/{{$quiz->id}}',
+  }, function(response){});
+}
+</script>
 
 @endsection
