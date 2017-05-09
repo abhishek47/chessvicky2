@@ -33,7 +33,7 @@
                                 <h4>Filter Quizzes</h4>
                             </div>
                             <div class="panel-body">
-                             <form class="form-inline" method="get" action="/quiz"> 
+                             <form class="form-inline" method="get" action="/puzzles"> 
                                <div class="form-group"> 
                                 <label>Difficulty Level : </label> &nbsp;
                                   <select class="form-control" name="level">
