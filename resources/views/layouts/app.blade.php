@@ -164,7 +164,7 @@
                                      @if( Auth::user()->profile->photo)
                                       <img class="img img-responsive" style="display: inline;width: 30px;height: 30px;margin-right: 5px;margin-bottom: 2px;" src="/{{  Auth::user()->profile->photo }}" alt="" class="img img-responsive img-circle">
                                     @else
-                                     <span class="chatter_avatar_circle small" style="background-color:#<?= \DevDojo\Chatter\Helpers\ChatterHelper::stringToColorCode( Auth::user()->name) ?>;width: 30px;height: 30px;font-size: 14px; ">
+                                     <span class="chatter_avatar_circle small" style="background-color:#<?= \DevDojo\Chatter\Helpers\ChatterHelper::stringToColorCode( Auth::user()->name) ?>;width: 30px;height: 30px;font-size: 18px;line-height: 28px;">
                                           {{ ucfirst(substr( Auth::user()->name, 0, 1)) }}
                                       </span>
                                      @endif 
