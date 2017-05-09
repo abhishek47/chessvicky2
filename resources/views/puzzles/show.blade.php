@@ -177,8 +177,8 @@ document.getElementById('shareBtn').onclick = function() {
   FB.ui({
     method: 'share',
     display: 'popup',
-    hashtag : 'chessvicky'
-    quote: 'Sovle this puzzle on Chessvicky and gain {{ $puzzle->points }}.'
+    hashtag : 'chessvicky',
+    quote: 'Sovle this puzzle on Chessvicky and gain {{ $puzzle->points }}.',
     href: "www.chessvicky.com/puzzles/{{$puzzle->id}}",
   }, function(response){});
 }
