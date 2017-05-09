@@ -168,12 +168,9 @@
 <script>
 document.getElementById('shareBtn').onclick = function() {
   FB.ui({
-    method: 'share',
-    display: 'popup',
-    hashtag : '#chessvicky',
-    mobile_iframe: true,
-    quote: 'Sovle this puzzle on Chessvicky and gain {{ $puzzle->points }} Points.',
-    href: 'www.chessvicky.com/puzzles/{{$puzzle->id}}',
+    method: 'feed',
+    caption: 'Sovle this puzzle on Chessvicky and gain {{ $puzzle->points }} Points.',
+    link: 'www.chessvicky.com/puzzles/{{$puzzle->id}}',
   }, function(response){});
 }
 </script>
