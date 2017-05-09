@@ -36,22 +36,28 @@
                            </div>
                            
                            <div id="qform" class="panel-body collapse">
-	                           <form method="post" action="/forum">
- 								
- 								  {{ csrf_field() }}	
+                            @if(Auth::check())
+    	                           <form method="post" action="/forum">
+     								
+                                      {{ csrf_field() }}	
 
-	                              <div class="form-group">
-	                               <label for="title">Your Question</label>
-	                           	   <input id="title" name="title" class="form-control" type="text" />
-	                           	  </div> 
+    	                              <div class="form-group">
+    	                               <label for="title">Your Question</label>
+    	                           	   <input id="title" name="title" class="form-control" type="text" />
+    	                           	  </div> 
 
-	                              <div class="form-group">
-	                               <label for="body">Describe your question</label>
-	                           	   <textarea id="body" name="body" class="form-control"></textarea>
-	                           	  </div> 
+    	                              <div class="form-group">
+    	                               <label for="body">Describe your question</label>
+    	                           	   <textarea id="body" name="body" class="form-control"></textarea>
+    	                           	  </div> 
 
-	                           	  <button class="btn btn-info" type="submit">Post Question</button>
-	                           </form>
+    	                           	  <button class="btn btn-info" type="submit">Post Question</button>
+    	                           </form>
+                              @else
+
+                                <a class="btn btn-info" href="/login">Login To Post New Question</a>
+                                       
+                              @endif 
                            </div>
                         	
                         </div>
