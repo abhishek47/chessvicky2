@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\User;
+
 use App\Puzzle;
 use App\Quiz;
 
@@ -22,7 +24,7 @@ class ProfileController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function index($username)
     {
         $user = User::where('username', $username)->first();
