@@ -74,9 +74,9 @@
                                 </div> <!-- link-button -->
                             </div>
                         </li>
-                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000" data-thumb="images/slider/slider-6.jpg" data-title="We are Consult Care" >
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000" data-thumb="images/page-title/img-1.jpg" data-title="We are Consult Care" >
                             <!-- MAIN IMAGE -->
-                            <img src="images/slider/slider-6.jpg"  alt="newslide2014_1"  data-bgposition="0%" data-bgfit="cover" data-bgrepeat="no-repeat">
+                            <img src="images/page-title/img-1.jpg"  alt="newslide2014_1"  data-bgposition="0%" data-bgfit="cover" data-bgrepeat="no-repeat">
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
