@@ -29,7 +29,7 @@ class ProfileController extends Controller
     {
         $user = User::where('username', $username)->first();
 
-        if($user == null || $user == Auth::user())
+        if($user == null || $user == \Auth::user())
         {
             return redirect('/home');
         }
