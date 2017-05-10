@@ -9,7 +9,7 @@
             <li>
                 
                 <div class="">
-                    <h4><a href="#">{{ substr($post->title, 0, 30) }}..</a></h4>
+                    <h4><a href="/blog/{{$post->slug}}">{{ substr($post->title, 0, 30) }}..</a></h4>
                     <span>{{ $post->created_at->toFormattedDateString() }}</span>
                 </div>
             </li>

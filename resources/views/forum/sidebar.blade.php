@@ -8,7 +8,7 @@
             <li>
                 
                 <div class="">
-                    <h4><a href="#">{{ substr($ques->title, 0, 30) }}..</a></h4>
+                    <h4><a href="/forum/{{$ques->slug}}">{{ substr($ques->title, 0, 30) }}..</a></h4>
                     <span>{{ $ques->created_at->toFormattedDateString() }}</span>
                 </div>
             </li>
