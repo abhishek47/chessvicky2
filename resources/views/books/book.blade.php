@@ -23,7 +23,7 @@
 
         ?>
         <div class="details">
-            <h3 style="font-size: 18px;"><a href="{{ $book->link }}">{{ Str::limit($value, $limit = 100, $end = '...') }}</a></h3>
+            <h3 style="font-size: 18px;"><a href="{{ $book->link }}">{{ str_limit($value, $limit = 100, $end = '...') }}</a></h3>
             <span>Price : {{ $book->price }}</span>
             <span>Author : @if(isset($q)){!! highlight_words($book->author, explode(' ', $q)) !!}@else {{ $book->author  }}@endif</span>
             <a href="{{ $book->link }}" class="view-case-studes">Buy Now</a>
