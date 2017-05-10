@@ -41,7 +41,7 @@ function engineGame(options) {
             status += 'loaded...';
         } else {
             status += 'ready.';
-            
+
         }
         status += ' <b>Book: </b>' + engineStatus.book;
         if(engineStatus.search) {
@@ -82,10 +82,26 @@ function engineGame(options) {
          if(time.wtime == 0)
             {
                 timeOver = true;
-                swal("Oops...", "White ran out of time!", "error");
+                 swal({
+                  title: "Oops!",
+                  html: true,
+                  text: "<span style='color:#0a0a0a;font-weight:400'>White ran out of time!</span>",
+                  type: "error",
+                  confirmButtonColor: "#0048bc",
+                  confirmButtonText: "Play Again!",
+                  closeOnConfirm: true,
+                }); 
             } else if(time.btime == 0) {
                 timeOver = true;
-                swal("Oops...", "Black ran out of time!", "error");
+                swal({
+                  title: "Oops!",
+                  html: true,
+                  text: "<span style='color:#0a0a0a;font-weight:400'>Black ran out of time!</span>",
+                  type: "error",
+                  confirmButtonColor: "#0048bc",
+                  confirmButtonText: "Play Again!",
+                  closeOnConfirm: true,
+                }); 
             } else {
                  updateClock();
         var t = (time.clockColor == 'white' ? time.wtime : time.btime) + time.startTime - Date.now();

@@ -128,6 +128,9 @@ Route::get('/payments/cancel', 'PaymentsController@cancel');
 Route::post('user/game/stats', 'GamesController@stats');
 
 
+Route::get('leaderboard', 'LeaderboardController@index');
+
+
 
 
 
