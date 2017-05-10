@@ -12,12 +12,13 @@
           if(isset($q))
 
             { 
-                $value = highlight_words($book->name, explode(' ', $q)) 
-            } else 
+                $value = highlight_words($book->name, explode(' ', $q)); 
+            } 
+            else 
 
             { 
 
-                $value = $book->name  
+                $value = $book->name ; 
             }
 
         ?>
