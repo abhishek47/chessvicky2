@@ -143,6 +143,8 @@
         <!-- end of hero slider -->
 
 
+
+
         <!-- start featured -->
         <section class="featured section-padding">
             <div class="container">
@@ -258,6 +260,9 @@
         <!-- end services -->
 
 
+
+
+
         <!-- start fun-fact -->
         <section class="fun-fact start-count">
             <div class="container">        
@@ -290,6 +295,9 @@
             </div> <!-- end container -->
         </section>
         <!-- end fun-fact -->
+
+
+       
 
 
         
@@ -480,6 +488,70 @@
             </div> <!-- end container -->
         </section>
         <!-- end blog-section -->
+
+   
+        <section id="vision" class="section-padding">
+
+           <div class="container"> 
+            <!--
+              <div class="row">
+                 <div class="col-md-6 col-xs-12 item">
+                    <div class="col-xs-3">
+                        <img src="images/user.png" class="img-circle">
+                    </div>
+                    <div class="col-xs-9">
+                        <h3>Vinayak Wadile</h3>
+                        <p>Chairman and Co-Founder at ChessVicky.Being a great chess player I am here to write and create usefull resources for all our members at ChessVicky.
+                        </p>
+                    </div>
+                 </div>
+                 <div class="col-md-6 col-xs-12 item">
+                    <div class="col-xs-3">
+                        <img src="images/user.png" class="img-circle">
+                    </div>
+                    <div class="col-xs-9">
+                        <h3>Abhishek Wani</h3>
+                        <p>Director and Co-Founder at ChessVicky.Being a Computer Engineer I am here to manage the technical consent of ChessVicky.
+                        </p>
+                    </div>
+                 </div>
+              </div>
+              <br><br>
+              
+              <br> -->
+              <hr>
+              <div class="row">
+                  <div class="col-md-12 col-xs-12 item">
+                  
+                  <div class="col-xs-12">
+                      <h2>Vision 2020</h2>
+                    <p>Teaching is the greatest act of optimism.Here at ChessVicky we want people to learn and persue their passion of chess in a different way at low costs.In future years we look forward to make a grandmaster in chess through ChessVicky.
+                    </p>
+                  </div>
+                 </div>
+              </div>
+           </div>
+       </section>
+
+        <section id="partners">
+
+            <div class="container">
+                <div class="row">
+                   
+                   <a target="_blank" href="http://www.trumpetstechnologies.com" class="col-md-3 col-xs-6">
+                      <img  src="/images/partners/01.png">
+                   </a>
+                   <a href="#" data-toggle="modal" data-target="#akashModal" class="col-md-3 col-xs-6">
+                      <img  src="/images/partners/02.jpg">
+                   </a>
+                   <a href="#" data-toggle="modal" data-target="#botvinnikModal" class="col-md-3 col-xs-6">
+                      <img  src="/images/partners/03.jpg">
+                   </a>
+                 
+                </div>
+            </div>
+            
+        </section> 
 
 
 

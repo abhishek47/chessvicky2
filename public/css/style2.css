@@ -9057,3 +9057,62 @@ span.chatter_avatar_circle.large {
      margin: 10px;
   
   }
+
+
+  * VISION */
+
+#vision {
+  padding-top: 65px;
+  margin-bottom: 105px;
+}
+
+#vision h3 {
+  margin-top: 0px;
+}
+
+#vision img {
+  height: 90px;
+  margin-top: 8px;
+}
+
+/* STATS  */
+
+#partners {
+  height: 150px;
+  background-color: #fff;
+  padding: 25px;
+  padding-top: 20px;
+  margin-bottom: 80px;
+
+}
+
+#partners img {
+  width: 250px;
+}
+
+
+@media (max-width: 767px) {
+ 
+  #vision img {
+    height: 70px;
+  }
+
+  #vision .item {
+    margin-top: 25px;
+  }
+
+    #partners img {
+     width: 150px;
+
+    }
+
+    #partners a:nth-child(3)
+    {
+      margin-top: 15px; 
+      margin-left: 8px; 
+    }
+    
+   
+
+}
+
