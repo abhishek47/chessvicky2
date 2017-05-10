@@ -28,3 +28,36 @@ function highlight_words( $content, $words) {
 
     return $content; // return highlighted data
 }
+
+
+function getRankOfCurrentUser()
+{
+    $profiles =  App\Profile::orderBy('points', 'DESC')->get();
+    
+    $c = count($profiles);
+    $i = 0;
+    foreach ($profiles as $key => $p) {
+         if($p->user_id === \Auth::user()->id)
+         {
+            return $i+1;  
+         }
+         $i++;
+     } 
+     return 0;
+    
+}
+function getRankOfGivenUser($id)
+{
+  $profiles =  App\Profile::orderBy('points', 'DESC')->get();
+    
+    $c = count($profiles);
+    $i = 0;
+    foreach ($profiles as $key => $p) {
+         if($p->user_id === $id)
+         {
+            return $i+1;  
+         }
+         $i++;
+     } 
+     return 0;
+}
