@@ -39,6 +39,9 @@
                                             <li><i class="fa fa-star"></i><b>Games Won :</b>  {{ Auth::user()->profile->games_won }}</li>
 
                                             <li><i class="fa fa-star"></i><b>Games Drawn :</b>  {{ Auth::user()->profile->games_drawn }}</li>
+
+
+                                          <li><i class="fa fa-star"></i><b>Quizzes Solved :</b>  {{ count(Auth::user()->solvedQuizzes) }}</li>
                                            
                                         </ul>
                                        </div> 
@@ -51,6 +54,9 @@
                                           <li><i class="fa fa-star"></i><b>Rating :</b>  {{ Auth::user()->profile->rating }}</li>
 
                                           <li><i class="fa fa-star"></i><b>Games Lost :</b>  {{ Auth::user()->profile->games_lost }}</li>
+
+                                          <li><i class="fa fa-star"></i><b>Puzzles Solved :</b>  {{ count(Auth::user()->solvedPuzzles) }}</li>
+
                                            
                                         </ul>
                                        </div> 
