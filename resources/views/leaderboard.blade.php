@@ -72,7 +72,7 @@
                                              
                                             <td>
                                                <a href="{{ url('/profile/' . $p->user->username) }}">
-                                                <p>{{ $p->user->name }}</p>
+                                                <p><b>{{ $p->user->name }}</b></p>
                                                </a> 
                                             </td>
 
