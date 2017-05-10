@@ -96,6 +96,9 @@ Route::get('/home', 'HomeController@index');
 Route::get('/user/edit', 'ProfileController@edit');
 
 
+Route::get('/profile/{username}', 'ProfileController@index');
+
+
 Route::post('/profile/photo', 'ProfileController@updatePhoto');
 Route::post('/profile/photo/remove', 'ProfileController@removePhoto');
 

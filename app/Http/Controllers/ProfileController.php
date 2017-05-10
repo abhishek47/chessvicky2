@@ -13,6 +13,28 @@ use App\Mail\QuizChallenge;
 class ProfileController extends Controller
 {
     
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
+    public function index($username)
+    {
+        $user = User::where('username', $username)->first();
+
+        if($user == null || $user == Auth::user())
+        {
+            return redirect('/home');
+        }
+
+        return view('profile.index', compact('user'));
+    }
+    
     public function edit()
     {
     	$user = \Auth::user();
