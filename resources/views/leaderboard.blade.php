@@ -64,7 +64,7 @@
                                                   @if($p->photo)
                                                     <img style="width: 30px;height: 30px;" src="{{ $p->photo }}" alt="" class="img-circle thumb-sm">
                                                   @else
-                                                   <span class="chatter_avatar_circle" style="background-color:#<?= \DevDojo\Chatter\Helpers\ChatterHelper::stringToColorCode($p->user->name) ?>;width: 30px;height: 30px;">
+                                                   <span class="chatter_avatar_circle" style="background-color:#<?= \DevDojo\Chatter\Helpers\ChatterHelper::stringToColorCode($p->user->name) ?>;width: 30px;height: 30px;font-size: 18px;line-height: 28px;">
                                                         {{ ucfirst(substr($p->user->name, 0, 1)) }}
                                                     </span>
                                                   @endif  
