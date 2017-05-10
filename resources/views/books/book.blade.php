@@ -7,7 +7,7 @@
             </a>
         </div>
         <div class="details">
-            <h3><a href="{{ $book->link }}">@if(isset($q)){!! highlight_words($book->name, explode(' ', $q)) !!}@else {{ $book->name  }}@endif</a></h3>
+            <h3 style="font-size: 18px;"><a href="{{ $book->link }}">@if(isset($q)){!! highlight_words($book->name, explode(' ', $q)) !!}@else {{ $book->name  }}@endif</a></h3>
             <span>Price : {{ $book->price }}</span>
             <span>Author : @if(isset($q)){!! highlight_words($book->author, explode(' ', $q)) !!}@else {{ $book->author  }}@endif</span>
             <a href="{{ $book->link }}" class="view-case-studes">Buy Now</a>
