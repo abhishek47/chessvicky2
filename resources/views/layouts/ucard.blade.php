@@ -36,12 +36,12 @@
                                               <li><i class="fa fa-map-marker"></i> {{ Auth::user()->profile->city . ',' .  Auth::user()->profile->state . ',' .  Auth::user()->profile->country }}</li>
                                             <li><i class="fa fa-clock-o"></i> Member Since <b>{{ Auth::user()->created_at->toFormattedDateString() }} </b></li>
 
-                                            <li><i class="fa fa-star"></i><b>Games Won :</b>  {{ Auth::user()->profile->games_won }}</li>
+                                            <li><i class="fa fa-thumbs-up"></i><b>Games Won :</b>  {{ Auth::user()->profile->games_won }}</li>
 
-                                            <li><i class="fa fa-star"></i><b>Games Drawn :</b>  {{ Auth::user()->profile->games_drawn }}</li>
+                                            <li><i class="fa fa-gamepad"></i><b>Games Drawn :</b>  {{ Auth::user()->profile->games_drawn }}</li>
 
 
-                                          <li><i class="fa fa-star"></i><b>Quizzes Solved :</b>  {{ count(Auth::user()->solvedQuizzes) }}</li>
+                                          <li><i class="fa fa-language"></i><b>Quizzes Solved :</b>  {{ count(Auth::user()->solvedQuizzes) }}</li>
                                            
                                         </ul>
                                        </div> 
@@ -51,11 +51,11 @@
                                             <li><i class="fa fa-user"></i> <b>Leaderboard Rank :</b> {{ Auth::user()->profile->rank }} &nbsp; <span style="font-size: 14px;"><a href="/leaderboard"><i class="fa fa-bars"></i>  View Leaderboard</a></span></li>
                                             <li><i class="fa fa-tasks"></i> <b>Points :</b> {{ Auth::user()->profile->points }}</li>
                                           <!--  <li><i class="fa fa-money"></i> <b>Coins :</b> {{ Auth::user()->profile->coins }} &nbsp; <span style="font-size: 14px;"><a href="#" data-toggle="modal" data-target="#buyCoins"><i class="fa fa-shopping-cart"></i>  Buy Coins</a> &nbsp;|&nbsp; <span style="font-size: 14px;"><a href="/user/upgrade"><i class="fa fa-bank"></i>  Redeem Coins</a></span></span></li> -->
-                                          <li><i class="fa fa-star"></i><b>Rating :</b>  {{ Auth::user()->profile->rating }}</li>
+                                          <li><i class="fa fa-star-half-empty"></i><b>Rating :</b>  {{ Auth::user()->profile->rating }}</li>
 
-                                          <li><i class="fa fa-star"></i><b>Games Lost :</b>  {{ Auth::user()->profile->games_lost }}</li>
+                                          <li><i class="fa fa-thumbs-down"></i><b>Games Lost :</b>  {{ Auth::user()->profile->games_lost }}</li>
 
-                                          <li><i class="fa fa-star"></i><b>Puzzles Solved :</b>  {{ count(Auth::user()->solvedPuzzles) }}</li>
+                                          <li><i class="fa fa-hashtag"></i><b>Puzzles Solved :</b>  {{ count(Auth::user()->solvedPuzzles) }}</li>
 
                                            
                                         </ul>
