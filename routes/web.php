@@ -83,12 +83,12 @@ Route::get('/quiz/{quiz}', 'QuizzesController@show');
 Route::post('/quiz', 'QuizzesController@store');
 Route::get('/quiz/{quiz}/edit', 'QuizzesController@edit');
 Route::post('/quiz/{quiz}/update', 'QuizzesController@update');
-Route::post('/quiz/{quiz}/delete', 'QuizzesController@delete');
+Route::post('/quiz/{quiz}/delete', 'QuizzesController@destroy');
 Route::get('/quiz/{quiz}/result', 'QuizzesController@result');
 
 Route::post('/quiz/questions', 'QuizQuestionsController@store');
 Route::post('/quiz/questions/{id}/update', 'QuizQuestionsController@update');
-Route::post('/quiz/questions/{id}/delete', 'QuizQuestionsController@delete');
+Route::post('/quiz/questions/{id}/delete', 'QuizQuestionsController@destroy');
 
 Auth::routes();
 
