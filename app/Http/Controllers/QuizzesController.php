@@ -63,9 +63,9 @@ class QuizzesController extends Controller
      */
     public function store(Request $request)
     {
-        Quiz::create($request->all());
+        $quiz = Quiz::create($request->all());
 
-        return redirect('/quiz');
+        return redirect('/admin/quiz/edit/' . $quiz->id);
     }
 
     /**
@@ -165,7 +165,7 @@ class QuizzesController extends Controller
     {
         $quiz->update($request->all());
 
-        return redirect('/quiz');
+        return redirect('/admin/quiz/edit/' . $quiz->id);
     }
 
     /**
@@ -178,6 +178,6 @@ class QuizzesController extends Controller
     {
         $quiz->delete();
 
-        return redirect('/quiz');
+        return redirect('/admin/quiz/edit/' . $quiz->id);
     }
 }

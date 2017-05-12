@@ -66,6 +66,6 @@ class QuizQuestionsController extends Controller
         
         $question->delete();
 
-        return redirect('/admin/quiz/edit/');
+        return redirect('/admin/quiz/edit/' . $question->quiz_id);
     }
 }
