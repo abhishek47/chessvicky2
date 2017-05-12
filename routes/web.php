@@ -32,9 +32,9 @@ Route::get('/calendar/events', 'CalendarController@events');
 Route::post('/calendar', 'CalendarController@store');
 Route::get('/calendar/{event}', 'CalendarController@show');
 Route::get('/calendar/create', 'CalendarController@create');
-Route::get('/calendar/{id}/edit', 'CalendarController@edit');
-Route::post('/calendar/{id}/update', 'CalendarController@update');
-Route::post('/calendar/{id}/delete', 'CalendarController@destroy');
+Route::get('/admin/calendar/edit/{id}', 'CalendarController@edit');
+Route::post('/admin/calendar/update/{id}', 'CalendarController@update');
+Route::post('/admin/calendar/delete/{id}', 'CalendarController@destroy');
 
 Route::get('/forum', 'ForumQuestionsController@index');
 Route::get('/forum/{question}', 'ForumQuestionsController@show');
@@ -61,18 +61,18 @@ Route::get('/puzzles/contest/{contest}', 'ContestController@puzzle');
 
 Route::get('/puzzles/{puzzle}', 'PuzzlesController@show');
 Route::post('/puzzles', 'PuzzlesController@store');
-Route::get('/puzzles/{puzzle}/edit', 'PuzzlesController@edit');
-Route::post('/puzzles/{puzzle}/update', 'PuzzlesController@update');
-Route::post('/puzzles/{puzzle}/delete', 'PuzzlesController@destroy');
+Route::get('/admin/puzzles/edit/{puzzle}', 'PuzzlesController@edit');
+Route::post('/admin/puzzles/update/{puzzle}', 'PuzzlesController@update');
+Route::post('/admin/puzzles/delete/{puzzle}', 'PuzzlesController@destroy');
 
 
 Route::get('/books', 'BooksController@index');
 Route::get('/books/create', 'BooksController@create');
 Route::get('/books/{book}', 'BooksController@show');
 Route::post('/books', 'BooksController@store');
-Route::get('/books/{book}/edit', 'BooksController@edit');
-Route::post('/books/{book}/update', 'BooksController@update');
-Route::post('/books/{book}/delete', 'BooksController@destroy');
+Route::get('/admin/books/edit/{book}', 'BooksController@edit');
+Route::post('/admin/books/update/{book}', 'BooksController@update');
+Route::post('/admin/books/delete/{book}e', 'BooksController@destroy');
 
 
 
@@ -81,9 +81,9 @@ Route::get('/quiz/random', 'QuizzesController@random');
 Route::get('/quiz/create', 'QuizzesController@create');
 Route::get('/quiz/{quiz}', 'QuizzesController@show');
 Route::post('/quiz', 'QuizzesController@store');
-Route::get('/quiz/{quiz}/edit', 'QuizzesController@edit');
-Route::post('/quiz/{quiz}/update', 'QuizzesController@update');
-Route::post('/quiz/{quiz}/delete', 'QuizzesController@destroy');
+Route::get('/admin/quiz/edit/{quiz}', 'QuizzesController@edit');
+Route::post('/admin/quiz/update/{quiz}', 'QuizzesController@update');
+Route::post('/admin/quiz/delete/{quiz}', 'QuizzesController@destroy');
 Route::get('/quiz/{quiz}/result', 'QuizzesController@result');
 
 Route::post('/quiz/questions', 'QuizQuestionsController@store');
