@@ -178,6 +178,6 @@ class QuizzesController extends Controller
     {
         $quiz->delete();
 
-        return redirect('/admin/quiz/edit/' . $quiz->id);
+        return redirect('/admin/quiz/list/');
     }
 }

@@ -176,7 +176,7 @@ Route::post('/admin/quiz/events/store', 'QuizzesController@storeEvent');
 Route::get('/admin/quiz/events/edit/{id}', 'QuizzesController@editEvent');
 Route::post('/admin/quiz/events/update/{id}', 'QuizzesController@updateEvent');
 Route::get('/admin/quiz/events/delete/{id}', 'QuizzesController@deleteEvent');
-Route::post('/admin/admin/quiz/question/store', 'QuizQuestionsController@store');
+Route::post('/admin/quiz/question/store', 'QuizQuestionsController@store');
 Route::get('/admin/quiz/question/edit/{id}', 'QuizQuestionsController@edit');
 Route::post('/admin/quiz/question/update/{id}', 'QuizQuestionsController@update');
 Route::get('/admin/quiz/question/delete/{id}', 'QuizQuestionsController@destroy');
