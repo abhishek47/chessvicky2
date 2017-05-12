@@ -393,7 +393,7 @@
                         <div class="testimonials-slider">
                             <div class="box">
                                 <div class="client-pic">
-                                    <img src="images/testimonials/img-1.jpg" alt class="img img-responsive">
+                                    <img src="images/user.png" alt class="img img-responsive">
                                 </div>
                                 <div class="details">
                                     <h4>Sunil Sharma</h4>
@@ -409,7 +409,7 @@
                             </div>
                             <div class="box">
                                 <div class="client-pic">
-                                    <img src="images/testimonials/img-2.jpg" alt class="img img-responsive">
+                                    <img src="images/user.png" alt class="img img-responsive">
                                 </div>
                                 <div class="details">
                                     <h4>GM Vidit Gurathi</h4>
@@ -425,7 +425,7 @@
                             </div>
                             <div class="box">
                                 <div class="client-pic">
-                                    <img src="images/testimonials/img-1.jpg" alt class="img img-responsive">
+                                    <img src="images/user.png" alt class="img img-responsive">
                                 </div>
                                 <div class="details">
                                     <h4>GM Pravin Thipsay</h4>
