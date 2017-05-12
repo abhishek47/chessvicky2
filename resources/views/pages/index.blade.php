@@ -171,13 +171,13 @@
                             </div>
                         </div>
                     </a>
-                    <a href="/game/computer" class="col col-lg-4 col-xs-6">
+                     <a href="/game/computer" class="col col-lg-4 col-xs-6">
                         <div class="grid">
                             <div class="img-holder">
                                 <img src="images/featured/img-3.jpg" alt class="img img-responsive">
                             </div>
                             <div class="details">
-                                <h3>Online Tournaments <i class="fi flaticon-money-2"></i></h3>
+                                <h3>Play Chess <i class="fi flaticon-money-2"></i></h3>
                                 <p>Well, we feel just learning and comparing with friends is no cool.So we bring up online chess tournaments as well as puzzle and quiz events where you can earn real money.</p>
                             </div>
                         </div>
