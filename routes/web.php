@@ -25,7 +25,7 @@ Route::get('/blog/{post}', 'PostsController@show');
 Route::get('/blog/create', 'PostsController@create');
 Route::get('/blog/{id}/edit', 'PostsController@edit');
 Route::post('/blog/{id}/update', 'PostsController@update');
-Route::post('/blog/{id}/delete', 'PostsController@delete');
+Route::post('/blog/{id}/delete', 'PostsController@destroy');
 
 Route::get('/calendar', 'CalendarController@index');
 Route::get('/calendar/events', 'CalendarController@events');
@@ -34,7 +34,7 @@ Route::get('/calendar/{event}', 'CalendarController@show');
 Route::get('/calendar/create', 'CalendarController@create');
 Route::get('/calendar/{id}/edit', 'CalendarController@edit');
 Route::post('/calendar/{id}/update', 'CalendarController@update');
-Route::post('/calendar/{id}/delete', 'CalendarController@delete');
+Route::post('/calendar/{id}/delete', 'CalendarController@destroy');
 
 Route::get('/forum', 'ForumQuestionsController@index');
 Route::get('/forum/{question}', 'ForumQuestionsController@show');
@@ -42,11 +42,11 @@ Route::get('/forum/create', 'ForumQuestionsController@create');
 Route::post('/forum', 'ForumQuestionsController@store');
 Route::get('/forum/{question}/edit', 'ForumQuestionsController@edit');
 Route::post('/forum/{id}/update', 'ForumQuestionsController@update');
-Route::post('/forum/{id}/delete', 'ForumQuestionsController@delete');
+Route::post('/forum/{id}/delete', 'ForumQuestionsController@destroy');
 
 Route::post('/forum/answer', 'ForumAnswersController@store');
 Route::post('/forum/answer/{id}/update', 'ForumAnswersController@update');
-Route::post('/forum/answer/{id}/delete', 'ForumAnswersController@delete');
+Route::post('/forum/answer/{id}/delete', 'ForumAnswersController@destroy');
 
 Route::get('/forum/answer/{ansid}/{qid}', 'ForumAnswersController@markAnswer');
 Route::get('/forum/answer/{ansid}/{qid}/unmark', 'ForumAnswersController@unmarkAnswer');
@@ -63,7 +63,7 @@ Route::get('/puzzles/{puzzle}', 'PuzzlesController@show');
 Route::post('/puzzles', 'PuzzlesController@store');
 Route::get('/puzzles/{puzzle}/edit', 'PuzzlesController@edit');
 Route::post('/puzzles/{puzzle}/update', 'PuzzlesController@update');
-Route::post('/puzzles/{puzzle}/delete', 'PuzzlesController@delete');
+Route::post('/puzzles/{puzzle}/delete', 'PuzzlesController@destroy');
 
 
 Route::get('/books', 'BooksController@index');
@@ -72,7 +72,7 @@ Route::get('/books/{book}', 'BooksController@show');
 Route::post('/books', 'BooksController@store');
 Route::get('/books/{book}/edit', 'BooksController@edit');
 Route::post('/books/{book}/update', 'BooksController@update');
-Route::post('/books/{book}/delete', 'BooksController@delete');
+Route::post('/books/{book}/delete', 'BooksController@destroy');
 
 
 
