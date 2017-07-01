@@ -90,7 +90,7 @@
 									</div><!-- /.form-group -->
 
 									<div class="form-group">
-										<input type="submit" class="btn btn-success" name="addarticle" value="Update article" >
+										<input type="submit" class="btn btn-success"  value="Update article" >
 									</div>
 
 									
