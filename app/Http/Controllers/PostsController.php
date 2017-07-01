@@ -78,7 +78,6 @@ class PostsController extends Controller
     public function store(Request $request)
     {   
 
-        $post = new Post;
         $data = $request->all();
         $data['slug'] = str_slug($data['title'], '-');
         $data['category_id'] = 0;
@@ -124,12 +123,12 @@ class PostsController extends Controller
     public function update(Request $request, $id)
     {   
         $post = Post::find($id);
-        $post->title = $request->get('title');
-        $post->slug = str_slug($post->title, '-');
-        $post->body = $request->get('body');
-        $post->tags = $request->get('tags');
+        
+        $data = $request->all();
+        $data['slug'] = str_slug($data['title'], '-');
+        $data['category_id'] = 0;
 
-        $post->save();
+        $post->update($data);
         
 
 
