@@ -79,13 +79,10 @@ class PostsController extends Controller
     {   
 
         $post = new Post;
-        $post->title = $request->get('title');
-        $post->slug = str_slug($post->title, '-');
-        $post->intro = $request->get('intro');
-        $post->body = $request->get('body');
-        $post->tags = $request->get('tags');
+        $data = $request->all();
+        $data['slug'] = str_slug($data['title'], '-');
 
-        auth()->user()->posts()->save($post);
+        auth()->user()->posts()->create($data);
         
 
 
