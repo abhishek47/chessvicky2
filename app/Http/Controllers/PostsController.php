@@ -81,6 +81,7 @@ class PostsController extends Controller
         $post = new Post;
         $data = $request->all();
         $data['slug'] = str_slug($data['title'], '-');
+        $data['category_id'] = 0;
 
         auth()->user()->posts()->create($data);
         
