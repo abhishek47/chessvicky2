@@ -83,6 +83,7 @@ class PostsController extends Controller
         $post->slug = str_slug($post->title, '-');
         $post->intro = $request->get('intro');
         $post->body = $request->get('body');
+        $post->tags = $request->get('tags');
 
         auth()->user()->posts()->save($post);
         
@@ -128,6 +129,7 @@ class PostsController extends Controller
         $post->title = $request->get('title');
         $post->slug = str_slug($post->title, '-');
         $post->body = $request->get('body');
+        $post->tags = $request->get('tags');
 
         $post->save();
         
