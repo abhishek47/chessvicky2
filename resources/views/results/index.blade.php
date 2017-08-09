@@ -35,7 +35,7 @@
                   	@foreach($resultGroup  as $result)
                     
                       <div class="col col-md-4 col-xs-12" style="padding: 10px;padding-top: 0px;margin-bottom: 10px;">
-						    <div class="grid panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);background: #ffffff;height: 160px;">
+						    <div class="grid panel panel-default" style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);background: #f5f5f5;height: 160px;">
 						        <div class="panel-heading" style="background: #460063">
 						        </div>
 						        <div class="details" style="padding: 0px 10px 10px 10px;font-size: 18px;">
