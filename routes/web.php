@@ -209,6 +209,6 @@ Route::get('/admin/results', 'ResultsController@adminResults');
 Route::post('/admin/results', 'ResultsController@store');
 Route::get('/admin/results/edit/{result}', 'ResultsController@edit');
 Route::post('/admin/results/{result}', 'ResultsController@update');
-Route::post('/admin/results/delete/{result}', 'ResultsController@delete');
+Route::get('/admin/results/delete/{result}', 'ResultsController@destroy');
 
 
