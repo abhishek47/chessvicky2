@@ -52,12 +52,10 @@
                                 <table class="table table-b-t table-b-b datatable-roosa rs-table table-default">
                                     <thead>
                                         <tr>
-                                            <th>Title</th>
-                                            <th>Date</th>
+                                            <th>Round</th>
                                             <th>Player 1</th>
-                                            <th>Player 1 Points</th>
                                             <th>Player 2</th>
-                                            <th>Player 2 Points</th>
+                                            <th>Result</th>
                                             <th class="no-sort">Actions</th>
                                         </tr>
                                     </thead>
@@ -65,12 +63,10 @@
 
                                      <?php foreach ($results as $key => $result) : ?>
                                         <tr>
-                                            <td><?= $result->title; ?></td>
-                                            <td><?= $result->date; ?></td>
+                                            <td><?= $result->round; ?></td>
                                             <td><?= $result->player_1; ?></td>
-                                            <td><?= $result->player_1_points; ?></td>
                                             <td><?= $result->player_2; ?></td>
-                                            <td><?= $result->player_2_points; ?></td>
+                                            <td><?= $result->result; ?></td>
                                             <td>
                                                 <a href="/admin/results/edit/{{$result->id}}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
                                                 <a href="/admin/results/delete/{{$result->id}}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</a>
@@ -105,35 +101,30 @@
 
                                     
                                     <div class="form-group">
-                                        <label>Title</label>
-                                        <input type="text" name="title" class="form-control">
+                                        <label>Round</label>
+                                        <select class="form-control" name="round"> 
+                                            @for($i = 1; $i < 20; $i++)
+                                                <option value="{{ $i }}">Round {{ $i }}</option>
+                                            @endfor
+                                        </select>
                                     </div>
                                 
 
-                                    <div class="form-group has-feedback">
-                                            <label class="control-label">Date</label>
-                                            <input type="text" name="date" class="form-control rs-datepicker" data-date-format="yyyy-mm-dd" placeholder="YYYY-MM-DD" readonly>
-                                            <span class="fa fa-calendar form-control-feedback" aria-hidden="true"></span>
-                                    </div><!-- /.form-group -->
 
                                     <div class="form-group">
                                         <label>Player 1 Name</label>
                                         <input type="text" name="player_1" class="form-control">
                                     </div>
 
-                                    <div class="form-group">
-                                        <label>Player 1 Points</label>
-                                        <input type="text" name="player_1_points" class="form-control">
-                                    </div>
-
+                                   
                                     <div class="form-group">
                                         <label>Player 2 Name</label>
                                         <input type="text" name="player_2" class="form-control">
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Player 2 Points</label>
-                                        <input type="text" name="player_2_points" class="form-control">
+                                        <label>Result</label>
+                                        <input type="text" name="result" class="form-control">
                                     </div>
 
 

@@ -9,7 +9,9 @@ class ResultsController extends Controller
 {
     public function index()
     {
-    	$results = Result::latest()->get();
+    	$results = Result::latest()->get()->groupBy('round');
+
+
     	return view('results.index', compact('results'));
     }
 

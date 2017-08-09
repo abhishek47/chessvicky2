@@ -55,37 +55,38 @@
 
 								{{ csrf_field() }}
 
-									 <div class="form-group">
-                                        <label>Title</label>
-                                        <input type="text" name="title" class="form-control" value="{{ old('title')?:$result->title }}">
+									  <div class="form-group">
+                                        <label>Round</label>
+                                        <select class="form-control" name="round">
+                                            @for($i = 1; $i < 20; $i++)
+                                                <option value="{{ $i }}" >Round {{ $i }}</option>
+                                            @endfor
+                                        </select>
                                     </div>
                                 
 
-                                    <div class="form-group has-feedback">
-                                            <label class="control-label">Date</label>
-                                            <input type="text" name="date" class="form-control rs-datepicker" data-date-format="yyyy-mm-dd" placeholder="YYYY-MM-DD" readonly value="{{ old('date')?:$result->date }}">
-                                            <span class="fa fa-calendar form-control-feedback" aria-hidden="true"></span>
-                                    </div><!-- /.form-group -->
 
                                     <div class="form-group">
                                         <label>Player 1 Name</label>
                                         <input type="text" name="player_1" class="form-control" value="{{ old('player_1')?:$result->player_1 }}">
                                     </div>
 
-                                    <div class="form-group">
-                                        <label>Player 1 Points</label>
-                                        <input type="text" name="player_1_points" class="form-control" value="{{ old('player_1_points')?:$result->player_1_points }}">
-                                    </div>
-
+                                   
                                     <div class="form-group">
                                         <label>Player 2 Name</label>
                                         <input type="text" name="player_2" class="form-control" value="{{ old('player_2')?:$result->player_2 }}">
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Player 2 Points</label>
-                                        <input type="text" name="player_2_points" class="form-control" value="{{ old('player_2_points')?:$result->player_2_points }}">
+                                        <label>Result</label>
+                                        <input type="text" name="result" class="form-control" value="{{ old('result')?:$result->result }}">
                                     </div>
+
+
+
+                                  
+
+                                    
 
 								
 
