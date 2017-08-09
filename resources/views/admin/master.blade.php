@@ -92,6 +92,11 @@
           </a>
         </li>
 
+        <li class="<?= $page == 'results' ? 'active selected' : ''; ?>">
+          <a href="/admin/results">
+            <span class="fa fa-user rs-icon-menu"></span>Results
+          </a>
+        </li>
 
 
         

@@ -42,6 +42,7 @@
           </a>
         </li>
 
+         
 
 
         
@@ -50,6 +51,13 @@
 
         <li class="menu-block-divider"></li>
         <li class="menu-header">Site Content</li>
+
+         <li class="<?= $page == 'results' ? 'active selected' : ''; ?>">
+          <a href="admin/results">
+            <span class="fa fa-bullhorn rs-icon-menu"></span>Results
+          </a>
+        </li>
+
 
          <li class="<?= $page == 'calendar' ? 'active selected' : ''; ?>">
           <a href="<?= url('calendar'); ?>">

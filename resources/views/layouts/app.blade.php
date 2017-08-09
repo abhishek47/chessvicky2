@@ -184,7 +184,9 @@
                           <li><a href="/leaderboard">Leaderboard</a></li>
                             <li><a href="/blog">Blog</a></li>
                             <li><a href="/forum">Forum</a></li>
-                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="/results">Results</a></li>
+
+                           <!-- <li><a href="/contact">Contact</a></li> -->
 
                             <!-- Authentication Links -->
                             @if (Auth::guest())

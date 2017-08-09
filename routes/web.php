@@ -203,4 +203,12 @@ Route::post('/admin/login', 'LoginController@postLogin');
 Route::get('/game/computer', 'GamesController@computer');
 
 
+Route::get('/results', 'ResultsController@index');
+
+Route::get('/admin/results', 'ResultsController@adminResults');
+Route::post('/admin/results', 'ResultsController@store');
+Route::get('/admin/results/edit/{result}', 'ResultsController@edit');
+Route::post('/admin/results/{result}', 'ResultsController@update');
+Route::post('/admin/results/delete/{result}', 'ResultsController@delete');
+
 
