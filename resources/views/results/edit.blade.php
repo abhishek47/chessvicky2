@@ -86,7 +86,10 @@
 
                                   
 
-                                    
+                                    <div class="form-group">
+                                        <label>Table No.</label>
+                                        <input type="integer" name="table" class="form-control" value="{{ old('table')?:$result->table }}">
+                                    </div>
 
 								
 

@@ -19,6 +19,7 @@ class CreateResultsTable extends Migration
             $table->string('player_1');
             $table->string('player_2');
             $table->string('result');
+             $table->integer('table');
             $table->timestamps();
         });
     }

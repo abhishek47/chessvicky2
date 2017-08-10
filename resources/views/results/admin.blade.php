@@ -127,6 +127,11 @@
                                         <input type="text" name="result" class="form-control">
                                     </div>
 
+                                    <div class="form-group">
+                                        <label>Table No.</label>
+                                        <input type="integer" name="table" class="form-control">
+                                    </div>
+
 
 
                                   
