@@ -8,7 +8,7 @@
         <section class="page-title">
             <div class="container">
                 <div class="title-box">
-                    <h1>Tournament Results</h1>
+                    <h1>Under 19 Tournament Results</h1>
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
                         <li>Results</li>
@@ -33,7 +33,7 @@
                   </div>
 
                    <div class="table-responsive">
-                                <table class="table table-hover mails m-0 table table-actions-bar">
+                                <table class="table table-bordered table-responsive table-striped mails m-0 table table-actions-bar" style="font-size: 18px;">
                                     <thead>
                                         <tr>
                                             <th>Table No.</th>
