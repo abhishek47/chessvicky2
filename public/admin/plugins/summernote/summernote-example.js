@@ -4,9 +4,28 @@ if($('.summernote-fixed-height').length) {
 	$('.summernote-fixed-height').summernote({
 		height: 300,
 		dialogsInBody: true,
-		dialogsFade: true
+		dialogsFade: true,
+		 onImageUpload: function(files, editor, welEditable) {
+                sendFile(files[0], editor, welEditable);
+            }
 	});
 }
+
+function sendFile(file, editor, welEditable) {
+            data = new FormData();
+            data.append("file", file);
+            $.ajax({
+                data: data,
+                type: "POST",
+                url: "/image/upload",
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function(url) {
+                    editor.insertImage(welEditable, url);
+                }
+            });
+        }
 
 if($('.summernote-auto').length) {
 	$('.summernote-auto').summernote({

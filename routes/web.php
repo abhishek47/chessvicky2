@@ -211,4 +211,4 @@ Route::get('/admin/results/edit/{result}', 'ResultsController@edit');
 Route::post('/admin/results/{result}', 'ResultsController@update');
 Route::get('/admin/results/delete/{result}', 'ResultsController@destroy');
 
-
+Route::post('/image/upload', 'ImageController@upload');

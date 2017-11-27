@@ -64,7 +64,7 @@
 								
 
 									<div class="form-group">
-										<textarea name="body" class="summernote-fixed-height" title="Contents"><p>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~<br>blah blah~</p></textarea>
+										<textarea name="body" class="summernote-fixed-height" title="Contents"></textarea>
 									</div><!-- /.form-group -->
 
 
