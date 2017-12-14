@@ -6,6 +6,8 @@ if($('.summernote-fixed-height').length) {
 		dialogsInBody: true,
 		dialogsFade: true,
 		 onImageUpload: function(files, editor, welEditable) {
+		 		 console.log("UPLOADING!!!");
+
                 sendFile(files[0], editor, welEditable);
             }
 	});
