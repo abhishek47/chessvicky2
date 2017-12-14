@@ -22,7 +22,7 @@ function sendFile(file, editor, welEditable) {
                 contentType: false,
                 processData: false,
                 success: function(url) {
-                    editor.insertImage(welEditable, url);
+                     $('#blog-body').summernote("editor.insertImage", url, 'filename');
                 }
             });
         }
