@@ -12,6 +12,7 @@ if($('.summernote-fixed-height').length) {
 }
 
 function sendFile(file, editor, welEditable) {
+	        console.log(file);
             data = new FormData();
             data.append("file", file);
             $.ajax({
