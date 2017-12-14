@@ -31,14 +31,13 @@ class PostsController extends Controller
                $posts = $posts->orWhere('title', 'LIKE', '%' . $word . '%')->orWhere('tags', 'LIKE',  '%' . $word . '%')->orWhere('body', 'LIKE',  '%' . $word . '%')->orWhere('author', 'LIKE',  '%' . $word . '%');
            }
 
-           $posts = $posts->paginate(10);
+           $posts = $posts->latest()->paginate(10);
         
         }
          else {
             
              $posts = Post::latest()
-                       ->filter(request(['month', 'year']))
-                       ->latest()->paginate(20);
+                       ->filter(request(['month', 'year']))->paginate(20);
 
          }              
 
