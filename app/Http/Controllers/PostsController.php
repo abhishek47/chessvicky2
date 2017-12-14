@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use \DomDocument;
 use App\Post;
 
 class PostsController extends Controller
