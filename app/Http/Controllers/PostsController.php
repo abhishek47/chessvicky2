@@ -49,7 +49,7 @@ class PostsController extends Controller
      public function admin(Request $request)
     {   
 
-        $articles = Post::all();
+        $articles = Post::latest()->get();
 
        
        $page = 'blog';
