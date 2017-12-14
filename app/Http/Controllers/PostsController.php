@@ -79,6 +79,9 @@ class PostsController extends Controller
     {   
 
         $data = $request->all();
+
+        dd($data);
+
         $data['slug'] = str_slug($data['title'], '-');
         $data['category_id'] = 0;
 
