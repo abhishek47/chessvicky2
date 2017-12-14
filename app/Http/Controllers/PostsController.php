@@ -80,10 +80,53 @@ class PostsController extends Controller
 
         $data = $request->all();
 
-        dd($data);
+
 
         $data['slug'] = str_slug($data['title'], '-');
         $data['category_id'] = 0;
+
+        $message=$data['body'];
+
+       $dom = new DomDocument();
+
+       $dom->loadHTML("<div>$message</div>");
+
+       $container = $dom->getElementsByTagName('div')->item(0);
+
+       $container = $container->parentNode->removeChild($container);
+
+       while ($dom->firstChild) {
+         $dom->removeChild($dom->firstChild);
+       }
+
+       while ($container->firstChild ) {
+         $dom->appendChild($container->firstChild);
+       }
+
+       $images = $dom->getElementsByTagName('img');
+       // foreach <img> in the submited message
+       foreach($images as $img){
+          $src = $img->getAttribute('src');
+ 
+           // if the img source is 'data-url'
+          if(preg_match('/data:image/', $src)){ 
+          preg_match('/data:image\/(?<mime>.*?)\;/', $src, $groups);
+          $mimetype = $groups['mime']; 
+          // Generating a random filename
+          $imageName = 'uploads/' . uniqid();
+
+         \Storage::disk('s3')->put($imageName, $src);
+         \Storage::disk('s3')->setVisibility($imageName, 'public');
+
+         $url = \Storage::disk('s3')->url($imageName);
+
+         $new_src = $url;
+         $img->removeAttribute('src');
+         $img->setAttribute('src', $new_src);
+        } // <!--endif
+      } // 
+
+       $data['body'] = $dom->saveHTML();
 
         auth()->user()->posts()->create($data);
         
