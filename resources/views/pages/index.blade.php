@@ -269,25 +269,25 @@
                 <div class="row content">
                     <div class="col col-sm-3 col-xs-6">
                         <div class="box">
-                            <h3><span class="counter" data-count="100">00</span>+</h3>
+                            <h3><span class="counter" data-count="500">00</span>+</h3>
                             <p>Puzzles</p>
                         </div>
                     </div>
                     <div class="col col-sm-3 col-xs-6">
                         <div class="box">
-                            <h3><span class="counter" data-count="150">00</span>+</h3>
+                            <h3><span class="counter" data-count="250">00</span>+</h3>
                             <p>Quizzes</p>
                         </div>
                     </div>
                     <div class="col col-sm-3 col-xs-6">
                         <div class="box">
-                            <h3><span class="counter" data-count="91">00</span>k</h3>
+                            <h3><span class="counter" data-count="910">00</span>k</h3>
                             <p>Visits</p>
                         </div>
                     </div>
                     <div class="col col-sm-3 col-xs-6">
                         <div class="box">
-                            <h3><span class="counter" data-count="800">00</span>+</h3>
+                            <h3><span class="counter" data-count="250000">00</span>+</h3>
                             <p>Members</p>
                         </div>
                     </div>
