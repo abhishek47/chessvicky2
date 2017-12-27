@@ -37,7 +37,7 @@ var cfg = {
   position: 'start',
   dropOffBoard: 'trash',
   sparePieces: true,
-  pieceTheme: 'http://www.willangles.com/projects/chessboard/img/chesspieces/wikipedia/{piece}.png',
+  pieceTheme: 'https://chessvicky.com/admin/img/chesspieces/wikipedia/{piece}.png',
   onDrop: onDrop,
 };
 board = ChessBoard('startboard', cfg);
