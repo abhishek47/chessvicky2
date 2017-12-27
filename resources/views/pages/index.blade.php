@@ -3,6 +3,7 @@
 
 @section('content')
 
+@if(!request()->has('platform'))
 <div id="feedback">
 			<a href="/register"><i class="fa fa-rocket"></i> Join Now</a>
 		</div>
@@ -142,7 +143,7 @@
         </section>    
         <!-- end of hero slider -->
 
-
+@endif
 
 
         <!-- start featured -->
@@ -188,7 +189,7 @@
         <!-- end featured -->
        
       
-
+@if(!request()->has('platform'))
        <!-- start services -->
         <section class="services section-padding">
             <div class="container">
@@ -296,7 +297,7 @@
         </section>
         <!-- end fun-fact -->
 
-
+@endif
        
 
 
@@ -374,7 +375,7 @@
             </div> <!-- end container -->
         </section>
         <!-- end latest-projects -->
-
+@if(!request()->has('platform'))
 
         <!-- start testimonials-->
         <section class="testimonials section-padding">
@@ -446,7 +447,7 @@
         </section>
         <!-- end testimonials-->
 
-
+@endif
         <!-- start blog-section -->
         <section class="blog-section section-padding">
             <div class="container">
@@ -489,7 +490,7 @@
         </section>
         <!-- end blog-section -->
 
-   
+   @if(!request()->has('platform'))
         <section id="vision" class="section-padding">
 
            <div class="container"> 
@@ -552,7 +553,7 @@
             </div>
             
         </section> 
-
+@endif
 
 
 @endsection
