@@ -23,7 +23,7 @@
 	                                    draggable: false,
 	                                    position: 'start',
 	                                    sparePieces: false,
-	                                    pieceTheme: 'http://www.willangles.com/projects/chessboard/img/chesspieces/wikipedia/{piece}.png'
+	                                    pieceTheme: 'https://chessvicky.com/admin/img/chesspieces/wikipedia/{piece}.png'
 	                                    };
 	                                    board<?= $puzzle->id; ?> = ChessBoard('board<?= $puzzle->id; ?>', cfg<?= $puzzle->id; ?>);
 
