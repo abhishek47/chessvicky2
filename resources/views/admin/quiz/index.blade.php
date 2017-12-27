@@ -105,7 +105,7 @@
 
 									<textarea name="description" class="summernote-fixed-height" title="Contents"></textarea>
 
-									
+									<input type="hidden" value="0" name="coins" class="form-control">
 
 								   <div class="form-group">
 										<label>Quiz Level</label>

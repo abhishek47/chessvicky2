@@ -136,6 +136,7 @@
 									<div class="form-group">
 										<label>Points</label> 
 										<input type="text" name="points" value="<?= $puzzle->points; ?>" class="form-control">
+										<input type="hidden" value="0" name="coins" class="form-control">
 									</div>
 
 									<div class="form-group">

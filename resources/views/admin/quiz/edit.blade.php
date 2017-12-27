@@ -76,6 +76,7 @@
 										</select>
 									</div><!-- /.form-group -->
 
+									<input type="hidden" value="0" name="coins" class="form-control">
 
 									<div class="form-group">
 										<input type="submit" class="btn btn-success" name="addQuiz" value="Update Quiz" >
