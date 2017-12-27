@@ -12,7 +12,11 @@ class PuzzlesController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth', ['except' => 'index']);
+        if(request()->has('platform')) {
+            $this->middleware('auth');
+        } else {
+            $this->middleware('auth', ['except' => ['index']]);
+        }
     }
 
     /**
