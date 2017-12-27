@@ -5,7 +5,9 @@
 
 @section('content')
 
-<!-- start page-title -->
+@if(request()->has('platform'))
+      
+      <!-- start page-title -->
         <section class="page-title">
             <div class="container">
                 <div class="title-box">
@@ -19,6 +21,8 @@
         </section>
         <!-- end page-title -->
  
+ @endif
+
    <div class="page-wrapper blog-single-page">
 
         <!-- start blog-single-content -->

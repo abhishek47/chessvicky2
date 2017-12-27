@@ -2,7 +2,9 @@
 
 @section('content')
 
-<!-- start page-title -->
+@if(request()->has('platform'))
+
+        <!-- start page-title -->
         <section class="page-title">
             <div class="container">
                 <div class="title-box">
@@ -16,6 +18,7 @@
         </section>
         <!-- end page-title -->
 
+@endif
     <!-- start team-single-content -->
         <section class="team-single-content section-padding" style="padding-bottom: 0px;">
             <div class="container">

@@ -2,6 +2,7 @@
 
 @section('content')
 
+@if(request()->has('platform'))
 <!-- start page-title -->
         <section class="page-title">
             <div class="container">
@@ -15,11 +16,11 @@
             </div> <!-- end container -->
         </section>
         <!-- end page-title -->
-
+@endif
     <!-- start team-single-content -->
        @include('layouts.ucard')
      
-
+@if(request()->has('platform'))
 
  <!-- start featured -->
         <section class="featured section-padding">
@@ -138,7 +139,7 @@
             </div> <!-- end container -->
         </section>
         <!-- end featured -->
-
+@endif
 <br><br><br>
 
   @include('layouts.buycoins')
