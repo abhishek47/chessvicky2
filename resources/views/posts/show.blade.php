@@ -2,7 +2,7 @@
 
 
 @section('content')
-  
+  @if(!request()->has('platform'))
   <div class="blog-single-page">
  <!-- start page-title -->
         <section class="page-title">
@@ -17,7 +17,7 @@
             </div> <!-- end container -->
         </section>
         <!-- end page-title -->
-
+@endif
 
         <!-- start blog-single-content -->
         <section class="blog-single-content section-padding">
