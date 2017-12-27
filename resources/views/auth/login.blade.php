@@ -2,6 +2,7 @@
 
 @section('content')
 
+  @if(!request()->has('platform'))
  <!-- start page-title -->
         <section class="page-title">
             <div class="container">
@@ -18,6 +19,8 @@
 
         
 <br><br><br>
+
+@endif
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

@@ -3,7 +3,7 @@
 
 @section('content')
 
-
+  @if(!request()->has('platform'))
  <!-- start page-title -->
         <section class="page-title">
             <div class="container">
@@ -17,7 +17,7 @@
             </div> <!-- end container -->
         </section>
         <!-- end page-title -->
-
+@endif
 
         <!-- start case-studies -->
         <section class="case-studies section-padding">

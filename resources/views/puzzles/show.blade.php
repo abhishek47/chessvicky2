@@ -9,6 +9,7 @@ Puzzle #{{$puzzle->id}}
 
 @section('content')
 
+  @if(!request()->has('platform'))
 <!-- start page-title -->
         <section class="page-title">
             <div class="container">
@@ -22,7 +23,7 @@ Puzzle #{{$puzzle->id}}
             </div> <!-- end container -->
         </section>
         <!-- end page-title -->
- 
+ @endif
    <div class="page-wrapper blog-single-page">
 
         <!-- start blog-single-content -->

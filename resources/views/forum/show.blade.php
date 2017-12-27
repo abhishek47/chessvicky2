@@ -6,6 +6,7 @@
 
 <div class="page-wrapper blog-single-page">
 
+  @if(!request()->has('platform'))
 <!-- start page-title -->
         <section class="page-title">
             <div class="container">
@@ -19,7 +20,7 @@
             </div> <!-- end container -->
         </section>
         <!-- end page-title -->
-
+@endif
         <!-- start blog-single-content -->
         <section class="blog-single-content section-padding">
             <div class="container">
