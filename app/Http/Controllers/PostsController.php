@@ -11,11 +11,9 @@ class PostsController extends Controller
 
     public function __construct()
     {
-       if(request()->has('platform')) {
-        $this->middleware('auth');
-       } else {
+       
         $this->middleware('auth', ['except' => ['index', 'show']]);
-       }
+     
         
     }
 
