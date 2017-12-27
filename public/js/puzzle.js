@@ -93,7 +93,7 @@ var cfg = {
   sparePieces: false,
   snapbackSpeed: 500,
   snapSpeed: 100,
-  pieceTheme: 'http://www.willangles.com/projects/chessboard/img/chesspieces/wikipedia/{piece}.png',
+  pieceTheme: 'https://chessvicky.com/admin/img/chesspieces/wikipedia/{piece}.png',
   
 };
 board = ChessBoard('board', cfg);
