@@ -2,7 +2,7 @@
 
 @section('content')
 
-@if(request()->has('platform'))
+@if(!request()->has('platform'))
 <!-- start page-title -->
         <section class="page-title">
             <div class="container">
@@ -20,7 +20,7 @@
     <!-- start team-single-content -->
        @include('layouts.ucard')
      
-@if(request()->has('platform'))
+@if(!request()->has('platform'))
 
  <!-- start featured -->
         <section class="featured section-padding">
