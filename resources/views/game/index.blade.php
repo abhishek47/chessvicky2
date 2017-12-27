@@ -5,7 +5,7 @@
 
 @section('content')
 
-@if(request()->has('platform'))
+@if(!request()->has('platform'))
       
       <!-- start page-title -->
         <section class="page-title">
