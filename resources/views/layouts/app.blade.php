@@ -394,21 +394,25 @@
       </script>
      @endif
 
-      <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=udlmn059umrh6h02jyxtcyslj0xed1gbqz1g6s1h2xe4062e"></script>
-    <script>tinymce.init({
-      selector: '#body',
-      height: 200,
-      plugins: [
-            "advlist autolink lists link image charmap print preview anchor",
-            "searchreplace visualblocks code fullscreen",
-            "insertdatetime media table contextmenu paste imagetools"
-        ],
-        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
-      imagetools_cors_hosts: ['www.tinymce.com', 'codepen.io'],
-      content_css: [
-        '//www.tinymce.com/css/codepen.min.css'
-      ]
-    });</script>
+     @if(!request()->has('platform'))
+     
+          <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=udlmn059umrh6h02jyxtcyslj0xed1gbqz1g6s1h2xe4062e"></script>
+            <script>tinymce.init({
+              selector: '#body',
+              height: 200,
+              plugins: [
+                    "advlist autolink lists link image charmap print preview anchor",
+                    "searchreplace visualblocks code fullscreen",
+                    "insertdatetime media table contextmenu paste imagetools"
+                ],
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+              imagetools_cors_hosts: ['www.tinymce.com', 'codepen.io'],
+              content_css: [
+                '//www.tinymce.com/css/codepen.min.css'
+              ]
+            });</script>
+
+    @endif
 
    
     @yield('js')
