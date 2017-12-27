@@ -115,6 +115,7 @@
     <!-- start page-wrapper -->
     <div class="page-wrapper">
 
+    @if(!request()->has('platfrom'))
         <!-- start preloader -->
         <div class="preloader">
             <div>
@@ -126,6 +127,7 @@
             </div>
         </div>
         <!-- end preloader -->
+    @endif  
 
         <!-- Start header -->
         <header class="site-header-style2">
