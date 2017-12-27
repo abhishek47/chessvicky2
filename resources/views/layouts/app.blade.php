@@ -115,7 +115,7 @@
     <!-- start page-wrapper -->
     <div class="page-wrapper">
 
-    @if(!request()->has('platfrom'))
+    @if(!request()->has('platform'))
         <!-- start preloader -->
         <div class="preloader">
             <div>
@@ -129,6 +129,7 @@
         <!-- end preloader -->
     @endif  
 
+        @if(!request()->has('platform'))
         <!-- Start header -->
         <header class="site-header-style2">
 
@@ -231,7 +232,7 @@
             </nav>
         </header>
         <!-- end of header -->
-
+        @endif
 
 
         @yield('content');
@@ -239,7 +240,7 @@
 
 
 
-
+@if(!request()->has('platform'))
         <!-- start footer-->
         <footer class="site-footer">
             <div class="upper-footer">
@@ -335,6 +336,8 @@
             </div>
         </footer>
         <!-- end sectionname-->
+
+        @endif
     </div>
     <!-- end of page-wrapper -->
 
