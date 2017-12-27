@@ -51,7 +51,7 @@
                                 data-end="9000"
                                 data-endspeed="2000"
                                 data-linktoslide="next"
-                                style="z-index: 8;color: #fff"> ChessVicky is a one stop platfrom to learn chess in a better and an advanced <br>way.Join now to learn and earn with chess.
+                                style="z-index: 8;color: #fff"> ChessVicky is a platfrom to learn chess in a better and an advanced <br>way.Join now to learn and earn with chess.
                             </div>
 
                             <!-- LAYER NR. 3 -->

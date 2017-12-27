@@ -395,7 +395,7 @@
      @endif
 
      @if(!request()->has('platform'))
-     
+
           <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=udlmn059umrh6h02jyxtcyslj0xed1gbqz1g6s1h2xe4062e"></script>
             <script>tinymce.init({
               selector: '#body',
