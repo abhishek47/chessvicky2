@@ -91,10 +91,12 @@ class QuizzesController extends Controller
         
         $quiz = null;
         
-        while($quiz == null){
-          $rid = rand(1, $count);
-          $quiz = Quiz::find($rid);
-         }
+       
+
+         do {
+             $rid = rand(1, $count);
+              $quiz = Quiz::find($rid);
+         }while($quiz == null || \Auth::user()->hasSolvedQuiz($quiz));
         
         return view('quiz.show', compact('quiz'));
     }
