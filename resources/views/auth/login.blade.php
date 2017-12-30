@@ -4,7 +4,7 @@
 
   @if(!request()->has('platform'))
  <!-- start page-title -->
-        <section class="page-title">
+        <section class="page-title hidden-xs">
             <div class="container">
                 <div class="title-box">
                     <h1>Login to Account</h1>
@@ -18,9 +18,11 @@
         <!-- end page-title -->
 
         
-<br><br><br>
+
 
 @endif
+
+<br><br><br>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

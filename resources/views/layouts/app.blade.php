@@ -117,7 +117,7 @@
 
     @if(!request()->has('platform'))
         <!-- start preloader -->
-        <div class="preloader">
+        <div class="preloader hidden-xs">
             <div>
                 <span></span>
                 <span></span>
@@ -131,7 +131,7 @@
 
         @if(!request()->has('platform'))
         <!-- Start header -->
-        <header class="site-header-style2">
+        <header class="site-header-style2 hidden-xs">
 
             <!-- start upper-topbar -->
             <div class="upper-topbar hidden-xs">
@@ -201,7 +201,7 @@
                                      @if( Auth::user()->profile->photo)
                                       <img class="img img-responsive" style="display: inline;width: 30px;height: 30px;margin-right: 5px;margin-bottom: 2px;" src="/{{  Auth::user()->profile->photo }}" alt="" class="img img-responsive img-circle">
                                     @else
-                                     <span class="chatter_avatar_circle small" style="background-color:#<?= \DevDojo\Chatter\Helpers\ChatterHelper::stringToColorCode( Auth::user()->name) ?>;width: 30px;height: 30px;font-size: 18px;line-height: 28px;">
+                                     <span class="chatter_avatar_circle small" style="background-color:#<?= \DevDojo\Chatter\Helpers\ChatterHelper::stringToColorCode( Auth::user()->name) ?>;width: 30px;height: 30px;font-size: 18px;line-height: 28px; ?>">
                                           {{ ucfirst(substr( Auth::user()->name, 0, 1)) }}
                                       </span>
                                      @endif 
@@ -242,7 +242,7 @@
 
 @if(!request()->has('platform'))
         <!-- start footer-->
-        <footer class="site-footer">
+        <footer class="site-footer hidden-xs">
             <div class="upper-footer">
                 <div class="container">
                     <div class="row">
