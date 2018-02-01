@@ -131,10 +131,10 @@
 
        
         <!-- Start header -->
-        <header class="site-header-style2 hidden-xs">
+        <header class="site-header-style2">
 
             <!-- start upper-topbar -->
-            <div class="upper-topbar hidden-xs">
+            <div class="upper-topbar">
                 <div class="container">
                     <div class="row">
                         <div class="col col-md-9 contact-info">
