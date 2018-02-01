@@ -115,7 +115,7 @@
     <!-- start page-wrapper -->
     <div class="page-wrapper">
 
-    @if(!request()->has('platform'))
+    
         <!-- start preloader -->
         <div class="preloader hidden-xs">
             <div>
@@ -127,9 +127,9 @@
             </div>
         </div>
         <!-- end preloader -->
-    @endif  
+  
 
-        @if(!request()->has('platform'))
+       
         <!-- Start header -->
         <header class="site-header-style2 hidden-xs">
 
@@ -232,7 +232,7 @@
             </nav>
         </header>
         <!-- end of header -->
-        @endif
+      
 
 
         @yield('content');
