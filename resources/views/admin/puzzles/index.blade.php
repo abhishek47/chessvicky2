@@ -173,10 +173,13 @@
 										<textarea name="hint" class="form-control"></textarea> 
 									</div>
 
+
+
 									<div class="form-group">
 										<label>Points</label>
 										<input type="text" name="points" class="form-control">
 										<input type="hidden" value="0" name="coins" class="form-control">
+											<input type="hidden" value="0" name="solution" class="form-control">
 									</div>
 
 									<div class="form-group">
