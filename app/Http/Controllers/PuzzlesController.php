@@ -43,7 +43,7 @@ class PuzzlesController extends Controller
     public function admin(Request $request)
     {
 
-        $puzzles = Puzzle::all();
+        $puzzles = Puzzle::latest();
 
         $page = 'puzzles';
        
