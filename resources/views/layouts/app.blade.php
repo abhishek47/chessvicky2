@@ -167,7 +167,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/"><img src="/images/logo2.png" alt></a>
+                        <a class="navbar-brand" href="/"><img style="width:220px;" src="/images/logo3.png" alt></a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse navbar-right">
                         <button class="close-navbar"><i class="fa fa-close"></i></button>
