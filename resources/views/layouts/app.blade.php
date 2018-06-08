@@ -167,7 +167,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/"><img style="width:220px;" src="/images/logo3.png" alt></a>
+                        <a class="navbar-brand" href="/"><img style="width:220px;" src="/images/logofinal.png" alt></a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse navbar-right">
                         <button class="close-navbar"><i class="fa fa-close"></i></button>
@@ -249,7 +249,7 @@
                     <div class="row">
                         <div class="col col-lg-3 col-sm-6">
                             <div class="widget about-widget">
-                                <a href="#" class="footer-logo"><img src="/images/logo3d.png" alt class="img img-responsive"></a>
+                                <a href="#" class="footer-logo"><img src="/images/logofinal.png" alt class="img img-responsive"></a>
                                 <p>ChessVicky is a one stop platfrom to learn chess in a better and an advanced way.Join now to learn and earn with chess.</p>
                                
                             </div>
